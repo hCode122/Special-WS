@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
         slide.classList.add("swiper-slide"); 
         slide.innerHTML = `
             <div class="mt-[65px] rounded-[10px] bg-[#EBEBEB] dark:bg-[#303030] h-[300px] w-[220px] flex flex-col pt-[150px] items-center">
-                <img class="w-[55px] h-[45px]" src="/assets/icons/img.svg" class="flex-1">  <!-- Fixed src -->
+                <img class="w-[55px] h-[45px]" src="./assets/icons/img.svg" class="flex-1">  <!-- Fixed src -->
                 <div class="  mt-auto w-[160px] h-[80px] dark:bg-black bg-[#F5F5F5] mb-[20px] text-center">
                     <p class="dark:text-white text-[#2E2E2E] mt-[15px]">${member.name}</p>
                     <p class="text-grey">${member.role}</p>
@@ -52,30 +52,30 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     const members2 = [
-        {src:"/assets/icons/f.svg"},
-        {src:"/assets/icons/ps.svg"},
-        {src:"/assets/icons/pr.svg"},
-        {src:"/assets/icons/ai.svg"},
-        {src:"/assets/icons/html.svg"},
-        {src:"/assets/icons/js.svg"},
-        {src:"/assets/icons/cs.svg"},
-        {src:"/assets/icons/flut.svg"},
-        {src:"/assets/icons/ruby.svg"},
-        {src:"/assets/icons/b.svg"},
-        {src:"/assets/icons/ps.svg"},
-        {src:"/assets/icons/word.svg"},
-        {src:"/assets/icons/f.svg"},
-        {src:"/assets/icons/ps.svg"},
-        {src:"/assets/icons/pr.svg"},
-        {src:"/assets/icons/ai.svg"},
-        {src:"/assets/icons/html.svg"},
-        {src:"/assets/icons/js.svg"},
-        {src:"/assets/icons/cs.svg"},
-        {src:"/assets/icons/flut.svg"},
-        {src:"/assets/icons/ruby.svg"},
-        {src:"/assets/icons/b.svg"},
-        {src:"/assets/icons/ps.svg"},
-        {src:"/assets/icons/word.svg"},
+        {src:"./assets/icons/f.svg"},
+        {src:"./assets/icons/ps.svg"},
+        {src:"./assets/icons/pr.svg"},
+        {src:"./assets/icons/ai.svg"},
+        {src:"./assets/icons/html.svg"},
+        {src:"./assets/icons/js.svg"},
+        {src:"./assets/icons/cs.svg"},
+        {src:"./assets/icons/flut.svg"},
+        {src:"./assets/icons/ruby.svg"},
+        {src:"./assets/icons/b.svg"},
+        {src:"./assets/icons/ps.svg"},
+        {src:"./assets/icons/word.svg"},
+        {src:"./assets/icons/f.svg"},
+        {src:"./assets/icons/ps.svg"},
+        {src:"./assets/icons/pr.svg"},
+        {src:"./assets/icons/ai.svg"},
+        {src:"./assets/icons/html.svg"},
+        {src:"./assets/icons/js.svg"},
+        {src:"./assets/icons/cs.svg"},
+        {src:"./assets/icons/flut.svg"},
+        {src:"./assets/icons/ruby.svg"},
+        {src:"./assets/icons/b.svg"},
+        {src:"./assets/icons/ps.svg"},
+        {src:"./assets/icons/word.svg"},
     ];
     
     const swiperWrapper = document.getElementById("swiper-wrapper");
