@@ -1,4 +1,4 @@
-import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
+import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs';
  
 export function toggle() {
     var btn = document.getElementById("btn-toggle")
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const slide = document.createElement("div");
         slide.classList.add("swiper-slide"); 
         slide.innerHTML = `
-            <div class="mt-[65px] rounded-[10px] bg-[#EBEBEB] dark:bg-[#303030] h-[300px] w-[220px] flex flex-col pt-[150px] items-center">
+            <div class="mt-[65px] rounded-[10px] bg-[#EBEBEB] dark:bg-[#303030] h-[320px] w-[220px] flex flex-col pt-[150px] items-center">
                 <img class="w-[55px] h-[45px]" src="./assets/icons/img.svg" class="flex-1">  <!-- Fixed src -->
                 <div class="  mt-auto w-[160px] h-[80px] dark:bg-black bg-[#F5F5F5] mb-[20px] text-center">
                     <p class="dark:text-white text-[#2E2E2E] mt-[15px]">${member.name}</p>

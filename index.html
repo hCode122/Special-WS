@@ -18,8 +18,8 @@
     <img class="absolute top-[4370px] left-[9vw]" src="./assets/imgs/bg-leaf-1.png" > 
 
     <div name="upper" class=" ">
-        <div name="hero" class="">
-            <div name="colomns-container" class="flex flex-col lg:flex-row justify-center items-center  md:h-[900px] lg:h-[750px]">
+        <div name="hero" class="h-[1200px] lg:h-[800px]">
+            <div name="colomns-container" class="flex flex-col lg:flex-row justify-center items-center  h-[900px] lg:h-[750px]">
                 <div name="nav-title-section" class="lg:ml-auto flex flex-col max-w-[850px] justify-between self-start h-[650px] flex-1">
                     <nav class="flex mt-8  h-8 w-[600px]">
                         <img src="./assets/icons/logo-dark.svg"  class="h-8 mr-auto cursor-pointer block dark:hidden">
@@ -41,14 +41,14 @@
                         Let our tech and design experts help you <span class="text-[#2E2E2E] dark:text-white">elevate your digital presence</span>
                         and achieve your business goals.
                     </p>
-                    <div class="flex lg:flex-row  md:flex-row items-start md:items-center mt-8 md:mt-16 gap-4 max-w-[580px] flex
+                    <div class="flex lg:flex-row  md:flex-col items-start md:items-center mt-8 md:mt-16 gap-4 max-w-[580px] flex
                     ">
                         <a class="w-[180px] md:w-48 border-2 dark:border-white border-black rounded-3xl relative
-                        text-white  cursor-pointer contact-animation  ">   
+                          cursor-pointer contact-animation dark:hover:text-[#2A2A2A] hover:text-white dark:text-white text-[#2A2A2A]">   
                             <img class="absolute bg-white dark:block hidden" src="./assets/icons/right-arrow-dark.svg "> 
                             <img class="absolute bg-[#2E2E2E] dark:hidden block" src="./assets/icons/right-arrow.svg "> 
 
-                            <span class="absolute dark:text-white text-[#2A2A2A] hover:text-white dark:hover:text-[#2A2A2A]">Contact us</span>
+                            <span class="absolute   ">Contact us</span>
                         </a>
                         <div class="flex items-center ">
                             <img class="pulsing-animation" src="./assets/icons/blue-circle.svg">
@@ -57,7 +57,7 @@
                     </div>
                 </div>
         
-                <div name="hero-image" class="relative md:w-[350px] lg:w-[35vw]">
+                <div name="hero-image" class="relative md:w-[45vw] lg:w-[35vw]">
                     <img src="./assets/imgs/hero-img-dark.png" class="dark:block hidden">
                     <img src="./assets/imgs/hero-img.png" class="dark:hidden block">
 
@@ -73,63 +73,106 @@
             </div>
         </div>
         
-        <div id="who-is" class="flex flex-col justify-center gap-32 mt-32 h-[538px] lg:flex-row">
-            <div name="left" class="flex-1 max-w-[400px] flex-col flex">
-                <span class="flex-col  ">
-                    <h2 class="text-[2rem] font-bold text-[#2A2A2A] dark:text-white">Who is <span class="text-blue-500">Special Team</span></h2>
+        <div id="who-is" class="hidden lg:flex flex-col lg:flex-row justify-center gap-32 mt-32 lg:mt-12 h-[538px]">
+            <div name="left" class="flex-1 max-w-[400px] flex flex-col">
+                <span class="flex-col self-start">
+                    <h2 class="text-[2rem] font-bold text-[#2A2A2A] dark:text-white">
+                        Who is <span class="text-blue-500">Special Team</span>
+                    </h2>
                     <p class="text-[18px] text-[#5C5C5C]">Your Partner in Innovative Tech Solutions</p>
                 </span>
                 <div class="mt-8 lg:mt-16 relative">
-                    <img class=" " src="./assets/imgs/who-is.png">
-                    <img class="absolute top-[60px] right-[90px] dark:hidden block" src="./assets/imgs/rocket.svg">
-                    <img class="absolute top-[60px] right-[90px] dark:block hidden" src="./assets/imgs/rocket-dark.svg">
+                    <img src="./assets/imgs/who-is.png" alt="Who is Special Team Image">
+                    <img class="absolute top-[60px] right-[90px] dark:hidden block" src="./assets/imgs/rocket.svg" alt="Rocket Light">
+                    <img class="absolute top-[60px] right-[90px] dark:block hidden" src="./assets/imgs/rocket-dark.svg" alt="Rocket Dark">
+                    <img class="absolute bottom-[60px] left-[60px] dark:hidden block" src="./assets/imgs/probe.svg" alt="Probe Light">
+                    <img class="absolute bottom-[60px] left-[60px] dark:block hidden" src="./assets/imgs/probe-dark.svg" alt="Probe Dark">
+                </div>
+            </div>
+            <div name="right" class="flex-1 max-w-[580px] flex flex-col justify-between">
+                <span class="flex flex-col gap-2">
+                    <h3 class="text-[#2E2E2E] font-bold dark:text-white text-[1.5rem]">About us</h3>
+                    <p>
+                        Our journey began with the belief that <span class="text-[#2E2E2E] dark:text-[#BBBBBB]">every individual has the potential</span> 
+                        to make a difference. With passion and perseverance, we are on the path of 
+                        <span class="text-[#2E2E2E] dark:text-[#BBBBBB]">creating solutions</span> that not only meet the needs of today 
+                        but also shape the possibilities of tomorrow.
+                    </p>
+                </span>
+                <span class="flex flex-col gap-2">
+                    <h3 class="text-[#2E2E2E] font-bold dark:text-white text-[1.5rem]">Our vision</h3>
+                    <p>
+                        Our vision is rooted in the belief that technology has the power to transform lives. 
+                        <span class="text-[#2E2E2E] dark:text-[#BBBBBB]">We aspire to lead innovation</span> by harnessing the unique talents 
+                        and perspectives of our team, creating solutions that leave a lasting impact on society 
+                        and <span class="text-[#2E2E2E] dark:text-[#BBBBBB]">inspire positive change.</span>
+                    </p>
+                </span>
+                <span class="flex flex-col">
+                    <h3 class="text-[#2E2E2E] font-bold dark:text-white text-[1.5rem]">Our mission</h3>
+                    <p>
+                        At Special Team, our mission is to <span class="text-[#2E2E2E] dark:text-[#BBBBBB]">empower tech talent</span> 
+                        and redefine what's possible in the industry. We strive to deliver solutions that not only meet 
+                        the <span class="text-[#2E2E2E] dark:text-[#BBBBBB]">highest standards of quality</span> 
+                        but also ignite a sense of purpose and possibility in everyone we touch.
+                    </p>
+                </span>
+            </div>
+        </div>
+        <div id="who-is-mobile" class="flex flex-col justify-center gap-14 mt-44 h-[800px] lg:hidden">
+            <div name="left" class="flex-1 max-w-[400px] flex  flex-col">
+                <span class="self-start">
+                    <h2 class="text-[2rem] font-bold text-[#2A2A2A] dark:text-white">Who is <span class="text-blue-500">Special Team</span></h2>
+                    <p class="text-[18px] text-[#5C5C5C]">Your Partner in Innovative Tech Solutions</p>
+                </span>
+            </div>
+            <div name="right" class="flex-1 max-w-[580px] flex gap-6 flex-col justify-between">
+                <span class="flex flex-col gap-2">
+                    <h3 class="text-[#2E2E2E] font-bold dark:text-white text-[1.5rem]">About us</h3>
+                    <p class="mt-2">Our journey began with the belief that <span class="text-[#2E2E2E]  dark:text-[#BBBBBB]">every individual has the potential</span> to make a difference. With passion and perseverance, we are on the path of <span class="text-[#2E2E2E] dark:text-[#BBBBBB]">creating solutions</span> that not only meet the needs of today but also shape the possibilities of tomorrow.</p>
+                </span>
+                <span class="flex flex-col gap-2">
+                    <h3 class="text-[#2E2E2E] font-bold dark:text-white text-[1.5rem]">Our vision</h3>
+                    <p class="mt-2">Our vision is rooted in the belief that technology has  class="mt-2"the power to transform lives. <span class="text-[#2E2E2E] dark:text-[#BBBBBB]">We aspire to lead innovation</span> by harnessing the unique talents and perspectives of our team, creating solutions that leave a lasting impact on society and <span class="text-[#2E2E2E] dark:text-[#BBBBBB]">inspire positive change.</span></p>
+                </span>
+                <span class="flex flex-col">
+                    <h3 class="text-[#2E2E2E] font-bold dark:text-white text-[1.5rem]">Our mission</h3>
+                    <p class="mt-2">At Special Team, our mission is to <span class="text-[#2E2E2E] dark:text-[#BBBBBB]">empower tech talent</span> and redefine what's possible in the industry. We strive to deliver solutions that not only meet the <span class="text-[#2E2E2E] dark:text-[#BBBBBB]">highest standards of quality</span> but also ignite a sense of purpose and possibility in everyone we touch.</p>
+                </span>
+            </div>
+            <div class="mt-4 relative">
+                <img src="./assets/imgs/who-is.png" alt="Who is Special Team Image">
+                <img class="absolute top-[60px] right-[90px] dark:hidden block" src="./assets/imgs/rocket.svg" alt="Rocket Light">
+                <img class="absolute top-[60px] right-[90px] dark:block hidden" src="./assets/imgs/rocket-dark.svg" alt="Rocket Dark">
+                <img class="absolute bottom-[60px] left-[60px] dark:hidden block" src="./assets/imgs/probe.svg" alt="Probe Light">
+                <img class="absolute bottom-[60px] left-[60px] dark:block hidden" src="./assets/imgs/probe-dark.svg" alt="Probe Dark">
+            </div>
+        </div>
 
-                    <img class="absolute bottom-[60px] left-[60px] dark:hidden block" src="./assets/imgs/probe.svg">
-                    <img class="absolute bottom-[60px] left-[60px] dark:block hidden" src="./assets/imgs/probe-dark.svg">
-                </div>
-            </div>
-            <div name="right" class="flex-1  flex-col max-w-[580px] justify-between flex ">
-                <span class="flex flex-col gap-2">
-                    <h3 class="text-[#2E2E2E] bold dark:text-white text-[1.5rem]">About us</h3>
-                    <p>Our journey began with the belief that <span class="text-[#2E2E2E] dark:text-[#BBBBBB]">every individual has the potential</span> to make a difference. With passion and perseverance,
-                         we are on the path of <span class="text-[#2E2E2E] dark:text-[#BBBBBB]">creating solutions</span> that not only meet the needs of today but also shape the possibilities of tomorrow.</p>
-                </span>
-                <span class="flex flex-col gap-2">
-                    <h3 class="text-[#2E2E2E] bold dark:text-white text-[1.5rem]">Our vision</h3>
-                    <p>Our vision is rooted in the belief that technology has the power to transform lives. <span class="text-[#2E2E2E] dark:text-[#BBBBBB]">We aspire to lead innovation</span> by harnessing the unique talents and perspectives of our team,
-                         creating solutions that leave a lasting impact on society and <span class="text-[#2E2E2E] dark:text-[#BBBBBB]">inspire positive change.</span></p>
-                </span>
-                <span class="flex flex-col ">
-                    <h3 class="text-[#2E2E2E] bold dark:text-white text-[1.5rem]">Our mission</h3>
-                    <p>At Special Team, our mission is to <span class="text-[#2E2E2E] dark:text-[#BBBBBB]">empower tech talent</span> and redefine what's possible in the industry. We strive to deliver solutions
-                         that not only meet the <span class="text-[#2E2E2E] dark:text-[#BBBBBB]">highest standards of quality</span> but also ignite a sense of purpose and possibility in everyone we touch.</p>
-                </span>
-            </div>
-        </div>
-        <div id="what-do" class="lg:mt-16 mt-64 lg:ml-16  ">
-                <h2 class="text-[2rem] ml-24 font-bold text-[#2A2A2A] dark:text-white">What we <span class="text-blue-500">do?</span></h2>
-                <p class=" mt-6 text-[18px] ml-24 text-[#5C5C5C]">We offer tailored Tech Services</p>
-                <div class="flex flex-col lg:flex-row justify-evenly gap-4 mt-24 h-[180px]">
-                    <div class="service-block bar rounded-[10px] max-w-[368px]">
-                        <div class="h-48 flex flex-col justify-center ml-12">
-                            <h3 class="text-[1.5rem] font-bold dark:text-white text-[#5C5C5C] ">Web development</h3>
-                            <p class="pt-2 dark:text-white text-[#5C5C5C]">Lorem ipsum dolor sit amet, saconsectetur adipiscing elit, </p>
-                        </div>
-                    </div>
-                    <div class="service-block2 bar2 rounded-[10px] max-w-[368px]">
-                        <div class="h-48 flex flex-col justify-center ml-12">
-                            <h3 class="text-[1.5rem] font-bold dark:text-white text-[#5C5C5C]">UI UX Design</h3>
-                            <p class="pt-2 dark:text-white text-[#5C5C5C]">user interface design / ux research information architecture /ux writing </p>
-                        </div>
-                    </div>
-                    <div class="service-block3 bar3 rounded-[10px] max-w-[368px]">
-                        <div class="h-48 flex flex-col justify-center ml-12">
-                            <h3 class="text-[1.5rem] font-bold dark:text-white text-[#5C5C5C]">App Development</h3>
-                            <p class="pt-2 dark:text-white text-[#5C5C5C]">Lorem ipsum dolor sit amet, saconsectetur adipiscing elit, </p>
-                        </div>
+        <div id="what-do" class="lg:mt-16 mt-64 lg:ml-16 h-[750px] lg:h-[400px]">
+            <h2 class="text-[2rem] lg:ml-24 ml-4 font-bold text-[#2A2A2A] dark:text-white">What we <span class="text-blue-500">do?</span></h2>
+            <p class=" mt-6 text-[18px] lg:ml-24 ml-4 text-[#5C5C5C]">We offer tailored Tech Services</p>
+            <div class="flex flex-col lg:flex-row justify-evenly items-center gap-4 mt-64 lg:mt-24 h-[180px]">
+                <div class="service-block bar rounded-[10px] max-w-[368px]">
+                    <div class="h-48 flex flex-col justify-center ml-12">
+                        <h3 class="text-[1.5rem] font-bold dark:text-white text-[#5C5C5C] ">Web development</h3>
+                        <p class="pt-2 dark:text-white text-[#5C5C5C]">Lorem ipsum dolor sit amet, saconsectetur adipiscing elit, </p>
                     </div>
                 </div>
-        </div>
+                <div class="service-block2 bar2 rounded-[10px] max-w-[368px]">
+                    <div class="h-48 flex flex-col justify-center ml-12">
+                        <h3 class="text-[1.5rem] font-bold dark:text-white text-[#5C5C5C]">UI UX Design</h3>
+                        <p class="pt-2 dark:text-white text-[#5C5C5C]">user interface design / ux research information architecture /ux writing </p>
+                    </div>
+                </div>
+                <div class="service-block3 bar3 rounded-[10px] max-w-[368px]">
+                    <div class="h-48 flex flex-col justify-center ml-12">
+                        <h3 class="text-[1.5rem] font-bold dark:text-white text-[#5C5C5C]">App Development</h3>
+                        <p class="pt-2 dark:text-white text-[#5C5C5C]">Lorem ipsum dolor sit amet, saconsectetur adipiscing elit, </p>
+                    </div>
+                </div>
+            </div>
+         </div>
     </div>
 
     <div class="swiper2 w-full flex justify-center items-center overflow-hidden mt-[56px]" >
@@ -154,21 +197,21 @@
                         <img class="w-[200px]  h-[200px]" src="./assets/imgs/leaf1.png">
                         <p class="absolute top-4 left-16 text-[100px] text-white empty-text">1</p>
                     </div>
-                    <p class="w-[220px] h-[200px] text-center text-[#2A2A2A] dark:text-white pt-[70px] pr-4 font-bold ">Implementation</p>
+                    <p class="w-[220px] h-[200px] text-center text-[#2A2A2A] dark:text-white pt-[70px] pr-4 font-bold text-[1.5rem] lg:text-[2rem] ">Implementation</p>
                     <div class="relative">
                         <p class="absolute top-4 left-20 text-[100px] text-white empty-text ">3</p>
                         <img class="w-[200px] h-[200px]" src="./assets/imgs/leaf3.png">
                     </div>
-                    <p class="w-[220px] h-[200px] text-right text-[#2A2A2A] dark:text-white pt-[70px] pr-4 font-bold ">Handover and Support</p>
+                    <p class="w-[220px] h-[200px] text-right text-[#2A2A2A] dark:text-white pt-[70px] pr-4 font-bold text-[1.5rem] lg:text-[2rem] ">Handover and Support</p>
 
                 </div>
                 <div name="right" class="flex flex-col justify-evenly items-center">
-                    <p class=" w-[202px] h-[200px] text-left text-[#2A2A2A] dark:text-white  pt-[70px] font-bold">Consultation and Planning</p>
+                    <p class=" w-[202px] h-[200px] text-left text-[#2A2A2A] dark:text-white  pt-[70px] font-bold text-[1.5rem] lg:text-[2rem]">Consultation and Planning</p>
                     <div class="relative">
                         <img class="w-[200px]  h-[200px]" src="./assets/imgs/leaf2.png">
                         <p class="absolute top-4 left-16 text-[100px] text-white empty-text">2</p>
                     </div>
-                    <p class=" w-[200px] h-[200px] text-left text-[#2A2A2A] dark:text-white pt-[70px] font-bold ">Review and Refinement</p>
+                    <p class=" w-[200px] h-[200px] text-left text-[#2A2A2A] dark:text-white pt-[70px] font-bold text-[1.5rem] lg:text-[2rem] ">Review and Refinement</p>
                     <div class="relative">
                         <img class="w-[200px]  h-[200px]" src="./assets/imgs/leaf4.png">
                         <p class="absolute top-4 left-16 text-[100px] text-white empty-text">4</p>
@@ -179,15 +222,15 @@
             </div>
         </div>
 
-        <div name="client-say" class="flex flex-col lg:ml-16  mt-32  ">
+        <div name="client-say" class="flex flex-col lg:ml-8  mt-32  ">
             <h2 class="text-[#2A2A2A] dark:text-white text-[32px] lg:ml-56  lg:mr-[0px] ml-auto mr-auto font-bold ">
                 What <span class="text-blue-500 ">clients</span> say
             </h2>
             <p class="text-gray-500 mt-[8px] text-[18px] lg:ml-56  lg:mr-[0px] ml-auto mr-auto ">Our Success Stories and Testimonials</p>
 
-            <div class="flex md:flex-col text-white lg:ml-28  lg:mr-[0px] ml-auto mr-auto gap-8 items-center mt-28 lg:flex-row lg md:max-w-[500px] lg:max-w-full"> 
+            <div class="flex flex-col text-white lg:ml-28  lg:mr-[0px] ml-auto mr-auto gap-8 items-center mt-12 lg:mt-28 lg:flex-row lg md:max-w-[500px] lg:max-w-full"> 
                 <div class="rounded-tl-[100px] flex flex-col items-center justify-center border-grad client-animation max-w-[350px]">
-                    <p class="lg:text-[0.9rem] md:text-[0.6rem] text-gray-400 lg:p-8 xl:p-12 md:p-4 sm:p-2">
+                    <p class="lg:text-[0.9rem] text-[0.8rem] text-gray-400 lg:p-8  p-2">
                         Lorem ipsum dolor sit amet, dolor consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur Lorem adipiscing consectetur sed dolor o Lorem ipsum dolor sit amet, dolor
                     </p>
                     <img src="./assets/icons/user.svg" class="mt-4 rounded-full h-12 p-2">
@@ -195,29 +238,29 @@
                     <p>CEO example agency</p>
                 </div>
                 <div class=" flex flex-col items-center justify-center border-grad2 client-animation max-w-[350px]">
-                    <p class="lg:text-[0.9rem] md:text-[0.6rem] text-gray-400 lg:p-8 xl:p-12 md:p-4 sm:p-2">
+                    <p class="lg:text-[0.9rem] text-[0.8rem] text-gray-400 lg:p-8  p-2">
                         Lorem ipsum dolor sit amet, dolor consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur Lorem adipiscing consectetur sed dolor o Lorem ipsum dolor sit amet, dolor
                     </p>
                     <img src="./assets/icons/user.svg" class="mt-4 rounded-full h-12 p-2">
                     <p class="text-[0.9rem] text-white mt-4">name</p>
                     <p>CEO example agency</p>
                 </div>
-                <div class="rounded-tr-[100px] flex flex-col items-center justify-center border-grad3 client-animation max-w-[350px]">
-                    <p class="lg:text-[0.9rem] md:text-[0.6rem] text-gray-400 lg:p-8 xl:p-12 md:p-4 sm:p-2">
+                <div class=" flex flex-col items-center justify-center border-grad2 client-animation max-w-[350px]">
+                    <p class="lg:text-[0.9rem] text-[0.8rem] text-gray-400 lg:p-8  p-2">
                         Lorem ipsum dolor sit amet, dolor consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur Lorem adipiscing consectetur sed dolor o Lorem ipsum dolor sit amet, dolor
                     </p>
                     <img src="./assets/icons/user.svg" class="mt-4 rounded-full h-12 p-2">
                     <p class="text-[0.9rem] text-white mt-4">name</p>
                     <p>CEO example agency</p>
                 </div>
-                <div name="btn" class="flex flex-col items-center justify-center rounded-full w-44 h-44 btn-cont">
+                <div name="btn" class="flex flex-col items-center justify-center rounded-full w-32 h-32 lg:w-44 lg:h-44 btn-cont">
                     <div class="icon-change w-32 h-32"></div>                
                 </div>
             </div>
         </div>
 
 
-        <div name="our-team" class=" mt-32 flex lg:ml-16 flex-col lg:flex-row gap-32">
+        <div name="our-team" class=" mt-24 lg:mt-32 flex lg:ml-16 flex-col lg:flex-row gap-32">
             <div name="textArea" class=" self-start lg:ml-56  lg:mr-[0px] ml-auto mr-auto">
                 <h2 class="text-[#2A2A2A] dark:text-white text-[32px] font-bold">
                     Our <span class="text-blue-500">Team</span>
@@ -239,20 +282,20 @@
         
 
         <div name="collab" class="mt-32 lg:ml-16 flex flex-col">
-            <h2 class="text-[#2A2A2A] dark:text-white text-[32px] ml-56 font-bold flex-1">
+            <h2 class="text-[#2A2A2A] dark:text-white text-[32px] ml-4 lg:ml-56 font-bold flex-1">
                  let's <span class="text-blue-500">collaborate</span>
             </h2>
-            <p class="text-gray-500 ml-56 mt-4 flex-1">Join Forces with Us for Your Next Big Idea</p>
+            <p class="text-gray-500 ml-4 lg:ml-56 mt-4 flex-1">Join Forces with Us for Your Next Big Idea</p>
 
-            <form class="mt-12 lg::ml-[380px] md:ml-auto md:mr-auto md:w-[75vw] flex flex-col gap-4 max-w-[750px] flex-1 dark:text-white">
-                <div class="flex gap-8 justify-center ">
-                    <div class="flex flex-1 flex-col gap-4">
+            <form class="mt-12 lg:ml-[380px] md:ml-auto md:mr-auto md:w-[75vw] flex flex-col gap-4 max-w-[750px] flex-1 dark:text-white">
+                <div class="flex gap-8 justify-center flex-col lg:flex-row ">
+                    <div class="flex flex-1 flex-col gap-4 ml-4 mr-4">
                         <label>First Name</label>
                         <input  class="rounded-md dark:bg-[#303030] bg-[#E2E2E2] h-[55px]">
                         <label>Email Address</label>
                         <input  class="rounded-md dark:bg-[#303030] bg-[#E2E2E2] h-[55px]">
                     </div>
-                    <div class="flex flex-1 flex-col gap-4">
+                    <div class="flex flex-1 flex-col gap-4 ml-4 mr-4">
                         <label>Last Name</label>
                         <input  class="rounded-md dark:bg-[#303030] bg-[#E2E2E2] h-[55px]">
                         <label>choose service</label>
@@ -269,23 +312,23 @@
                     </div>
 
                 </div>
-                <label class="mt-6">Tell Us More</label>
-                <textarea class="dark:bg-[#303030] bg-[#E2E2E2] h-[200px] w-full  rounded-md">
+                <label class="mt-6 ml-4 mr-4">Tell Us More</label>
+                <textarea class="dark:bg-[#303030] bg-[#E2E2E2] h-[200px] w-full ml-4 mr-4 rounded-md">
 
                 </textarea>
-                <button class="mr-[auto] border-[1px] dark:border-white border-[#2E2E2E] rounded-[24px] mt-[30px] w-[200px] p-2 submit-animation">Submit</button>
+                <button class="ml-auto mr-auto lg:ml-[0px] border-[1px] dark:border-white border-[#2E2E2E] rounded-[24px] mt-[30px] w-[200px] p-2 submit-animation">Submit</button>
             </form>
 
 
         </div>
     </div>
 
-    <footer class=" mt-12  ml-auto mr-auto pt-4 w-[80%] h-[100px]">
-        <div class="flex footer-border justify-between items-center h-full">
+    <footer class=" mt-12 w-full  ml-auto mr-auto pt-4 lg:w-[80%] h-[100px]">
+        <div class="lg:flex footer-border hidden justify-between items-center h-full">
             <div class="flex gap-4 ">
                 <img src="./assets/icons/logo-dark.svg"  class="cursor-pointer block dark:hidden">
                         <img src="./assets/icons/logo.svg"  class="cursor-pointer hidden dark:block">
-                <p class="text-white">Special Team</p>
+                <p class="text-white dark:text-">Special Team</p>
             </div>
             <p class=" text-center text-[#2E2E2E]">Copyright © 2024 Specialteam.com</p>
             <div class="flex gap-4 items-center " >
@@ -298,6 +341,25 @@
             </div>
         </div>
         
+        <div name="mobile-footer" class="flex flex-col justify-center items-center lg:hidden">
+            <div class="flex w-[90%]  justify-between items-center">
+                <div class="flex gap-4 ">
+                    <img src="./assets/icons/logo-dark.svg"  class="cursor-pointer block dark:hidden">
+                            <img src="./assets/icons/logo.svg"  class="cursor-pointer hidden dark:block">
+                    <p class="text-[#2E2E2E] dark:text-white">Special Team</p>
+                </div>
+                <div class="flex gap-4 items-center " >
+                    <p class="dark:text-gray-500 text-[#2E2E2E]">Dark Mode</p>
+                    <div class="dark:bg-[#303030] bg-[#E2E2E2] relative rounded-full w-20 h-10 toggle-off" id="btn-toggle ">
+                        <img src="./assets/icons/circle.svg" 
+                             class="absolute h-full w-10 cursor-pointer"
+                             id="circle-toggle">
+                      </div>
+                </div>
+            </div>
+            <p class=" text-center mt-8 mb-12 font-[12px] text-[#2E2E2E]">Copyright © 2024 Specialteam.com</p>
+
+        </div>
     </footer>
 
     
