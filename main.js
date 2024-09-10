@@ -15,14 +15,38 @@ export function toggle() {
     }
 }
 
+export function toggleNav() {
+    const btn = document.getElementById("nav-btn");
+    const navMenu = document.getElementById("nav-menu");
+
+    if (navMenu.classList.contains('nav-off')) {
+        navMenu.classList.remove("nav-off");
+        navMenu.classList.add("nav-on");
+        btn.textContent = "Hide";  
+    } else {
+        navMenu.classList.remove("nav-on");
+        navMenu.classList.add("nav-off");
+        btn.textContent = "Show";  
+    }
+}
+
 
 
 document.addEventListener("DOMContentLoaded", function () {
+    const navBtn = document.getElementById('nav-btn');
+    navBtn.addEventListener('click', toggleNav);
+
+    const navBtn2 = document.getElementById('nav-btn2');
+    navBtn2.addEventListener('click', toggleNav);
+
     const dropdownToggle = document.getElementById('dropdown-toggle');
     dropdownToggle.addEventListener('click', dropdown);
 
     const btnToggle = document.getElementById('btn-toggle');
     btnToggle.addEventListener('click', toggle);
+    const btnToggle2 = document.getElementById('btn-toggle2');
+    btnToggle2.addEventListener('click', toggle);
+
 
 
     const members = [
@@ -39,14 +63,14 @@ document.addEventListener("DOMContentLoaded", function () {
         const slide = document.createElement("div");
         slide.classList.add("swiper-slide"); 
         slide.innerHTML = `
-            <div class="mt-[65px] rounded-[10px] bg-[#EBEBEB] dark:bg-[#303030] h-[320px] w-[220px] flex flex-col pt-[150px] items-center">
-                <img class="w-[55px] h-[45px]" src="./assets/icons/img.svg" class="flex-1">  <!-- Fixed src -->
-                <div class="  mt-auto w-[160px] h-[80px] dark:bg-black bg-[#F5F5F5] mb-[20px] text-center">
-                    <p class="dark:text-white text-[#2E2E2E] mt-[15px]">${member.name}</p>
-                    <p class="text-grey">${member.role}</p>
-                </div>
+        <div class="rounded-[10px] bg-[#EBEBEB] dark:bg-[#303030] h-full gap-[50px] flex flex-col justify-center">
+            <img class="w-[80px] ml-auto mr-auto mt-[100px]" src="./assets/icons/img.svg"> 
+            <div class="w-[60px] h-[100px] dark:bg-black bg-[#F5F5F5]  text-center">
+                <p class="dark:text-white text-[#2E2E2E] ">${member.name}</p>
+                <p class="text-grey">${member.role}</p>
             </div>
-        `;
+        </div>
+    `;
         
         swiperContainer.appendChild(slide);
     });
@@ -65,6 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
         {src:"./assets/icons/ps.svg"},
         {src:"./assets/icons/word.svg"},
         {src:"./assets/icons/f.svg"},
+        {src:"./assets/icons/f-dark.svg"},
         {src:"./assets/icons/ps.svg"},
         {src:"./assets/icons/pr.svg"},
         {src:"./assets/icons/ai.svg"},
@@ -83,27 +108,49 @@ document.addEventListener("DOMContentLoaded", function () {
     members2.forEach(member => {
         const slide = document.createElement("div");
         slide.classList.add("swiper-slide"); 
-        slide.innerHTML = `
-            <img class=" " src="${member.src}">
-        `;
-        swiperWrapper.appendChild(slide);
+        if (member.src== "./assets/icons/f.svg") {
+            if (document.documentElement.classList.contains('dark')) {
+                slide.innerHTML = `
+                    <img class="" src="${member.src}">
+                `;
+                swiperWrapper.appendChild(slide);
+
+            }
+        } else {
+            slide.innerHTML = `
+                    <img class="" src="${member.src}">
+                `;
+                swiperWrapper.appendChild(slide);
+
+        }
     });
 
     const swiper = new Swiper('.swiper', {
         direction: 'horizontal',
         loop: true,
-        slidesPerView: 2.5,
+        slidesPerView: 1.5,
         autoplay: {
             delay: 1500
-        }
+        },
+        breakpoints: {
+            1024: {
+                slidesPerView: 2.5,
+            }
+        },
+        spaceBetween: 35
       });
 
     const swiper2 = new Swiper('.swiper2', {
         direction: 'horizontal',
         loop: true,
-        slidesPerView: 12,
+        slidesPerView: 6,
         autoplay: {
             delay: 1500
+        },
+        breakpoints: {
+            1024: {
+                slidesPerView: 12,
+            }
         }
       });
       
@@ -132,14 +179,19 @@ const items = [
 export function populateDropdown(items) {
     const dropdownMenu = document.getElementById('dropdown-menu');
     dropdownMenu.innerHTML = '';
+    const ul = document.createElement('ul');
 
     items.forEach(item => {
+        const li = document.createElement('li');
         const p = document.createElement('p');
-        p.className = 'item  bg-[#262626] w-full h-full text-start pl-4 pb-4 pt-[18px] text-white text-[14px]  border-2 border-[#262626]';
+
+        li.className = 'item bg-white text-[#2E2E2E]  dark:bg-[#262626] w-full h-full text-start pl-4 pb-4 pt-[18px] dark:text-white text-[14px]  border-2 border-[#262626]';
         p.textContent = item;
-        p.onclick = () => setSelectedItem(item); 
-        dropdownMenu.appendChild(p);
+        li.onclick = () => setSelectedItem(item); 
+        li.appendChild(p)
+        ul.appendChild(li)
     });
+    dropdownMenu.appendChild(ul);
 }
 
 export function setSelectedItem(itemText) {

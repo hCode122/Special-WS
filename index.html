@@ -17,11 +17,11 @@
     <img class="absolute top-[3920px] left-[9vw]" src="./assets/imgs/bg-leaf-1.png" > 
     <img class="absolute top-[4370px] left-[9vw]" src="./assets/imgs/bg-leaf-1.png" > 
 
-    <div name="upper" class="ml-4 mr-4 ">
-        <div name="hero" class="h-[1100px] lg:h-[800px]">
-            <div name="colomns-container" class="flex flex-col lg:flex-row justify-center items-center  h-[900px] lg:h-[750px]">
-                <div name="nav-title-section" class="lg:ml-auto flex flex-col lg:w-[850px] justify-between self-start h-[650px] flex-1">
-                    <nav class="flex mt-8  h-8 lg:w-[600px]">
+    <div name="upper" class="ml-4 mr-4 md:ml-0 md:mr-0 w-full overflow-x:hidden">
+        <div name="hero" class="h-[1200px] md:h-[800px] md:ml-[5%]">
+            <div name="colomns-container" class="flex flex-col md:flex-row justify-center  items-center  h-[800px] md:h-[750px]">
+                <div name="nav-title-section" class="md:ml-auto flex flex-col md:w-[20vw]  md:justify-between items-center self-start flex-1">
+                    <nav class=" mt-8  md:self-start h-8 w-[40vw] hidden md:flex">
                         <img src="./assets/icons/logo-dark.svg"  class="h-8 mr-auto cursor-pointer block dark:hidden">
                         <img src="./assets/icons/logo.svg"  class="h-8 mr-auto cursor-pointer hidden dark:block">
 
@@ -32,32 +32,44 @@
                             <li class="text-gray-400 dark:hover:text-white hover:text-black"><a class="cursor-pointer">Contact</a></li>
                         </ul>
                     </nav>
-                    <h1 class="text-[#868686] text-[2rem] lg:text-[4rem] mt-[80px] ">
-                        <span class="dark:bg-[#2E2E2E] bg-[#EBEBEB] dark:text-white text-[#2E2E2E] rounded-lg p-1">Special</span> Solutions for a 
-                        <span class="dark:bg-[#2E2E2E] bg-[#EBEBEB] dark:text-white text-[#2E2E2E] rounded-lg p-1">Special</span> future
+                    <nav name="mobile-nav" class="flex md:hidden mt-8 w-full h-8 relative ">
+                        <img src="./assets/icons/logo-dark.svg"  class="h-8 mr-auto cursor-pointer block dark:hidden">
+                        <img src="./assets/icons/logo.svg"  class="h-8 mr-auto cursor-pointer hidden dark:block">
+                        <button class="self-end bg-blue-500 text-white px-4 py-2 rounded-md" id="nav-btn">Show</button>
+                        <ul id="nav-menu" class="fixed dark:bg-[#F5F5F5E5] nav-off rounded-lg h-[35%] w-[250px] gap-4 p-6 bg-white z-12 text-white transform translate-x-full transition-transform duration-500 ease-in-out">
+                            <button class="self-end  text-black px-4 py-2 rounded-md mb-4" id="nav-btn2">Hide</button>
+                            <li class="text-black  py-2 px-4 rounded-md cursor-pointer"><a>Home</a></li>
+                            <li class="dark:hover:text-white hover:text-black text-gray-400  py-2 px-4 rounded-md cursor-pointer"><a>About Us</a></li>
+                            <li class="dark:hover:text-white hover:text-black text-gray-400 py-2 px-4 rounded-md cursor-pointer"><a>Services</a></li>
+                            <li class="dark:hover:text-white hover:text-black text-gray-400 py-2 px-4 rounded-md cursor-pointer"><a>Contact</a></li>
+                        </ul>
+                    </nav>
+                    <h1 class="text-[#868686] text-[3rem] md:text-[4rem] mt-32 text-start mt-50px ">
+                        <span class="dark:bg-[#2E2E2E] bg-[#EBEBEB] dark:text-white  text-[#2E2E2E] rounded-lg p-1">Special</span> Solutions for a 
+                        <span class="dark:bg-[#2E2E2E] bg-[#EBEBEB] dark:text-white  text-[#2E2E2E] rounded-lg p-1">Special</span> future
                     </h1>
-                    <p class="max-w-[445px] mt-4 md:mt-8">
+                    <p class="md:w-[30vw]  w-ful mt-8 text-center md:text-start md:mr-auto">
                         At Special Team, we create <span class="text-[#2E2E2E] dark:text-white">custom web and app solutions</span> to bring your ideas to life.
                         Let our tech and design experts help you <span class="text-[#2E2E2E] dark:text-white">elevate your digital presence</span>
                         and achieve your business goals.
                     </p>
-                    <div class="flex lg:flex-row  flex-col items-start items-center mt-8 md:mt-16 gap-4 max-w-[580px] flex
+                    <div class="flex md:flex-row flex-col md:items-start items-center md:mr-auto mt-8 md:mt-32 gap-4 w-[40vw] 
                     ">
-                        <a class="w-[48vw] lg:w-[180px] md:w-48 border-2 dark:border-white border-black rounded-3xl relative
+                        <a class="w-[33vw] md:w-48 border-2 dark:border-white border-black rounded-3xl relative
                           cursor-pointer contact-animation dark:hover:text-[#2A2A2A] hover:text-white dark:text-white text-[#2A2A2A]">   
                             <img class="absolute bg-white dark:block hidden" src="./assets/icons/right-arrow-dark.svg "> 
                             <img class="absolute bg-[#2E2E2E] dark:hidden block" src="./assets/icons/right-arrow.svg "> 
 
                             <span class="absolute   ">Contact us</span>
                         </a>
-                        <div class="flex w-[37vw] items-center ">
+                        <div class="flex w-[30vw] md:w-[15vw] items-center ">
                             <img class="pulsing-animation w-[50px]" src="./assets/icons/blue-circle.svg">
-                            <p class="dark:text-white text-[#2A2A2A] text-[0.7rem]">Available for new projects</p>
+                            <p class="dark:text-white text-[#2A2A2A] md:text-[0.9rem] text-[0.7rem]">Available for new projects</p>
                         </div>
                     </div>
                 </div>
         
-                <div name="hero-image" class="relative mt-16 w-[75vw] lg:w-[35vw]">
+                <div name="hero-image" class="relative mt-4 w-[75vw] h-[5vh] md:h-auto md:w-[35vw]  block ">
                     <img src="./assets/imgs/hero-img-dark.png" class="dark:block hidden">
                     <img src="./assets/imgs/hero-img.png" class="dark:hidden block">
 
@@ -73,23 +85,23 @@
             </div>
         </div>
         
-        <div id="who-is" class="hidden lg:flex flex-col lg:flex-row justify-center gap-32 lg:mt-12 h-[538px]">
-            <div name="left" class="flex-1 max-w-[400px] flex flex-col">
+        <div id="who-is" class="hidden md:flex flex-col md:flex-row md:ml-[15%] md:mr-[6%] justify-center gap-18 mt-32 md:mt-12 h-[538px]">
+            <div name="left" class="flex-1  flex flex-col">
                 <span class="flex-col self-start">
-                    <h2 class="text-[2rem] lg:ml-auto mr-auto font-bold text-[#2A2A2A] dark:text-white">
+                    <h2 class="text-[2rem] md:ml-auto mr-auto font-bold text-[#2A2A2A] dark:text-white">
                         Who is <span class="text-blue-500">Special Team</span>
                     </h2>
                     <p class="text-[18px] text-[#5C5C5C]">Your Partner in Innovative Tech Solutions</p>
                 </span>
-                <div class="mt-8 lg:mt-16 relative">
+                <div class="mt-8 md:mt-16 relative">
                     <img src="./assets/imgs/who-is.png" alt="Who is Special Team Image">
-                    <img class="absolute top-[60px] right-[90px] dark:hidden block" src="./assets/imgs/rocket.svg" alt="Rocket Light">
-                    <img class="absolute top-[60px] right-[90px] dark:block hidden" src="./assets/imgs/rocket-dark.svg" alt="Rocket Dark">
+                    <img class="absolute top-[60px] left-[250px] dark:hidden block" src="./assets/imgs/rocket.svg" alt="Rocket Light">
+                    <img class="absolute top-[60px] left-[250px] dark:block hidden" src="./assets/imgs/rocket-dark.svg" alt="Rocket Dark">
                     <img class="absolute bottom-[60px] left-[60px] dark:hidden block" src="./assets/imgs/probe.svg" alt="Probe Light">
                     <img class="absolute bottom-[60px] left-[60px] dark:block hidden" src="./assets/imgs/probe-dark.svg" alt="Probe Dark">
                 </div>
             </div>
-            <div name="right" class="flex-1 max-w-[580px] flex flex-col justify-between">
+            <div name="right" class="flex-1  flex flex-col justify-between">
                 <span class="flex flex-col gap-2">
                     <h3 class="text-[#2E2E2E] font-bold dark:text-white text-[1.5rem]">About us</h3>
                     <p>
@@ -119,14 +131,14 @@
                 </span>
             </div>
         </div>
-        <div id="who-is-mobile" class="flex flex-col justify-center gap-14 mt-44 h-[800px] lg:hidden">
+        <div id="who-is-mobile" class="flex flex-col justify-center gap-14 mt-44 h-[870px] md:hidden">
             <div name="left" class="flex-1 max-w-[400px] flex  flex-col">
                 <span class="self-start">
                     <h2 class="text-[2rem] font-bold text-[#2A2A2A] dark:text-white">Who is <span class="text-blue-500">Special Team</span></h2>
                     <p class="text-[18px] text-[#5C5C5C]">Your Partner in Innovative Tech Solutions</p>
                 </span>
             </div>
-            <div name="right" class="flex-1 max-w-[580px] flex gap-6 flex-col justify-between">
+            <div name="right" class="flex-1 max-w-[580px] ml-4 flex gap-6 flex-col justify-between">
                 <span class="flex flex-col gap-2">
                     <h3 class="text-[#2E2E2E] font-bold dark:text-white text-[1.5rem]">About us</h3>
                     <p class="mt-2">Our journey began with the belief that <span class="text-[#2E2E2E]  dark:text-[#BBBBBB]">every individual has the potential</span> to make a difference. With passion and perseverance, we are on the path of <span class="text-[#2E2E2E] dark:text-[#BBBBBB]">creating solutions</span> that not only meet the needs of today but also shape the possibilities of tomorrow.</p>
@@ -140,7 +152,7 @@
                     <p class="mt-2">At Special Team, our mission is to <span class="text-[#2E2E2E] dark:text-[#BBBBBB]">empower tech talent</span> and redefine what's possible in the industry. We strive to deliver solutions that not only meet the <span class="text-[#2E2E2E] dark:text-[#BBBBBB]">highest standards of quality</span> but also ignite a sense of purpose and possibility in everyone we touch.</p>
                 </span>
             </div>
-            <div class="mt-4 relative">
+            <div class="mt-4 relative ml-auto mr-auto md:ml-0 md:mr-0">
                 <img src="./assets/imgs/who-is.png" alt="Who is Special Team Image">
                 <img class="absolute top-[60px] right-[90px] dark:hidden block" src="./assets/imgs/rocket.svg" alt="Rocket Light">
                 <img class="absolute top-[60px] right-[90px] dark:block hidden" src="./assets/imgs/rocket-dark.svg" alt="Rocket Dark">
@@ -149,10 +161,10 @@
             </div>
         </div>
 
-        <div id="what-do" class="lg:mt-16 mt-64 lg:ml-16 h-[750px] lg:h-[400px]">
-            <h2 class="text-[2rem] lg:ml-24 lg:ml-auto mr-auto font-bold text-[#2A2A2A] dark:text-white">What we <span class="text-blue-500">do?</span></h2>
-            <p class=" mt-6 text-[18px] lg:ml-24 lg:ml-auto mr-auto text-[#5C5C5C]">We offer tailored Tech Services</p>
-            <div class="flex flex-col lg:flex-row justify-evenly items-center gap-4 mt-64 lg:mt-24 h-[180px]">
+        <div id="what-do" class="md:mt-16 mt-32   h-[750px] md:h-[400px]">
+            <h2 class="text-[2rem] md:ml-[15%]  mt-12  mr-auto font-bold text-[#2A2A2A] dark:text-white">What we <span class="text-blue-500">do?</span></h2>
+            <p class=" mt-6 text-[18px] md:ml-[15%]  mr-auto text-[#5C5C5C]">We offer tailored Tech Services</p>
+            <div class="flex flex-col md:flex-row justify-evenly items-center gap-4 mt-64 md:mt-24 h-[180px]">
                 <div class="service-block bar rounded-[10px] max-w-[368px]">
                     <div class="h-48 flex flex-col justify-center ml-12">
                         <h3 class="text-[1.5rem] font-bold dark:text-white text-[#5C5C5C] ">Web development</h3>
@@ -175,9 +187,9 @@
          </div>
     </div>
 
-    <div class="swiper2 w-full flex justify-center items-center overflow-hidden mt-[56px]" >
+    <div class="swiper2 w-full overflow-hidden mt-[56px] flex justify-center" >
       
-        <div  id="swiper-wrapper" class="swiper-wrapper">
+        <div  id="swiper-wrapper" class="swiper-wrapper mx-auto w-full">
       
 
          </div>
@@ -185,36 +197,36 @@
    
    
 
-    <div name="bottom" class="mt-[66px] ml-2 mr-2">
-        <div name="pr-flow" class="flex flex-col lg:ml-16">
-            <h2 class="text-[2rem] lg:ml-auto mr-auto lg:ml-56 font-bold text-[#2A2A2A] dark:text-white">
-                Project <span class="text-blue-500">workflow</span>
+    <div name="bottom" class="mt-[66px]   ml-2 mr-2 md:ml-0 md:mr-0">
+        <div name="pr-flow" class="flex flex-col ">
+            <h2 class="text-[2rem] md:ml-[15%] mr-auto  font-bold text-[#2A2A2A] dark:text-white">
+                Project <span class="text-blue-500 ">workflow</span>
             </h2>
-            <p class="text-gray-500 lg:ml-auto mr-auto lg:ml-56">From Concept to Completion, Seamlessly</p>
-            <div class="flex mt-[78px]  m-auto text-[28px]">
+            <p class="text-gray-500 mr-auto mt-4 md:ml-[15%]">From Concept to Completion, Seamlessly</p>
+            <div class="flex mt-12 ml-auto  mr-auto ">
                 <div name="left" class="flex flex-col  justify-evenly items-center">
                     <div class="relative">
-                        <img class="w-[150px] h-[150px] lg:w-[200px]  lg:h-[200px]" src="./assets/imgs/leaf1.png">
-                        <p class="absolute top-4 left-16 text-[100px] text-white empty-text">1</p>
+                        <img class="w-[150px] h-[150px] md:w-[200px]  md:h-[200px]" src="./assets/imgs/leaf1.png">
+                        <p class="absolute top-4 left-14 md:left-16 text-[80px] md:text-[100px] text-white empty-text">1</p>
                     </div>
-                    <p class="w-[170px] h-[150px] lg:w-[220px] lg:h-[200px] text-center text-[#2A2A2A] dark:text-white pt-[70px] pr-4 font-bold text-[1.2rem] lg:text-[2rem] ">Implementation</p>
+                    <p class="w-[170px] h-[150px] md:w-[220px] md:h-[200px] text-center text-[#2A2A2A] dark:text-white pt-[70px] pr-2 font-bold text-[1.2rem] md:text-[1.7rem] ">Implementation</p>
                     <div class="relative">
-                        <p class="absolute top-4 left-20 text-[100px] text-white empty-text ">3</p>
-                        <img class="w-[150px] h-[150px] lg:w-[200px] lg:h-[200px]" src="./assets/imgs/leaf3.png">
+                        <p class="absolute top-4 left-14 md:left-20 text-[80px] md:text-[100px] text-white empty-text ">3</p>
+                        <img class="w-[150px] h-[150px] md:w-[200px] md:h-[200px]" src="./assets/imgs/leaf3.png">
                     </div>
-                    <p class="w-[170px] h-[150px] lg:w-[220px] lg:h-[200px] text-right text-[#2A2A2A] dark:text-white pt-[70px] pr-4 font-bold text-[1.2rem] lg:text-[2rem] ">Handover and Support</p>
+                    <p class="w-[170px] h-[150px] md:w-[220px] md:h-[200px] text-right text-[#2A2A2A] dark:text-white pt-[70px] pr-4 font-bold text-[1.2rem] md:text-[1.7rem] ">Handover and Support</p>
 
                 </div>
                 <div name="right" class="flex flex-col justify-evenly items-center">
-                    <p class=" w-[150px] h-[150px] lg:w-[202px] lg:h-[200px] text-left text-[#2A2A2A] dark:text-white  pt-[70px] font-bold text-[1.2rem] lg:text-[2rem]">Consultation and Planning</p>
+                    <p class=" w-[150px] h-[150px] md:w-[202px] md:h-[200px] text-left text-[#2A2A2A] dark:text-white  pt-[70px] font-bold text-[1.2rem] md:text-[1.9rem]">Consultation and Planning</p>
                     <div class="relative">
-                        <img class="w-[150px] h-[150px] lg:w-[200px]  lg:h-[200px]" src="./assets/imgs/leaf2.png">
-                        <p class="absolute top-4 left-16 text-[100px] text-white empty-text">2</p>
+                        <img class="w-[150px] h-[150px] md:w-[200px]  md:h-[200px]" src="./assets/imgs/leaf2.png">
+                        <p class="absolute top-4 left-12 md:left-16 text-[80px] md:text-[100px] text-white empty-text">2</p>
                     </div>
-                    <p class="w-[150px] h-[150px] lg:w-[200px] lg:h-[200px] text-left text-[#2A2A2A] dark:text-white pt-[70px] font-bold text-[1.2rem] lg:text-[2rem] ">Review and Refinement</p>
+                    <p class="w-[150px] h-[150px] md:w-[200px] md:h-[200px] text-left text-[#2A2A2A] dark:text-white pt-[70px] font-bold text-[1.2rem] md:text-[1.7rem] ">Review and Refinement</p>
                     <div class="relative">
-                        <img class="w-[150px] h-[150px] lg:w-[200px]  lg:h-[200px]" src="./assets/imgs/leaf4.png">
-                        <p class="absolute top-4 left-16 text-[100px] text-white empty-text">4</p>
+                        <img class="w-[150px] h-[150px] md:w-[200px]  md:h-[200px]" src="./assets/imgs/leaf4.png">
+                        <p class="absolute top-3 left-12 md:left-16 text-[80px] md:text-[100px] text-white empty-text">4</p>
                     </div>
 
                 </div>
@@ -222,46 +234,46 @@
             </div>
         </div>
 
-        <div name="client-say" class="flex flex-col lg:ml-8  mt-32  ">
-            <h2 class="text-[#2A2A2A] dark:text-white text-[32px] lg:ml-56  lg:mr-[0px]  mr-auto font-bold ">
+        <div name="client-say" class="flex flex-col   mt-32  ">
+            <h2 class="text-[#2A2A2A] dark:text-white text-[32px] md:ml-[15%]  md:mr-auto  mr-auto font-bold ">
                 What <span class="text-blue-500 ">clients</span> say
             </h2>
-            <p class="text-gray-500 mt-[8px] text-[18px] lg:ml-56  lg:mr-[0px] lg:ml-auto mr-auto ">Our Success Stories and Testimonials</p>
+            <p class="text-gray-500 mt-[8px] text-[18px]  md:ml-[15%]  mr-auto ">Our Success Stories and Testimonials</p>
 
-            <div class="flex flex-col text-white lg:ml-28  lg:mr-[0px] ml-auto mr-auto gap-8 items-center mt-12 lg:mt-28 lg:flex-row lg md:max-w-[500px] lg:max-w-full"> 
-                <div class="rounded-tl-[100px] flex flex-col items-center justify-center border-grad client-animation w-[80vw] lg:w-[350px]">
-                    <p class="lg:text-[0.9rem] text-[0.8rem] text-center text-gray-400 lg:p-8  p-2">
+            <div class="flex flex-col text-white md:ml-28  md:mr-[0px] md:ml-[5%] lg:ml-[15%]  gap-8 items-center mt-12 md:mt-28 md:flex-row  "> 
+                <div class="rounded-tl-[100px] flex flex-col items-center justify-center border-grad client-animation w-[70vw] md:w-[30%] lg:w-[25%]">
+                    <p class="lg:text-[0.9rem] md:text-[0.8rem] text-[0.8rem] text-center text-gray-400 md:p-8  p-2">
                         Lorem ipsum dolor sit amet, dolor consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur Lorem adipiscing consectetur sed dolor o Lorem ipsum dolor sit amet, dolor
                     </p>
                     <img src="./assets/icons/user.svg" class="mt-4 rounded-full h-12 p-2">
                     <p class="text-[0.9rem] text-white mt-4">name</p>
                     <p>CEO example agency</p>
                 </div>
-                <div class=" flex flex-col items-center justify-center border-grad2 client-animation  w-[80vw] lg:w-[350px]">
-                    <p class="lg:text-[0.9rem] text-[0.8rem] text-center  text-gray-400 lg:p-8  p-2">
+                <div class=" flex flex-col items-center justify-center border-grad2 client-animation  w-[70vw] md:w-[30%] lg:w-[25%]">
+                    <p class="lg:text-[0.9rem] md:text-[0.8rem] text-[0.8rem] text-center  text-gray-400 md:p-8  p-2">
                         Lorem ipsum dolor sit amet, dolor consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur Lorem adipiscing consectetur sed dolor o Lorem ipsum dolor sit amet, dolor
                     </p>
                     <img src="./assets/icons/user.svg" class="mt-4 rounded-full h-12 p-2">
                     <p class="text-[0.9rem] text-white mt-4">name</p>
                     <p>CEO example agency</p>
                 </div>
-                <div class=" flex flex-col items-center justify-center border-grad2 client-animation  w-[80vw] lg:w-[350px]">
-                    <p class="lg:text-[0.9rem] text-[0.8rem] text-center text-gray-400 lg:p-8  p-2">
+                <div class=" flex flex-col items-center justify-center border-grad2 client-animation  w-[70vw] md:w-[30%] lg:w-[25%]">
+                    <p class="lg:text-[0.9rem] md:text-[0.8rem] text-[0.8rem] text-center text-gray-400 md:p-8  p-2">
                         Lorem ipsum dolor sit amet, dolor consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur Lorem adipiscing consectetur sed dolor o Lorem ipsum dolor sit amet, dolor
                     </p>
                     <img src="./assets/icons/user.svg" class="mt-4 rounded-full h-12 p-2">
                     <p class="text-[0.9rem] text-white mt-4">name</p>
                     <p>CEO example agency</p>
                 </div>
-                <div name="btn" class="flex flex-col items-center justify-center rounded-full w-32 h-32 lg:w-44 lg:h-44 btn-cont">
+                <div name="btn" class="flex flex-col items-center justify-center rounded-full w-32 h-32 md:w-32 md:h-32 btn-cont">
                     <div class="icon-change w-32 h-32"></div>                
                 </div>
             </div>
         </div>
 
 
-        <div name="our-team" class=" mt-16 lg:mt-32 flex lg:ml-16 flex-col lg:flex-row gap-32">
-            <div name="textArea" class=" self-start lg:ml-56  lg:mr-[0px] ml-auto mr-auto">
+        <div name="our-team" class=" mt-16  flex  flex-col md:flex-row gap-32">
+            <div name="textArea" class=" self-start  md:ml-[15%] md:mr-[0px] ">
                 <h2 class="text-[#2A2A2A] dark:text-white text-[32px] font-bold">
                     Our <span class="text-blue-500">Team</span>
                 </h2>
@@ -270,9 +282,9 @@
             </div>
             
                     
-            <div class="swiper w-full flex justify-center items-center overflow-hidden mt-[56px]" >
+            <div class="swiper w-full flex justify-center items-center h-[350px] mt-8  md:mt-[56px]" >
               
-                <div  id="swiper-wrapper1" class="swiper-wrapper">
+                <div  id="swiper-wrapper1" class="swiper-wrapper h-full">
               
         
                  </div>
@@ -281,50 +293,45 @@
         </div>
         
 
-        <div name="collab" class="mt-32 lg:ml-16 flex flex-col">
-            <h2 class="text-[#2A2A2A] dark:text-white text-[32px] ml-4 lg:ml-56 font-bold flex-1">
+        <div name="collab" class="mt-32  flex flex-col">
+            <h2 class="text-[#2A2A2A] dark:text-white text-[32px] ml-4 md:ml-[15%] font-bold flex-1">
                  let's <span class="text-blue-500">collaborate</span>
             </h2>
-            <p class="text-gray-500 ml-4 lg:ml-56 mt-4 flex-1">Join Forces with Us for Your Next Big Idea</p>
+            <p class="text-gray-500 ml-4 md:ml-[15%] mt-4 flex-1">Join Forces with Us for Your Next Big Idea</p>
 
-            <form class="mt-12 lg:ml-[380px] md:ml-auto md:mr-auto md:w-[75vw] flex flex-col gap-4 max-w-[750px] flex-1 dark:text-white">
-                <div class="flex gap-8 justify-center flex-col lg:flex-row ">
-                    <div class="flex flex-1 flex-col gap-4 ml-4 mr-4">
+            <form class="mt-12 md:ml-[20%]  md:mr-auto md:w-[55vw] flex flex-col gap-4 flex-1 dark:text-white">
+                <div class="flex gap-8 justify-center flex-col md:flex-row w-full">
+                    <div class="flex flex-1 flex-col gap-4 lg:ml-0 lg:mr-0 ml-4 mr-4">
                         <label>First Name</label>
-                        <input  class="rounded-md dark:bg-[#303030] bg-[#E2E2E2] h-[55px]">
+                        <input class="rounded-md dark:bg-[#303030] bg-[#E2E2E2] h-[55px]">
                         <label>Email Address</label>
-                        <input  class="rounded-md dark:bg-[#303030] bg-[#E2E2E2] h-[55px]">
+                        <input class="rounded-md dark:bg-[#303030] bg-[#E2E2E2] h-[55px]">
                     </div>
-                    <div class="flex flex-1 flex-col gap-4 ml-4 mr-4">
+                    <div class="flex flex-1 flex-col gap-4 ml-4 mr-4 md:ml-0 md:mr-0">
                         <label>Last Name</label>
-                        <input  class="rounded-md dark:bg-[#303030] bg-[#E2E2E2] h-[55px]">
-                        <label>choose service</label>
+                        <input class="rounded-md dark:bg-[#303030] bg-[#E2E2E2] h-[55px]">
+                        <label>Choose Service</label>
                         <div class="rounded-md h-[55px] relative cursor-pointer dark:bg-[#303030] bg-[#E2E2E2]" id="dropdown-toggle">
                             <p id="selected-item" class="text-[#5C5C5C] dark:text-white text-[14px] text-start pt-4 pl-4">App Development</p>
                             <button type="button">
                                 <img src="./assets/icons/down-arrow.svg" class="absolute top-6 right-5">
                             </button>
-                            <div id="dropdown-menu" class="absolute top-16 flex flex-col w-full dropdown-off rounded-md" >
-                                
-                            </div>
+                            <div id="dropdown-menu" class="absolute top-16 flex flex-col w-full dropdown-off rounded-md"></div>
                         </div>  
-                        
                     </div>
-
                 </div>
-                <label class="mt-6 ml-4 mr-4">Tell Us More</label>
-                <textarea class="dark:bg-[#303030] bg-[#E2E2E2] h-[200px] w-full ml-4 mr-4 rounded-md">
-
+                <label class="mt-6 ml-4 mr-4 lg:ml-0 lg:mr-0">Tell Us More</label>
+                <textarea class="dark:bg-[#303030] bg-[#E2E2E2] h-[200px] w-full  rounded-md">
                 </textarea>
-                <button class="ml-auto mr-auto lg:ml-[0px] border-[1px] dark:border-white border-[#2E2E2E] rounded-[24px] mt-[30px] w-[200px] p-2 submit-animation">Submit</button>
+                <button class="ml-auto mr-auto md:ml-[0px] border-[1px] dark:border-white border-[#2E2E2E] rounded-[24px] mt-[30px] w-[200px] p-2 submit-animation">Submit</button>
             </form>
 
 
         </div>
     </div>
 
-    <footer class=" mt-12 w-full  ml-auto mr-auto pt-4 lg:w-[80%] h-[100px]">
-        <div class="lg:flex footer-border hidden justify-between items-center h-full">
+    <footer class=" mt-12 w-full  ml-auto mr-auto pt-4 md:w-[80%] h-[100px]">
+        <div class="md:flex footer-border hidden justify-between items-center h-full">
             <div class="flex gap-4 ">
                 <img src="./assets/icons/logo-dark.svg"  class="cursor-pointer block dark:hidden">
                         <img src="./assets/icons/logo.svg"  class="cursor-pointer hidden dark:block">
@@ -333,7 +340,7 @@
             <p class=" text-center text-[#2E2E2E]">Copyright © 2024 Specialteam.com</p>
             <div class="flex gap-4 items-center " >
                 <p class="dark:text-gray-500 text-[#2E2E2E]">Dark Mode</p>
-                <div class="dark:bg-[#303030] bg-[#E2E2E2] relative rounded-full w-20 h-10 toggle-off" id="btn-toggle" ">
+                <div class="dark:bg-[#303030] bg-[#E2E2E2] relative rounded-full w-20 h-10 toggle-off" id="btn-toggle" >
                     <img src="./assets/icons/circle.svg" 
                          class="absolute h-full w-10 cursor-pointer"
                          id="circle-toggle">
@@ -341,7 +348,7 @@
             </div>
         </div>
         
-        <div name="mobile-footer" class="flex flex-col justify-center items-center lg:hidden">
+        <div name="mobile-footer" class="flex flex-col justify-center items-center md:hidden">
             <div class="flex w-[90%]  justify-between items-center">
                 <div class="flex gap-4 ">
                     <img src="./assets/icons/logo-dark.svg"  class="cursor-pointer block dark:hidden">
@@ -350,7 +357,7 @@
                 </div>
                 <div class="flex gap-4 items-center " >
                     <p class="dark:text-gray-500 text-[#2E2E2E]">Dark Mode</p>
-                    <div class="dark:bg-[#303030] bg-[#E2E2E2] relative rounded-full w-20 h-10 toggle-off" id="btn-toggle ">
+                    <div class="dark:bg-[#303030] bg-[#E2E2E2] relative rounded-full w-20 h-10 toggle-off" id="btn-toggle2">
                         <img src="./assets/icons/circle.svg" 
                              class="absolute h-full w-10 cursor-pointer"
                              id="circle-toggle">
