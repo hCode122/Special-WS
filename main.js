@@ -1,7 +1,7 @@
 import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs';
  
-export function toggle() {
-    var btn = document.getElementById("btn-toggle")
+export function toggle(className) {
+    var btn = document.getElementById(className)
     if (btn.classList.contains('toggle-on')) {
         btn.classList.add("toggle-off")
         btn.classList.remove("toggle-on")
@@ -45,9 +45,9 @@ document.addEventListener("DOMContentLoaded", function () {
     dropdownToggle.addEventListener('click', dropdown);
 
     const btnToggle = document.getElementById('btn-toggle');
-    btnToggle.addEventListener('click', toggle);
+    btnToggle.addEventListener('click', () => toggle('btn-toggle'));
     const btnToggle2 = document.getElementById('btn-toggle2');
-    btnToggle2.addEventListener('click', toggle);
+    btnToggle2.addEventListener('click',() => toggle('btn-toggle2'));
 
 
 

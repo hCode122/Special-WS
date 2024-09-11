@@ -574,12 +574,8 @@ video {
   left: 3.5rem;
 }
 
-.left-\[5\%\] {
-  left: 5%;
-}
-
-.left-\[7\%\] {
-  left: 7%;
+.left-\[2\.1vw\] {
+  left: 2.1vw;
 }
 
 .left-\[9vw\] {
@@ -614,8 +610,8 @@ video {
   top: 1.5rem;
 }
 
-.top-\[1\.5\%\] {
-  top: 1.5%;
+.top-\[1\%\] {
+  top: 1%;
 }
 
 .top-\[1400px\] {
@@ -787,10 +783,6 @@ video {
   height: 2rem;
 }
 
-.h-\[10\.3vw\] {
-  height: 10.3vw;
-}
-
 .h-\[100px\] {
   height: 100px;
 }
@@ -801,6 +793,10 @@ video {
 
 .h-\[200px\] {
   height: 200px;
+}
+
+.h-\[22vw\] {
+  height: 22vw;
 }
 
 .h-\[400px\] {
@@ -835,10 +831,6 @@ video {
   width: 8rem;
 }
 
-.w-\[10\.3vw\] {
-  width: 10.3vw;
-}
-
 .w-\[150px\] {
   width: 150px;
 }
@@ -849,6 +841,10 @@ video {
 
 .w-\[200px\] {
   width: 200px;
+}
+
+.w-\[22vw\] {
+  width: 22vw;
 }
 
 .w-\[300px\] {
@@ -867,8 +863,8 @@ video {
   width: 42vw;
 }
 
-.w-\[50vw\] {
-  width: 50vw;
+.w-\[45vw\] {
+  width: 45vw;
 }
 
 .w-\[54vw\] {
@@ -964,16 +960,16 @@ video {
   overflow: hidden;
 }
 
-.rounded-3xl {
-  border-radius: 1.5rem;
-}
-
 .rounded-\[10px\] {
   border-radius: 10px;
 }
 
 .rounded-\[24px\] {
   border-radius: 24px;
+}
+
+.rounded-\[99px\] {
+  border-radius: 99px;
 }
 
 .rounded-full {
@@ -1261,10 +1257,6 @@ video {
   transition-duration: 150ms;
 }
 
-.duration-200 {
-  transition-duration: 200ms;
-}
-
 .duration-500 {
   transition-duration: 500ms;
 }
@@ -1283,7 +1275,7 @@ video {
 }
 
 body {
-  overflow-x: hidden;
+  overflow-x: hidden
 }
 
 .dark p {
@@ -1299,13 +1291,38 @@ p {
 .nav-off {
   top: 0;
   right: -40%;
-  transition:  ease 0.5s;
+  transition:   0.5s;
+  display: hidden;
 }
 
 .nav-on {
   top: 25%;
   right: 0%;
   transform: translateX(0);
+  display:flex;
+  flex-direction: column;
+}
+
+.colorSwitch {
+  background-color: #3887BE;
+}
+
+.colorSwitch:hover {
+  animation: colorSwitch 0.3s ease forwards ;
+}
+
+@keyframes colorSwitch {
+  0% {
+    background-color: #3887BE;
+  }
+
+  50% {
+    background-color: #59BBFF;
+  }
+
+  100% {
+    background-color: white;
+  }
 }
 
 .empty-text {
@@ -1523,14 +1540,10 @@ p {
   box-sizing: border-box;
   position: relative;
   background-color: black;
-  /* Card content background */
   height: 450px;
   border-radius: 15px;
-  /* Optional rounded corners */
   z-index: 1;
   overflow: hidden;
-  /* Ensure content doesn't overflow */
-  /* Pseudo-element for the gradient border */
   &:before {
     content: '';
     position: absolute;
@@ -1546,9 +1559,6 @@ p {
     pointer-events: none;
     /* Prevent any interactions */
   }
-}
-
-footer {
 }
 
 .footer-border {
@@ -1589,12 +1599,14 @@ footer {
   transition: ease-out 800ms;
 }
 
-.dark .toggle-on {
-  background-color: #676767;
-  img {
-    transition: right 1s;
-    right: 0px
-  }
+.toggle-off #circle-toggle {
+  left: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.toggle-on #circle-toggle {
+  left: calc(100% - 100% / 2);
+  transition: all 0.3s ease-in-out;
 }
 
 .dropdown-off {
@@ -1632,10 +1644,21 @@ footer {
 
 .contact-animation:hover {
   img {
-    padding-left: 80.5%;
+    padding-left: calc(100% - 25%);
   }
   span {
     left: calc(100% - 80%);
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-animation:hover {
+    img {
+      padding-left: calc(100% - 22%);
+    }
+    span {
+      left: calc(100% - 80%);
+    }
   }
 }
 
@@ -1738,9 +1761,9 @@ footer {
   background-image: url('/assets/icons/arrow-btn-circle.svg');
 }
 
-.hover\:bg-\[\#59BBFF\]:hover {
+.hover\:bg-\[\#D9D9D9\]:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(89 187 255 / var(--tw-bg-opacity));
+  background-color: rgb(217 217 217 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-\[\#E2E2E2\]:hover {
@@ -1823,6 +1846,12 @@ footer {
 .dark\:hover\:text-white:hover:is(.dark *) {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+@media (min-width: 640px) {
+  .sm\:w-\[31\.7vw\] {
+    width: 31.7vw;
+  }
 }
 
 @media (min-width: 768px) {
@@ -1910,6 +1939,10 @@ footer {
     height: 8rem;
   }
 
+  .md\:h-\[10\.4vw\] {
+    height: 10.4vw;
+  }
+
   .md\:h-\[200px\] {
     height: 200px;
   }
@@ -1936,6 +1969,10 @@ footer {
 
   .md\:w-48 {
     width: 12rem;
+  }
+
+  .md\:w-\[10\.4vw\] {
+    width: 10.4vw;
   }
 
   .md\:w-\[15vw\] {
@@ -2022,6 +2059,10 @@ footer {
     font-size: 0.9rem;
   }
 
+  .md\:text-\[1\.2rem\] {
+    font-size: 1.2rem;
+  }
+
   .md\:text-\[1\.7rem\] {
     font-size: 1.7rem;
   }
@@ -2050,5 +2091,9 @@ footer {
 
   .lg\:text-\[0\.9rem\] {
     font-size: 0.9rem;
+  }
+
+  .lg\:text-\[2rem\] {
+    font-size: 2rem;
   }
 }
