@@ -1128,8 +1128,8 @@ video {
   text-align: start;
 }
 
-.text-\[0\.7rem\] {
-  font-size: 0.7rem;
+.text-\[0\.6rem\] {
+  font-size: 0.6rem;
 }
 
 .text-\[0\.8rem\] {
@@ -1289,18 +1289,23 @@ p {
 }
 
 .nav-off {
-  top: 0;
-  right: -40%;
-  transition:   0.5s;
-  display: hidden;
+  transform: translateX(110%);
+  transform: translateY(-40%);
+  transition: transform 0.5s ease-in-out;
+  opacity: 0;
+  /* Optional for fade-in effect */
+  pointer-events: none;
+  /* Prevent clicks when off-screen */
 }
 
 .nav-on {
-  top: 25%;
-  right: 0%;
-  transform: translateX(0);
-  display:flex;
+  transform: translateX(150%);
+  opacity: 1;
+  pointer-events: all;
+  display: flex;
+  /* Keep flex display as needed */
   flex-direction: column;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 
 .colorSwitch {
@@ -2083,6 +2088,10 @@ p {
 @media (min-width: 1024px) {
   .lg\:ml-\[15\%\] {
     margin-left: 15%;
+  }
+
+  .lg\:mt-16 {
+    margin-top: 4rem;
   }
 
   .lg\:w-\[25\%\] {
