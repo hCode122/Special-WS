@@ -23,12 +23,11 @@ export function toggleNav() {
     if (navMenu.classList.contains('nav-off')) {
         navMenu.classList.remove("nav-off");
         navMenu.classList.add("nav-on");
-        btn.textContent = "Hide";  
     } else {
         navMenu.classList.remove("nav-on");
         navMenu.classList.add("nav-off");
-        btn.textContent = "Show";  
     }
+
     if (navIcon.src.includes('menu-off.svg')) {
         navIcon.src = './assets/icons/menu-on.svg';
     } else {
