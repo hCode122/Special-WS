@@ -566,10 +566,6 @@ video {
   bottom: 34%;
 }
 
-.bottom-\[60px\] {
-  bottom: 60px;
-}
-
 .left-12 {
   left: 3rem;
 }
@@ -578,16 +574,8 @@ video {
   left: 3.5rem;
 }
 
-.left-\[250px\] {
-  left: 250px;
-}
-
 .left-\[5\%\] {
   left: 5%;
-}
-
-.left-\[60px\] {
-  left: 60px;
 }
 
 .left-\[7\%\] {
@@ -606,12 +594,8 @@ video {
   right: 1.5%;
 }
 
-.right-\[90px\] {
-  right: 90px;
-}
-
-.top-12 {
-  top: 3rem;
+.right-\[1vw\] {
+  right: 1vw;
 }
 
 .top-16 {
@@ -634,32 +618,44 @@ video {
   top: 1.5%;
 }
 
-.top-\[1450px\] {
-  top: 1450px;
+.top-\[1400px\] {
+  top: 1400px;
 }
 
-.top-\[2050px\] {
-  top: 2050px;
+.top-\[1420px\] {
+  top: 1420px;
 }
 
-.top-\[3120px\] {
-  top: 3120px;
+.top-\[1970px\] {
+  top: 1970px;
 }
 
-.top-\[3920px\] {
-  top: 3920px;
+.top-\[2970px\] {
+  top: 2970px;
 }
 
-.top-\[4370px\] {
-  top: 4370px;
+.top-\[3680px\] {
+  top: 3680px;
 }
 
-.top-\[60px\] {
-  top: 60px;
+.top-\[4150px\] {
+  top: 4150px;
+}
+
+.top-\[4500px\] {
+  top: 4500px;
 }
 
 .top-\[8\%\] {
   top: 8%;
+}
+
+.top-\[800px\] {
+  top: 800px;
+}
+
+.z-\[-1\] {
+  z-index: -1;
 }
 
 .mx-auto {
@@ -775,6 +771,10 @@ video {
   height: 3rem;
 }
 
+.h-20 {
+  height: 5rem;
+}
+
 .h-32 {
   height: 8rem;
 }
@@ -803,8 +803,8 @@ video {
   height: 200px;
 }
 
-.h-\[350px\] {
-  height: 350px;
+.h-\[400px\] {
+  height: 400px;
 }
 
 .h-\[538px\] {
@@ -960,10 +960,6 @@ video {
   align-self: flex-start;
 }
 
-.self-end {
-  align-self: flex-end;
-}
-
 .overflow-hidden {
   overflow: hidden;
 }
@@ -1013,6 +1009,11 @@ video {
   border-color: rgb(46 46 46 / var(--tw-border-opacity));
 }
 
+.border-\[\#CCCCCC\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(204 204 204 / var(--tw-border-opacity));
+}
+
 .border-black {
   --tw-border-opacity: 1;
   border-color: rgb(0 0 0 / var(--tw-border-opacity));
@@ -1026,6 +1027,11 @@ video {
 .bg-\[\#2E2E2E\] {
   --tw-bg-opacity: 1;
   background-color: rgb(46 46 46 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#CCCCCC\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(204 204 204 / var(--tw-bg-opacity));
 }
 
 .bg-\[\#E2E2E2\] {
@@ -1043,14 +1049,13 @@ video {
   background-color: rgb(245 245 245 / var(--tw-bg-opacity));
 }
 
-.bg-black {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-}
-
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.p-0 {
+  padding: 0px;
 }
 
 .p-1 {
@@ -1075,6 +1080,10 @@ video {
   padding-bottom: 0.5rem;
 }
 
+.pb-4 {
+  padding-bottom: 1rem;
+}
+
 .pl-4 {
   padding-left: 1rem;
 }
@@ -1093,6 +1102,10 @@ video {
 
 .pt-4 {
   padding-top: 1rem;
+}
+
+.pt-\[18px\] {
+  padding-top: 18px;
 }
 
 .pt-\[50px\] {
@@ -1510,20 +1523,28 @@ p {
   box-sizing: border-box;
   position: relative;
   background-color: black;
-  border: none;
+  /* Card content background */
   height: 450px;
-  background-clip: padding-box;
+  border-radius: 15px;
+  /* Optional rounded corners */
+  z-index: 1;
+  overflow: hidden;
+  /* Ensure content doesn't overflow */
+  /* Pseudo-element for the gradient border */
   &:before {
     content: '';
     position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     border-radius: inherit;
+    /* Apply the same border-radius to the pseudo-element */
     background: linear-gradient(180deg, #707070 0%, #141414 115.5%);
-    padding: 2px;
+    z-index: -1;
+    /* Ensure the gradient stays behind the content */
+    pointer-events: none;
+    /* Prevent any interactions */
   }
 }
 
@@ -1576,12 +1597,12 @@ footer {
   }
 }
 
-.dark .dropdown-off {
+.dropdown-off {
   display: none;
   background-color: #262626;
 }
 
-.dark .dropdown-on {
+.dropdown-on {
   display: flex;
   background-color: var(--gray-bg);
 }
@@ -1593,7 +1614,7 @@ footer {
 
 .contact-animation {
   position: relative;
-  height: 53px;
+  height: 3.3rem;
   img, span {
     position: absolute;
     transition:  1s ease;
@@ -1611,7 +1632,7 @@ footer {
 
 .contact-animation:hover {
   img {
-    padding-left: 74.5%;
+    padding-left: 80.5%;
   }
   span {
     left: calc(100% - 80%);
@@ -1722,6 +1743,11 @@ footer {
   background-color: rgb(89 187 255 / var(--tw-bg-opacity));
 }
 
+.hover\:bg-\[\#E2E2E2\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(226 226 226 / var(--tw-bg-opacity));
+}
+
 .hover\:text-black:hover {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
@@ -1740,9 +1766,19 @@ footer {
   display: none;
 }
 
+.dark\:border-\[\#262626\]:is(.dark *) {
+  --tw-border-opacity: 1;
+  border-color: rgb(38 38 38 / var(--tw-border-opacity));
+}
+
 .dark\:border-white:is(.dark *) {
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
+}
+
+.dark\:bg-\[\#262626\]:is(.dark *) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(38 38 38 / var(--tw-bg-opacity));
 }
 
 .dark\:bg-\[\#2E2E2E\]:is(.dark *) {
@@ -1856,6 +1892,10 @@ footer {
 
   .md\:mt-\[56px\] {
     margin-top: 56px;
+  }
+
+  .md\:block {
+    display: block;
   }
 
   .md\:flex {

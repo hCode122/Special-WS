@@ -63,16 +63,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
     members.map(member => {
         const slide = document.createElement("div");
-        slide.classList.add("swiper-slide"); 
+        slide.classList.add("swiper-slide");
+        
         slide.innerHTML = `
-        <div class="rounded-[10px] bg-[#EBEBEB] dark:bg-[#303030] h-full gap-[50px] flex flex-col justify-center">
-            <img class="w-[80px] ml-auto mr-auto mt-[100px]" src="./assets/icons/img.svg"> 
-            <div class="w-[60px] h-[100px] dark:bg-black bg-[#F5F5F5]  text-center">
-                <p class="dark:text-white text-[#2E2E2E] ">${member.name}</p>
-                <p class="text-grey">${member.role}</p>
+        <div class="rounded-[10px] bg-[#EBEBEB] dark:bg-[#303030] h-full flex flex-col items-center gap-16 justify-center p-6">
+            <img class="w-[90px] h-[90px] object-cover  mt-16" src="./assets/icons/img.svg" alt="${member.name}"> 
+            
+            <div class="w-full max-w-[200px] h-[100px] bg-[#F5F5F5] text-start
+                 justify-center dark:bg-black text-center p-4 rounded-lg shadow-lg flex flex-col">
+                <p class="text-lg ml-2 font-bold text-[#2E2E2E] dark:text-white">${member.name}</p>
+                <p class="text-sm ml-2 text-gray-500">${member.role}</p>
             </div>
         </div>
-    `;
+        `;
         
         swiperContainer.appendChild(slide);
     });
@@ -162,39 +165,15 @@ export function dropdown() {
     var dropdownMenu = document.getElementById('dropdown-menu');
 
     if (dropdownMenu.classList.contains('dropdown-off')) {
-        populateDropdown(items)
         dropdownMenu.classList.remove('dropdown-off');
         dropdownMenu.classList.add('dropdown-on');
     } else {
-        dropdownMenu.innerHTML = '';
         dropdownMenu.classList.remove('dropdown-on');
         dropdownMenu.classList.add('dropdown-off');
     }
 }
 
-const items = [
-    "App Development",
-    "Web Development",
-    "UI UX Design"
-];
 
-export function populateDropdown(items) {
-    const dropdownMenu = document.getElementById('dropdown-menu');
-    dropdownMenu.innerHTML = '';
-    const ul = document.createElement('ul');
-
-    items.forEach(item => {
-        const li = document.createElement('li');
-        const p = document.createElement('p');
-
-        li.className = 'item bg-white text-[#2E2E2E]  dark:bg-[#262626] w-full h-full text-start pl-4 pb-4 pt-[18px] dark:text-white text-[14px]  border-2 border-[#262626]';
-        p.textContent = item;
-        li.onclick = () => setSelectedItem(item); 
-        li.appendChild(p)
-        ul.appendChild(li)
-    });
-    dropdownMenu.appendChild(ul);
-}
 
 export function setSelectedItem(itemText) {
     const selectedItemDiv = document.getElementById('selected-item');

@@ -11,11 +11,25 @@
 </head>
 
 <body class="dark:bg-black bg-[#F5F5F5] ">
-    <img class="absolute top-[1450px] left-[9vw]" src="./assets/imgs/bg-leaf-1.png" > 
-    <img class="absolute top-[2050px] left-[9vw]" src="./assets/imgs/bg-leaf-1.png" > 
-    <img class="absolute top-[3120px] left-[9vw]" src="./assets/imgs/bg-leaf-1.png" > 
-    <img class="absolute top-[3920px] left-[9vw]" src="./assets/imgs/bg-leaf-1.png" > 
-    <img class="absolute top-[4370px] left-[9vw]" src="./assets/imgs/bg-leaf-1.png" > 
+    <img class="hidden md:block absolute top-[800px] left-[9vw] dark:hidden z-[-1]" src="./assets/imgs/leaf.png" > 
+    <img class="hidden md:block absolute top-[1420px] left-[9vw] dark:hidden z-[-1]" src="./assets/imgs/leaf.png" > 
+    <img class="hidden md:block absolute top-[1970px] left-[9vw] dark:hidden z-[-1]" src="./assets/imgs/leaf.png" > 
+    <img class="hidden md:block absolute top-[2970px] left-[9vw] dark:hidden z-[-1]" src="./assets/imgs/leaf.png" > 
+    <img class="hidden md:block absolute top-[3680px] left-[9vw] dark:hidden z-[-1]" src="./assets/imgs/leaf.png" > 
+    <img class="hidden md:block absolute top-[4150px] left-[9vw] dark:hidden z-[-1]" src="./assets/imgs/leaf.png" >
+
+    <img class="hidden md:block absolute top-[1400px] right-[1vw] dark:hidden z-[-1]" src="./assets/imgs/bg-logo.png" > 
+    <img class="hidden md:block absolute  top-[4500px] right-[1vw] dark:hidden z-[-1]" src="./assets/imgs/bg-logo.png" >
+
+    <img class="hidden md:block absolute top-[800px] left-[9vw] hidden dark:block z-[-1]" src="./assets/imgs/leaf-dark.png" > 
+    <img class="hidden md:block absolute top-[1420px] left-[9vw] hidden dark:block z-[-1]" src="./assets/imgs/leaf-dark.png" > 
+    <img class="hidden md:block absolute top-[1970px] left-[9vw] hidden dark:block z-[-1]" src="./assets/imgs/leaf-dark.png" > 
+    <img class="hidden md:block absolute top-[2970px] left-[9vw] hidden dark:block z-[-1]" src="./assets/imgs/leaf-dark.png" > 
+    <img class="hidden md:block absolute top-[3680px] left-[9vw] hidden dark:block z-[-1]" src="./assets/imgs/leaf-dark.png" > 
+    <img class="hidden md:block absolute top-[4150px] left-[9vw] hidden dark:block z-[-1]" src="./assets/imgs/leaf-dark.png" >
+
+    <img class="hidden md:block absolute top-[1400px] right-[1vw] hidden dark:block z-[-1]" src="./assets/imgs/bg-logo-dark.png" > 
+    <img class="hidden md:block absolute top-[4500px] right-[1vw] hidden dark:block z-[-1]" src="./assets/imgs/bg-logo-dark.png" >
 
     <div name="upper" class=" md:ml-0 md:mr-0 w-full overflow-x:hidden">
         <div name="hero" class=" md:h-[800px] md:ml-[5%]">
@@ -32,11 +46,15 @@
                             <li class="text-gray-400 dark:hover:text-white hover:text-black"><a class="cursor-pointer">Contact</a></li>
                         </ul>
                     </nav>
-                    <nav name="mobile-nav" class="flex md:hidden mt-8 w-full h-8 relative ">
-                        <img src="./assets/icons/logo-dark.svg"  class="h-8 ml-[5%] mr-auto cursor-pointer block dark:hidden">
-                        <img src="./assets/icons/logo.svg"  class="h-8 ml-[5%] mr-auto cursor-pointer hidden dark:block">
-                        <button class="self-end bg-black  px-4 py-2 rounded-md mr-[5%]" id="nav-btn">
-                            <img src="./assets/icons/menu-off.svg" class=" block cursor-pointer" id="nav-icon">
+                    <nav name="mobile-nav" class="flex md:hidden items-center mt-8 w-full h-8 relative">
+                        <img src="./assets/icons/logo-dark.svg" class="h-8 ml-[5%] mr-auto cursor-pointer block dark:hidden">
+    
+                        <img src="./assets/icons/logo.svg" class="h-8 ml-[5%] mr-auto cursor-pointer hidden dark:block">
+                        
+                        <button class="h-20 w-20 mr-[5%] p-0 flex items-center justify-center" id="nav-btn">
+                            <img src="./assets/icons/menu-off.svg" class="h-20 w-20 dark:block hidden cursor-pointer" id="nav-icon">
+                            
+                            <img src="./assets/icons/menu-off-black.svg" class="h-20 w-20 dark:hidden block cursor-pointer" id="nav-icon">
                         </button>
                         <ul id="nav-menu" class="mt-8 dark:bg-[#F5F5F5E5] nav-off absolute rounded-lg  w-[40%] gap-4 p-6 bg-white z-12 text-white transform translate-x-full transition-transform duration-500 ease-in-out">
                             <li class="text-black  py-2 px-4 rounded-md cursor-pointer"><a>Home</a></li>
@@ -95,11 +113,8 @@
                     <p class="text-[1.2rem] text-[#5C5C5C]">Your Partner in Innovative Tech Solutions</p>
                 </span>
                 <div class="mt-8 md:mt-16 relative">
-                    <img src="./assets/imgs/who-is.png" alt="Who is Special Team Image">
-                    <img class="absolute top-[60px] left-[250px] dark:hidden block" src="./assets/imgs/rocket.svg" alt="Rocket Light">
-                    <img class="absolute top-[60px] left-[250px] dark:block hidden" src="./assets/imgs/rocket-dark.svg" alt="Rocket Dark">
-                    <img class="absolute bottom-[60px] left-[60px] dark:hidden block" src="./assets/imgs/probe.svg" alt="Probe Light">
-                    <img class="absolute bottom-[60px] left-[60px] dark:block hidden" src="./assets/imgs/probe-dark.svg" alt="Probe Dark">
+                    <img src="./assets/imgs/who-is.png" class="block dark:hidden" alt="Who is Special Team Image">
+                    <img src="./assets/imgs/who-is-dark.png" class="dark:block hidden" alt="Who is Special Team Image">
                 </div>
             </div>
             <div name="right" class="flex-1  flex flex-col justify-between">
@@ -154,11 +169,8 @@
                 </span>
             </div>
             <div class="mt-4 relative ml-auto mr-auto md:ml-0 md:mr-0">
-                <img src="./assets/imgs/who-is.png" class="w-[75vw]" alt="Who is Special Team Image">
-                <img class="absolute top-12 right-[90px] dark:hidden block" src="./assets/imgs/rocket.svg" alt="Rocket Light">
-                <img class="absolute top-[60px] right-[90px] dark:block hidden" src="./assets/imgs/rocket-dark.svg" alt="Rocket Dark">
-                <img class="absolute bottom-[60px] left-[60px] dark:hidden block" src="./assets/imgs/probe.svg" alt="Probe Light">
-                <img class="absolute bottom-[60px] left-[60px] dark:block hidden" src="./assets/imgs/probe-dark.svg" alt="Probe Dark">
+                <img src="./assets/imgs/who-is.png" class="block dark:hidden w-[75vw]" alt="Who is Special Team Image">
+                    <img src="./assets/imgs/who-is-dark.png" class="dark:block hidden w-[75vw]" alt="Who is Special Team Image">
             </div>
         </div>
 
@@ -215,7 +227,7 @@
                         <p class="absolute top-4 left-14 md:left-20 text-[80px] md:text-[100px] text-white empty-text ">3</p>
                         <img class="w-[150px] h-[150px] md:w-[200px] md:h-[200px]" src="./assets/imgs/leaf3.png">
                     </div>
-                    <p class="w-[170px] h-[150px] md:w-[220px] md:h-[200px] text-right text-[#2A2A2A] dark:text-white pt-[50px] md:pt-[70px pr-4 font-bold text-[1.2rem] md:text-[1.7rem] ">Handover and Support</p>
+                    <p class="w-[170px] h-[150px] md:w-[220px] md:h-[200px] text-right text-[#2A2A2A] dark:text-white pt-[50px] md:pt-[70px] pr-4 font-bold text-[1.2rem] md:text-[1.7rem] ">Handover and Support</p>
 
                 </div>
                 <div name="right" class="flex flex-col justify-evenly items-center">
@@ -224,7 +236,7 @@
                         <img class="w-[150px] h-[150px] md:w-[200px]  md:h-[200px]" src="./assets/imgs/leaf2.png">
                         <p class="absolute top-4 left-12 md:left-16 text-[80px] md:text-[100px] text-white empty-text">2</p>
                     </div>
-                    <p class="w-[150px] h-[150px] md:w-[200px] md:h-[200px] text-left text-[#2A2A2A] dark:text-white pt-[50px] md:pt-[70px font-bold text-[1.2rem] md:text-[1.7rem] ">Review and Refinement</p>
+                    <p class="w-[150px] h-[150px] md:w-[200px] md:h-[200px] text-left text-[#2A2A2A] dark:text-white pt-[50px] md:pt-[70px] font-bold text-[1.2rem] md:text-[1.7rem] ">Review and Refinement</p>
                     <div class="relative">
                         <img class="w-[150px] h-[150px] md:w-[200px]  md:h-[200px]" src="./assets/imgs/leaf4.png">
                         <p class="absolute top-3 left-12 md:left-16 text-[80px] md:text-[100px] text-white empty-text">4</p>
@@ -283,7 +295,7 @@
             </div>
             
                     
-            <div class="swiper w-full flex justify-center items-center h-[350px]  md:mt-[56px]" >
+            <div class="swiper w-full flex justify-center items-center h-[400px]  md:mt-[56px]" >
               
                 <div  id="swiper-wrapper1" class="swiper-wrapper h-full">
               
@@ -315,9 +327,22 @@
                         <div class="rounded-md h-[55px] relative cursor-pointer dark:bg-[#303030] bg-[#E2E2E2] w-full" id="dropdown-toggle">
                             <p id="selected-item" class="text-[#5C5C5C] dark:text-white text-[14px] text-start pt-4 pl-4">App Development</p>
                             <button type="button">
-                                <img src="./assets/icons/down-arrow.svg" class="absolute top-6 right-5">
+                                <img src="./assets/icons/down-arrow.svg" class="hidden dark:block absolute top-6 right-5">
+                                <img src="./assets/icons/down-arrow-black.svg" class="block dark:hidden absolute top-6 right-5">
                             </button>
-                            <div id="dropdown-menu" class="absolute top-16 flex flex-col w-full dropdown-off rounded-md"></div>
+                            <div id="dropdown-menu" class="absolute top-16 flex flex-col w-full dropdown-off rounded-md">
+                                <ul class="rounded-lg">
+                                    <li class="item bg-[#CCCCCC] text-[#2E2E2E] border-2 dark:border-[#262626] border-[#CCCCCC] hover:bg-[#E2E2E2] dark:bg-[#262626] w-full h-full text-start pl-4 pb-4 pt-[18px] text-[14px]  ">
+                                        <p class="dark:text-white">App Development</p>
+                                    </li>
+                                    <li class="item bg-[#CCCCCC] text-[#2E2E2E] border-2 dark:border-[#262626] border-[#CCCCCC] hover:bg-[#E2E2E2] dark:bg-[#262626] w-full h-full text-start pl-4 pb-4 pt-[18px] text-[14px]  ">
+                                        <p class="dark:text-white">Web Development</p>
+                                    </li>
+                                    <li class="item bg-[#CCCCCC] text-[#2E2E2E] border-2 dark:border-[#262626] border-[#CCCCCC] hover:bg-[#E2E2E2] dark:bg-[#262626] w-full h-full text-start pl-4 pb-4 pt-[18px] text-[14px]  ">
+                                        <p class="dark:text-white">UI UX Design</p>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>  
                     </div>
                 </div>
