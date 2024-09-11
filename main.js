@@ -18,6 +18,7 @@ export function toggle() {
 export function toggleNav() {
     const btn = document.getElementById("nav-btn");
     const navMenu = document.getElementById("nav-menu");
+    const navIcon = document.getElementById('nav-icon');
 
     if (navMenu.classList.contains('nav-off')) {
         navMenu.classList.remove("nav-off");
@@ -28,6 +29,11 @@ export function toggleNav() {
         navMenu.classList.add("nav-off");
         btn.textContent = "Show";  
     }
+    if (navIcon.src.includes('menu-off.svg')) {
+        navIcon.src = './assets/icons/menu-on.svg';
+    } else {
+        navIcon.src = './assets/icons/menu-off.svg';
+    }
 }
 
 
@@ -35,9 +41,6 @@ export function toggleNav() {
 document.addEventListener("DOMContentLoaded", function () {
     const navBtn = document.getElementById('nav-btn');
     navBtn.addEventListener('click', toggleNav);
-
-    const navBtn2 = document.getElementById('nav-btn2');
-    navBtn2.addEventListener('click', toggleNav);
 
     const dropdownToggle = document.getElementById('dropdown-toggle');
     dropdownToggle.addEventListener('click', dropdown);

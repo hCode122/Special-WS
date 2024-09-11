@@ -18,9 +18,9 @@
     <img class="absolute top-[4370px] left-[9vw]" src="./assets/imgs/bg-leaf-1.png" > 
 
     <div name="upper" class=" md:ml-0 md:mr-0 w-full overflow-x:hidden">
-        <div name="hero" class="h-[1200px] md:h-[800px] md:ml-[5%]">
-            <div name="colomns-container" class="flex flex-col md:flex-row justify-center  items-center  h-[800px] md:h-[750px]">
-                <div name="nav-title-section" class="md:ml-auto flex flex-col md:w-[20vw]  md:justify-between items-center self-start flex-1">
+        <div name="hero" class=" md:h-[800px] md:ml-[5%]">
+            <div name="colomns-container" class="flex flex-col md:flex-row justify-center  items-center  md:h-[750px]">
+                <div name="nav-title-section" class="md:ml-auto flex flex-col md:w-[20vw] md:justify-between items-center self-start flex-1">
                     <nav class=" mt-8  md:self-start h-8 w-[40vw] hidden md:flex">
                         <img src="./assets/icons/logo-dark.svg"  class="h-8 mr-auto cursor-pointer block dark:hidden">
                         <img src="./assets/icons/logo.svg"  class="h-8 mr-auto cursor-pointer hidden dark:block">
@@ -33,9 +33,11 @@
                         </ul>
                     </nav>
                     <nav name="mobile-nav" class="flex md:hidden mt-8 w-full h-8 relative ">
-                        <img src="./assets/icons/logo-dark.svg"  class="h-8 mr-auto cursor-pointer block dark:hidden">
-                        <img src="./assets/icons/logo.svg"  class="h-8 mr-auto cursor-pointer hidden dark:block">
-                        <button class="self-end bg-blue-500 text-white px-4 py-2 rounded-md" id="nav-btn">Show</button>
+                        <img src="./assets/icons/logo-dark.svg"  class="h-8 ml-[5%] mr-auto cursor-pointer block dark:hidden">
+                        <img src="./assets/icons/logo.svg"  class="h-8 ml-[5%] mr-auto cursor-pointer hidden dark:block">
+                        <button class="self-end  px-4 py-2 rounded-md mr-[5%]" id="nav-btn">
+                            <img src="./assets/icons/menu-off.svg" id="nav-icon w-[100px] cursor-pointer">
+                        </button>
                         <ul id="nav-menu" class="fixed dark:bg-[#F5F5F5E5] nav-off rounded-lg h-[35%] w-[60%] gap-4 p-6 bg-white z-12 text-white transform translate-x-full transition-transform duration-500 ease-in-out">
                             <button class="self-end  text-black px-4 py-2 rounded-md mb-4" id="nav-btn2">Hide</button>
                             <li class="text-black  py-2 px-4 rounded-md cursor-pointer"><a>Home</a></li>
@@ -44,7 +46,7 @@
                             <li class="dark:hover:text-white hover:text-black text-gray-400 py-2 px-4 rounded-md cursor-pointer"><a>Contact</a></li>
                         </ul>
                     </nav>
-                    <h1 class="text-[#868686] text-[3rem] md:text-[4rem] mt-32 text-start  ">
+                    <h1 class="text-[#868686] text-[3rem] md:text-[4rem] mt-16 text-start  ">
                         <span class="dark:bg-[#2E2E2E] bg-[#EBEBEB] dark:text-white  text-[#2E2E2E] rounded-lg p-1">Special</span> Solutions for a 
                         <span class="dark:bg-[#2E2E2E] bg-[#EBEBEB] dark:text-white  text-[#2E2E2E] rounded-lg p-1">Special</span> future
                     </h1>
@@ -62,14 +64,14 @@
 
                             <span class="absolute   ">Contact us</span>
                         </a>
-                        <div class="flex w-[35vw] md:w-[15vw] items-center ">
-                            <img class="pulsing-animation w-[50px]" src="./assets/icons/blue-circle.svg">
+                        <div class="flex w-[42vw] md:w-[15vw] items-center ">
+                            <img class="pulsing-animation md:w-[50px] w-[6vw]" src="./assets/icons/blue-circle.svg">
                             <p class="dark:text-white text-[#2A2A2A] md:text-[0.9rem] text-[0.7rem]">Available for new projects</p>
                         </div>
                     </div>
                 </div>
         
-                <div name="hero-image" class="relative mt-4 w-[75vw] h-[5vh] md:h-auto md:w-[35vw]  block ">
+                <div name="hero-image" class="relative mt-4 w-[75vw]  md:h-auto md:w-[35vw]  block ">
                     <img src="./assets/imgs/hero-img-dark.png" class="dark:block hidden">
                     <img src="./assets/imgs/hero-img.png" class="dark:hidden block">
 
@@ -138,14 +140,14 @@
                     <p class="text-[1.2rem] text-[#5C5C5C]">Your Partner in Innovative Tech Solutions</p>
                 </span>
             </div>
-            <div name="right" class="flex-1  ml-4 flex gap-6 flex-col justify-between">
+            <div name="right" class="flex-1 w-[90%] ml-4 flex gap-6 flex-col justify-between">
                 <span class="flex flex-col gap-2">
                     <h3 class="text-[#2E2E2E] font-bold dark:text-white text-[1.5rem]">About us</h3>
                     <p class="mt-2">Our journey began with the belief that <span class="text-[#2E2E2E]  dark:text-[#BBBBBB]">every individual has the potential</span> to make a difference. With passion and perseverance, we are on the path of <span class="text-[#2E2E2E] dark:text-[#BBBBBB]">creating solutions</span> that not only meet the needs of today but also shape the possibilities of tomorrow.</p>
                 </span>
                 <span class="flex flex-col gap-2">
                     <h3 class="text-[#2E2E2E] font-bold dark:text-white text-[1.5rem]">Our vision</h3>
-                    <p class="mt-2">Our vision is rooted in the belief that technology has  class="mt-2"the power to transform lives. <span class="text-[#2E2E2E] dark:text-[#BBBBBB]">We aspire to lead innovation</span> by harnessing the unique talents and perspectives of our team, creating solutions that leave a lasting impact on society and <span class="text-[#2E2E2E] dark:text-[#BBBBBB]">inspire positive change.</span></p>
+                    <p class="mt-2">Our vision is rooted in the belief that technology has the power to transform lives. <span class="text-[#2E2E2E] dark:text-[#BBBBBB]">We aspire to lead innovation</span> by harnessing the unique talents and perspectives of our team, creating solutions that leave a lasting impact on society and <span class="text-[#2E2E2E] dark:text-[#BBBBBB]">inspire positive change.</span></p>
                 </span>
                 <span class="flex flex-col gap-2">
                     <h3 class="text-[#2E2E2E] font-bold dark:text-white text-[1.5rem]">Our mission</h3>
@@ -161,25 +163,25 @@
             </div>
         </div>
 
-        <div id="what-do" class="md:mt-16 mt-32   h-[750px] md:h-[400px]">
+        <div id="what-do" class="md:mt-16 mt-32   md:h-[400px]">
             <h2 class="text-[2rem] md:ml-[15%]  mt-12  mr-auto font-bold text-[#2A2A2A] dark:text-white">What we <span class="text-blue-500">do?</span></h2>
             <p class=" mt-6 text-[18px] md:ml-[15%]  mr-auto text-[#5C5C5C]">We offer tailored Tech Services</p>
-            <div class="flex flex-col md:flex-row justify-evenly items-center gap-4 mt-64 md:mt-24 h-[180px]">
-                <div class="service-block bar rounded-[10px] max-w-[368px]">
+            <div class="flex flex-col md:flex-row justify-evenly items-center gap-4 mt-12 md:mt-24 ">
+                <div class="service-block bar rounded-[10px] w-[90%] md:max-w-[368px]">
                     <div class="h-48 flex flex-col justify-center ml-12">
-                        <h3 class="text-[1.5rem] font-bold dark:text-white text-[#5C5C5C] ">Web development</h3>
-                        <p class="pt-2 dark:text-white text-[#5C5C5C]">Lorem ipsum dolor sit amet, saconsectetur adipiscing elit, </p>
+                        <h3 class="text-[1.5rem] font-bold dark:text-white text-[#2E2E2E] ">Web development</h3>
+                        <p class="pt-2 dark:text-white text-[#5C5C5C] text-opacity-100">Lorem ipsum dolor sit amet, saconsectetur adipiscing elit, </p>
                     </div>
                 </div>
-                <div class="service-block2 bar2 rounded-[10px] max-w-[368px]">
+                <div class="service-block2 bar2 rounded-[10px] w-[90%] md:max-w-[368px]">
                     <div class="h-48 flex flex-col justify-center ml-12">
-                        <h3 class="text-[1.5rem] font-bold dark:text-white text-[#5C5C5C]">UI UX Design</h3>
+                        <h3 class="text-[1.5rem] font-bold dark:text-white text-[#2E2E2E]">UI UX Design</h3>
                         <p class="pt-2 dark:text-white text-[#5C5C5C]">user interface design / ux research information architecture /ux writing </p>
                     </div>
                 </div>
-                <div class="service-block3 bar3 rounded-[10px] max-w-[368px]">
+                <div class="service-block3 bar3 rounded-[10px] w-[90%] md:max-w-[368px]">
                     <div class="h-48 flex flex-col justify-center ml-12">
-                        <h3 class="text-[1.5rem] font-bold dark:text-white text-[#5C5C5C]">App Development</h3>
+                        <h3 class="text-[1.5rem] font-bold dark:text-white text-[#2E2E2E]">App Development</h3>
                         <p class="pt-2 dark:text-white text-[#5C5C5C]">Lorem ipsum dolor sit amet, saconsectetur adipiscing elit, </p>
                     </div>
                 </div>
@@ -214,16 +216,16 @@
                         <p class="absolute top-4 left-14 md:left-20 text-[80px] md:text-[100px] text-white empty-text ">3</p>
                         <img class="w-[150px] h-[150px] md:w-[200px] md:h-[200px]" src="./assets/imgs/leaf3.png">
                     </div>
-                    <p class="w-[170px] h-[150px] md:w-[220px] md:h-[200px] text-right text-[#2A2A2A] dark:text-white pt-[70px] pr-4 font-bold text-[1.2rem] md:text-[1.7rem] ">Handover and Support</p>
+                    <p class="w-[170px] h-[150px] md:w-[220px] md:h-[200px] text-right text-[#2A2A2A] dark:text-white pt-[50px] md:pt-[70px pr-4 font-bold text-[1.2rem] md:text-[1.7rem] ">Handover and Support</p>
 
                 </div>
                 <div name="right" class="flex flex-col justify-evenly items-center">
-                    <p class=" w-[150px] h-[150px] md:w-[202px] md:h-[200px] text-left text-[#2A2A2A] dark:text-white  pt-[70px] font-bold text-[1.2rem] md:text-[1.9rem]">Consultation and Planning</p>
+                    <p class=" w-[150px] h-[150px] md:w-[202px] md:h-[200px] text-left text-[#2A2A2A] dark:text-white pt-[50px]  md:pt-[70px] font-bold text-[1.2rem] md:text-[1.9rem]">Consultation and Planning</p>
                     <div class="relative">
                         <img class="w-[150px] h-[150px] md:w-[200px]  md:h-[200px]" src="./assets/imgs/leaf2.png">
                         <p class="absolute top-4 left-12 md:left-16 text-[80px] md:text-[100px] text-white empty-text">2</p>
                     </div>
-                    <p class="w-[150px] h-[150px] md:w-[200px] md:h-[200px] text-left text-[#2A2A2A] dark:text-white pt-[70px] font-bold text-[1.2rem] md:text-[1.7rem] ">Review and Refinement</p>
+                    <p class="w-[150px] h-[150px] md:w-[200px] md:h-[200px] text-left text-[#2A2A2A] dark:text-white pt-[50px] md:pt-[70px font-bold text-[1.2rem] md:text-[1.7rem] ">Review and Refinement</p>
                     <div class="relative">
                         <img class="w-[150px] h-[150px] md:w-[200px]  md:h-[200px]" src="./assets/imgs/leaf4.png">
                         <p class="absolute top-3 left-12 md:left-16 text-[80px] md:text-[100px] text-white empty-text">4</p>
@@ -234,15 +236,15 @@
             </div>
         </div>
 
-        <div name="client-say" class="flex flex-col   mt-32  ">
+        <div name="client-say" class="flex flex-col   mt-16  ">
             <h2 class="text-[#2A2A2A] dark:text-white text-[32px] md:ml-[15%]  md:mr-auto  mr-auto font-bold ">
                 What <span class="text-blue-500 ">clients</span> say
             </h2>
             <p class="text-gray-500 mt-[8px] text-[18px]  md:ml-[15%]  mr-auto ">Our Success Stories and Testimonials</p>
 
-            <div class="flex flex-col text-white md:ml-28  md:mr-[0px] md:ml-[5%] lg:ml-[15%]  gap-8 items-center mt-12 md:mt-28 md:flex-row  "> 
+            <div class="flex flex-col text-white  md:mr-[0px] md:ml-[5%] lg:ml-[15%] gap-8 items-center mt-12 md:mt-28 md:flex-row  "> 
                 <div class="rounded-tl-[100px] flex flex-col items-center justify-center border-grad client-animation w-[70vw] md:w-[30%] lg:w-[25%]">
-                    <p class="lg:text-[0.9rem] md:text-[0.8rem] text-[0.8rem] text-center text-gray-400 md:p-8  p-2">
+                    <p class="lg:text-[0.9rem] md:text-[0.8rem]  text-[0.8rem] text-center text-gray-400 md:p-8  p-2">
                         Lorem ipsum dolor sit amet, dolor consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur Lorem adipiscing consectetur sed dolor o Lorem ipsum dolor sit amet, dolor
                     </p>
                     <img src="./assets/icons/user.svg" class="mt-4 rounded-full h-12 p-2">
@@ -257,7 +259,7 @@
                     <p class="text-[0.9rem] text-white mt-4">name</p>
                     <p>CEO example agency</p>
                 </div>
-                <div class=" flex flex-col items-center justify-center border-grad2 client-animation  w-[70vw] md:w-[30%] lg:w-[25%]">
+                <div class="rounded-br-[100px] flex flex-col items-center justify-center border-grad2 client-animation  w-[70vw] md:w-[30%] lg:w-[25%]">
                     <p class="lg:text-[0.9rem] md:text-[0.8rem] text-[0.8rem] text-center text-gray-400 md:p-8  p-2">
                         Lorem ipsum dolor sit amet, dolor consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur Lorem adipiscing consectetur sed dolor o Lorem ipsum dolor sit amet, dolor
                     </p>
@@ -272,7 +274,7 @@
         </div>
 
 
-        <div name="our-team" class=" mt-16  flex  flex-col md:flex-row gap-32">
+        <div name="our-team" class=" mt-16  flex  flex-col md:flex-row gap-16">
             <div name="textArea" class=" self-start  md:ml-[15%] md:mr-[0px] ">
                 <h2 class="text-[#2A2A2A] dark:text-white text-[32px] font-bold">
                     Our <span class="text-blue-500">Team</span>
@@ -282,7 +284,7 @@
             </div>
             
                     
-            <div class="swiper w-full flex justify-center items-center h-[350px] mt-8  md:mt-[56px]" >
+            <div class="swiper w-full flex justify-center items-center h-[350px]  md:mt-[56px]" >
               
                 <div  id="swiper-wrapper1" class="swiper-wrapper h-full">
               
@@ -293,25 +295,25 @@
         </div>
         
 
-        <div name="collab" class="mt-32  flex flex-col">
+        <div name="collab" class="mt-16  flex flex-col">
             <h2 class="text-[#2A2A2A] dark:text-white text-[32px] ml-4 md:ml-[15%] font-bold flex-1">
                  let's <span class="text-blue-500">collaborate</span>
             </h2>
             <p class="text-gray-500 ml-4 md:ml-[15%] mt-4 flex-1">Join Forces with Us for Your Next Big Idea</p>
 
-            <form class="mt-12 md:ml-[20%]  md:mr-auto md:w-[55vw] flex flex-col gap-4 flex-1 dark:text-white">
+            <form class="mt-12 md:ml-[20%] md:mr-auto md:w-[55vw] flex flex-col gap-4 flex-1 dark:text-white">
                 <div class="flex gap-8 justify-center flex-col md:flex-row w-full">
-                    <div class="flex flex-1 flex-col gap-4 lg:ml-0 lg:mr-0 ml-4 mr-4">
+                    <div class="flex flex-1 flex-col gap-4">
                         <label>First Name</label>
-                        <input class="rounded-md dark:bg-[#303030] bg-[#E2E2E2] h-[55px]">
+                        <input class="rounded-md dark:bg-[#303030] bg-[#E2E2E2] h-[55px] w-full">
                         <label>Email Address</label>
-                        <input class="rounded-md dark:bg-[#303030] bg-[#E2E2E2] h-[55px]">
+                        <input class="rounded-md dark:bg-[#303030] bg-[#E2E2E2] h-[55px] w-full">
                     </div>
-                    <div class="flex flex-1 flex-col gap-4 ml-4 mr-4 md:ml-0 md:mr-0">
+                    <div class="flex flex-1 flex-col gap-4">
                         <label>Last Name</label>
-                        <input class="rounded-md dark:bg-[#303030] bg-[#E2E2E2] h-[55px]">
+                        <input class="rounded-md dark:bg-[#303030] bg-[#E2E2E2] h-[55px] w-full">
                         <label>Choose Service</label>
-                        <div class="rounded-md h-[55px] relative cursor-pointer dark:bg-[#303030] bg-[#E2E2E2]" id="dropdown-toggle">
+                        <div class="rounded-md h-[55px] relative cursor-pointer dark:bg-[#303030] bg-[#E2E2E2] w-full" id="dropdown-toggle">
                             <p id="selected-item" class="text-[#5C5C5C] dark:text-white text-[14px] text-start pt-4 pl-4">App Development</p>
                             <button type="button">
                                 <img src="./assets/icons/down-arrow.svg" class="absolute top-6 right-5">
@@ -320,10 +322,9 @@
                         </div>  
                     </div>
                 </div>
-                <label class="mt-6 ml-4 mr-4 lg:ml-0 lg:mr-0">Tell Us More</label>
-                <textarea class="dark:bg-[#303030] bg-[#E2E2E2] h-[200px] w-full  rounded-md">
-                </textarea>
-                <button class="ml-auto mr-auto md:ml-[0px] border-[1px] dark:border-white border-[#2E2E2E] rounded-[24px] mt-[30px] w-[200px] p-2 submit-animation">Submit</button>
+                <label class="mt-6">Tell Us More</label>
+                <textarea class="dark:bg-[#303030] bg-[#E2E2E2] h-[200px] w-full rounded-md"></textarea>
+                <button class="ml-auto mr-auto md:ml-0 border-[1px] dark:border-white border-[#2E2E2E] rounded-[24px] mt-[30px] w-[200px] p-2 submit-animation">Submit</button>
             </form>
 
 
@@ -351,12 +352,12 @@
         <div name="mobile-footer" class="flex flex-col justify-center items-center md:hidden">
             <div class="flex w-[90%]  justify-between items-center">
                 <div class="flex gap-4 ">
-                    <img src="./assets/icons/logo-dark.svg"  class="cursor-pointer block dark:hidden">
+                    <img src="./assets/icons/logo-dark.svg"  class="w-[7vw] cursor-pointer block dark:hidden">
                             <img src="./assets/icons/logo.svg"  class="cursor-pointer hidden dark:block">
-                    <p class="text-[#2E2E2E] dark:text-white">Special Team</p>
+                    <p class="text-[#2E2E2E] text-[0.8rem] dark:text-white">Special Team</p>
                 </div>
                 <div class="flex gap-4 items-center " >
-                    <p class="dark:text-gray-500 text-[#2E2E2E]">Dark Mode</p>
+                    <p class="dark:text-gray-500  text-[0.8rem] text-[#2E2E2E]">Dark Mode</p>
                     <div class="dark:bg-[#303030] bg-[#E2E2E2] relative rounded-full w-20 h-10 toggle-off" id="btn-toggle2">
                         <img src="./assets/icons/circle.svg" 
                              class="absolute h-full w-10 cursor-pointer"
@@ -364,7 +365,7 @@
                       </div>
                 </div>
             </div>
-            <p class=" text-center mt-8 mb-12 font-[12px] text-[#2E2E2E]">Copyright © 2024 Specialteam.com</p>
+            <p class=" text-center mt-12 mb-4 font-[0.7rem] text-[#2E2E2E]">Copyright © 2024 Specialteam.com</p>
 
         </div>
     </footer>
