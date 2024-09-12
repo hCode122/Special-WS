@@ -1289,23 +1289,19 @@ p {
 }
 
 .nav-off {
-  transform: translateX(110%);
-  transform: translateY(-40%);
-  transition: transform 0.5s ease-in-out;
-  opacity: 0;
-  /* Optional for fade-in effect */
-  pointer-events: none;
-  /* Prevent clicks when off-screen */
+  top: 25%;
+  right: -40%;
+  transition:   0.5s;
+  display:flex;
+  flex-direction: column;
 }
 
 .nav-on {
-  transform: translateX(150%);
-  opacity: 1;
-  pointer-events: all;
-  display: flex;
-  /* Keep flex display as needed */
+  top: 25%;
+  right: 0%;
+  transform: translateX(0);
+  display:flex;
   flex-direction: column;
-  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 
 .colorSwitch {

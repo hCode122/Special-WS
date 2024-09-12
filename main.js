@@ -44,6 +44,17 @@ document.addEventListener("DOMContentLoaded", function () {
     const dropdownToggle = document.getElementById('dropdown-toggle');
     dropdownToggle.addEventListener('click', dropdown);
 
+    const dropdownMenu = document.getElementById('dropdown-menu');
+    
+    
+    window.onclick = function(e) {
+        if (!dropdownToggle.contains(e.target) && !dropdownMenu.contains(e.target)) {
+            if (dropdownMenu.classList.contains('dropdown-on')) {
+                dropdown();
+            }
+        }
+    };
+      
     const btnToggle = document.getElementById('btn-toggle');
     btnToggle.addEventListener('click', () => toggle('btn-toggle'));
     const btnToggle2 = document.getElementById('btn-toggle2');
