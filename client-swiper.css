@@ -1,0 +1,145 @@
+.border-grad {
+    box-sizing: border-box;
+    position: relative;
+    background-color: black; 
+    border: none;
+    height: 450px;
+    background-clip: padding-box; 
+    
+  
+    &:before {
+        content: '';
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        z-index: -1; 
+        border-radius: inherit; 
+        background: linear-gradient(180deg, #707070 0%, #141414 115.5%);
+        padding: 2px; 
+    }
+}
+
+
+.border-grad2 {
+    box-sizing: border-box;
+    position: relative;
+    background-color: black; 
+    border: none;
+    height: 450px;
+    background-clip: padding-box; 
+
+  
+    &:before {
+        content: '';
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        z-index: -1; 
+        border-radius: inherit; 
+        background: linear-gradient(180deg, #707070 0%, #141414 115.5%);
+        padding: 2px; 
+    }
+}
+
+.border-grad3 {
+    box-sizing: border-box;
+    position: relative;
+    background-color: black; 
+    border: none;
+    height: 450px;
+    background-clip: padding-box; 
+
+  
+    &:before {
+        content: '';
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        z-index: -1; 
+        border-radius: inherit; 
+        background: linear-gradient(180deg, #707070 0%, #141414 115.5%);
+        padding: 2px; 
+    }
+}
+
+.dark .client-animation {
+    background-color: black;
+    transition: 0.5s;
+    p {
+        color: white
+    }
+
+    img {
+        background-color: white;
+    }
+}
+
+.dark .client-animation:hover {
+    background-color: white;
+
+    p {
+        color: black
+    }
+
+    img {
+        background-color: black;
+    }
+}
+
+.client-animation {
+    transition: 0.5s;
+    background-color: #F5F5F5;
+    p {
+        color: #2E2E2E
+    }
+
+    img {
+        background-color: rgb(255, 255, 255);
+    }
+}
+
+ .client-animation:hover {
+    background-color: black;
+
+    transition: 0.5s;
+    p {
+        color: white
+    }
+
+    img {
+        background-color: rgb(255, 255, 255);
+    }
+}
+
+
+#swiperPrev, #swiperNext {
+    position: absolute;
+    top: 80%;
+    transform: translateY(-50%);
+    width: 40px;  /* Adjust the size */
+    height: 40px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+#swiperPrev {
+    left: -90px;  /* Push the previous button outside the Swiper container */
+    background-image: url('./assets/icons/plus.svg');  /* Custom image for previous button */
+}
+
+#swiperNext {
+    right: 25px;  /* Push the next button outside the Swiper container */
+    background-image: url('./assets/icons/plus.svg');  /* Custom image for next button */
+}
+
+/* Optional hover effect */
+#swiperPrev:hover, #swiperNext:hover {
+    opacity: 0.8;
+}

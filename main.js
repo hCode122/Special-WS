@@ -1,5 +1,4 @@
-import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs';
- 
+//Dark Mode
 export function toggle(className) {
     var btn = document.getElementById(className)
     if (btn.classList.contains('toggle-on')) {
@@ -15,10 +14,11 @@ export function toggle(className) {
     }
 }
 
+//Nav Menu
 export function toggleNav() {
     const btn = document.getElementById("nav-btn");
     const navMenu = document.getElementById("nav-menu");
-    const navIcon = document.getElementById('nav-icon');
+    const navIcon = document.getElementById('nav-icon-light');
 
     if (navMenu.classList.contains('nav-off')) {
         navMenu.classList.remove("nav-off");
@@ -28,8 +28,11 @@ export function toggleNav() {
         navMenu.classList.add("nav-off");
     }
 
-    if (navIcon.src.includes('menu-off.svg')) {
+    if (navIcon.src.includes('menu-off.svg') ) {
         navIcon.src = './assets/icons/menu-on.svg';
+    } else if (navIcon.src.includes('menu-off-black.svg')) {
+        navIcon.src = './assets/icons/menu-on-dark.svg';
+
     } else {
         navIcon.src = './assets/icons/menu-off.svg';
     }
@@ -61,36 +64,6 @@ document.addEventListener("DOMContentLoaded", function () {
     btnToggle2.addEventListener('click',() => toggle('btn-toggle2'));
 
 
-
-    const members = [
-        { name: 'Ahmad Ahmad', role: 'Frontend Developer' },
-        { name: 'Ahmad Ahmad', role: 'Frontend Developer' },
-        { name: 'Ahmad Ahmad', role: 'Frontend Developer' },
-        { name: 'Ahmad Ahmad', role: 'Frontend Developer' },
-        { name: 'Ahmad Ahmad', role: 'Frontend Developer' },
-        { name: 'Ahmad Ahmad', role: 'Frontend Developer' }
-    ];
-    const swiperContainer = document.getElementById("swiper-wrapper1");
-
-    members.map(member => {
-        const slide = document.createElement("div");
-        slide.classList.add("swiper-slide");
-        
-        slide.innerHTML = `
-        <div class="rounded-[10px] bg-[#EBEBEB] dark:bg-[#303030] h-full flex flex-col items-center gap-16 justify-center p-6">
-            <img class="w-[90px] h-[90px] object-cover  mt-16" src="./assets/icons/img.svg" alt="${member.name}"> 
-            
-            <div class="w-full max-w-[200px] h-[100px] bg-[#F5F5F5] text-start
-                 justify-center dark:bg-black text-center p-4 rounded-lg shadow-lg flex flex-col">
-                <p class="text-lg ml-2 font-bold text-[#2E2E2E] dark:text-white">${member.name}</p>
-                <p class="text-sm ml-2 text-gray-500">${member.role}</p>
-            </div>
-        </div>
-        `;
-        
-        swiperContainer.appendChild(slide);
-    });
-
     const members2 = [
         {src:"./assets/icons/f.svg"},
         {src:"./assets/icons/ps.svg"},
@@ -119,60 +92,100 @@ document.addEventListener("DOMContentLoaded", function () {
         {src:"./assets/icons/word.svg"},
     ];
     
-    const swiperWrapper = document.getElementById("swiper-wrapper");
+    const marqueeContent = document.querySelector(".marquee-content");
 
     members2.forEach(member => {
-        const slide = document.createElement("div");
-        slide.classList.add("swiper-slide"); 
+        const img = document.createElement("img");
         if (member.src== "./assets/icons/f.svg") {
             if (document.documentElement.classList.contains('dark')) {
-                slide.innerHTML = `
-                    <img class="" src="${member.src}">
-                `;
-                swiperWrapper.appendChild(slide);
+                img.src = member.src;
+                marqueeContent.appendChild(img);
 
             }
         } else {
-            slide.innerHTML = `
-                    <img class="" src="${member.src}">
-                `;
-                swiperWrapper.appendChild(slide);
+            img.src = member.src
+            marqueeContent.appendChild(img);
 
         }
     });
 
-    const swiper = new Swiper('.swiper', {
-        direction: 'horizontal',
-        loop: true,
-        slidesPerView: 1.5,
-        autoplay: {
-            delay: 1500
-        },
-        breakpoints: {
-            1024: {
-                slidesPerView: 2.5,
-            }
-        },
-        spaceBetween: 35
-      });
+    members2.forEach(member => {
+        const img = document.createElement("img");
+        if (member.src== "./assets/icons/f.svg") {
+            if (document.documentElement.classList.contains('dark')) {
+                img.src = member.src;
+                marqueeContent.appendChild(img);
 
-    const swiper2 = new Swiper('.swiper2', {
-        direction: 'horizontal',
-        loop: true,
-        slidesPerView: 6,
-        autoplay: {
-            delay: 1500
-        },
-        breakpoints: {
-            1024: {
-                slidesPerView: 12,
             }
+        } else {
+            img.src = member.src
+            marqueeContent.appendChild(img);
+
         }
+    });
+   
+    const members = [
+        { name: 'Ahmad Ahmad', role: 'Frontend Developer', image:"./assets/imgs/person1.png" },
+        { name: 'Sameer Ahmad', role: 'Frontend Developer', image:"./assets/imgs/person1.png" },
+        { name: 'Tawfeeq Ahmad', role: 'Frontend Developer', image:"./assets/imgs/person1.png" },
+        { name: 'Ahmad Ahmad', role: 'Frontend Developer', image:"./assets/imgs/person1.png" },
+        { name: 'Ahmad Ahmad', role: 'Frontend Developer', image:"./assets/imgs/person1.png" },
+      ];
+      
+      // Select the container where the slides will be inserted
+      const marqueeContent2 = document.querySelector(".marquee-content2");
+      
+      // Function to create a slide from a member
+      const createSlide = (member) => {
+          const slide = document.createElement("div");
+          slide.innerHTML = `
+              <div class="card relative rounded-lg overflow-hidden shadow-lg">
+                  <img src=${member.image} class="h-full">
+                  <div class="text-content dark:bg-black text-center bg-white dark:text-white rounded-[10px]">
+                      <p class="text-lg font-bold text-[#2E2E2E] dark:text-white">${member.name}</p>
+                      <p class="text-sm text-gray-500">${member.role}</p>
+                  </div>
+              </div>
+          `;
+          return slide;
+      }
+      
+      // Append each member to the marquee-content2 twice for seamless looping
+      members.forEach(member => {
+          const slide = createSlide(member);
+          marqueeContent2.appendChild(slide);
       });
       
-});
+      // Duplicate the slides for seamless effect
+      members.forEach(member => {
+          const slide = createSlide(member);
+          marqueeContent2.appendChild(slide);
+      });
 
-export function dropdown() {
+
+      // Select all the cards
+      const cards = document.querySelectorAll(".card");
+      
+      // Pause marquee when hovering over a card
+      cards.forEach(card => {
+          card.addEventListener("mouseenter", () => {
+            cards.forEach(pausedCard => {
+                    pausedCard.style.animationPlayState = "paused";
+                
+          });
+      
+          card.addEventListener("mouseleave", () => {
+            cards.forEach(pausedCard => {
+                    pausedCard.style.animationPlayState = "running";
+          });
+      });
+
+      loadClient();
+      
+});
+      })})
+
+function dropdown() {
     var dropdownMenu = document.getElementById('dropdown-menu');
 
     if (dropdownMenu.classList.contains('dropdown-off')) {
@@ -192,3 +205,65 @@ export function setSelectedItem(itemText) {
     dropdown(); 
 }
 
+const clients = [
+    {
+        description: "Lorem ipsum dolor sit amet, dolor consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur Lorem adipiscing consectetur sed dolor o Lorem ipsum dolor sit amet, dolor",
+        imageSrc: "./assets/icons/user.svg",
+        name: "name",
+        position: "CEO agency"
+    },
+    {
+        description: "Lorem ipsum dolor sit amet, dolor consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur Lorem adipiscing consectetur sed dolor o Lorem ipsum dolor sit amet, dolor",
+        imageSrc: "./assets/icons/user.svg",
+        name: "name",
+        position: "CEO agency"
+    },
+    {
+        description: "Lorem ipsum dolor sit amet, dolor consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur Lorem adipiscing consectetur sed dolor o Lorem ipsum dolor sit amet, dolor",
+        imageSrc: "./assets/icons/user.svg",
+        name: "name",
+        position: "CEO agency"
+    },
+    {
+        description: "Lorem ipsum dolor sit amet, dolor consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur Lorem adipiscing consectetur sed dolor o Lorem ipsum dolor sit amet, dolor",
+        imageSrc: "./assets/icons/user.svg",
+        name: "AAA",
+        position: "CEO agency"
+    },
+    {
+        description: "Lorem ipsum dolor sit amet, dolor consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur Lorem adipiscing consectetur sed dolor o Lorem ipsum dolor sit amet, dolor",
+        imageSrc: "./assets/icons/user.svg",
+        name: "AAA",
+        position: "CEO agency"
+    },
+    {
+        description: "Lorem ipsum dolor sit amet, dolor consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur Lorem adipiscing consectetur sed dolor o Lorem ipsum dolor sit amet, dolor",
+        imageSrc: "./assets/icons/user.svg",
+        name: "AAA",
+        position: "CEO agency"
+    },
+    {
+        description: "Lorem ipsum dolor sit amet, dolor consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur Lorem adipiscing consectetur sed dolor o Lorem ipsum dolor sit amet, dolor",
+        imageSrc: "./assets/icons/user.svg",
+        name: "3",
+        position: "CEO agency"
+    },
+    {
+        description: "Lorem ipsum dolor sit amet, dolor consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur Lorem adipiscing consectetur sed dolor o Lorem ipsum dolor sit amet, dolor",
+        imageSrc: "./assets/icons/user.svg",
+        name: "3",
+        position: "CEO agency"
+    },
+    {
+        description: "Lorem ipsum dolor sit amet, dolor consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur Lorem adipiscing consectetur sed dolor o Lorem ipsum dolor sit amet, dolor",
+        imageSrc: "./assets/icons/user.svg",
+        name: "3",
+        position: "CEO agency"
+    },
+    {
+        description: "Lorem ipsum dolor sit amet, dolor consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur Lorem adipiscing consectetur sed dolor o Lorem ipsum dolor sit amet, dolor",
+        imageSrc: "./assets/icons/user.svg",
+        name: "name",
+        position: "CEO agency"
+    },
+]
