@@ -28,16 +28,8 @@ export function toggleNav() {
         navMenu.classList.add("nav-off");
     }
 
-    if (navIcon.src.includes('menu-off.svg') ) {
-        navIcon.src = './assets/icons/menu-on.svg';
-    } else if (navIcon.src.includes('menu-off-black.svg')) {
-        navIcon.src = './assets/icons/menu-on-dark.svg';
-
-    } else {
-        navIcon.src = './assets/icons/menu-off.svg';
-    }
+    
 }
-
 
 
 document.addEventListener("DOMContentLoaded", function () {

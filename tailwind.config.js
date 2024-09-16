@@ -19,6 +19,8 @@ module.exports = {
     'w-[30vw]',
     'md:w-[30%]',
     'lg:w-[22vw]',
+    'nav-off',
+    'nav-on',
     'text-[0.8rem]',
     'hover:bg-[#D9D9D9]',
       'flex',
