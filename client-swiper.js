@@ -104,6 +104,8 @@ function loadClients() {
             nextButton.classList.remove('hidden');
         }
     }
+
+    
 }
 
 // Initialize the Swiper

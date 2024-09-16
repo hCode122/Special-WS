@@ -84,98 +84,10 @@ document.addEventListener("DOMContentLoaded", function () {
         {src:"./assets/icons/word.svg"},
     ];
     
-    const marqueeContent = document.querySelector(".marquee-content");
+    
 
-    members2.forEach(member => {
-        const img = document.createElement("img");
-        if (member.src== "./assets/icons/f.svg") {
-            if (document.documentElement.classList.contains('dark')) {
-                img.src = member.src;
-                marqueeContent.appendChild(img);
-
-            }
-        } else {
-            img.src = member.src
-            marqueeContent.appendChild(img);
-
-        }
-    });
-
-    members2.forEach(member => {
-        const img = document.createElement("img");
-        if (member.src== "./assets/icons/f.svg") {
-            if (document.documentElement.classList.contains('dark')) {
-                img.src = member.src;
-                marqueeContent.appendChild(img);
-
-            }
-        } else {
-            img.src = member.src
-            marqueeContent.appendChild(img);
-
-        }
-    });
-   
-    const members = [
-        { name: 'Ahmad Ahmad', role: 'Frontend Developer', image:"./assets/imgs/person1.png" },
-        { name: 'Sameer Ahmad', role: 'Frontend Developer', image:"./assets/imgs/person1.png" },
-        { name: 'Tawfeeq Ahmad', role: 'Frontend Developer', image:"./assets/imgs/person1.png" },
-        { name: 'Ahmad Ahmad', role: 'Frontend Developer', image:"./assets/imgs/person1.png" },
-        { name: 'Ahmad Ahmad', role: 'Frontend Developer', image:"./assets/imgs/person1.png" },
-      ];
-      
-      // Select the container where the slides will be inserted
-      const marqueeContent2 = document.querySelector(".marquee-content2");
-      
-      // Function to create a slide from a member
-      const createSlide = (member) => {
-          const slide = document.createElement("div");
-          slide.innerHTML = `
-              <div class="card relative rounded-lg overflow-hidden shadow-lg">
-                  <img src=${member.image} class="h-full">
-                  <div class="text-content dark:bg-black text-center bg-white dark:text-white rounded-[10px]">
-                      <p class="text-lg font-bold text-[#2E2E2E] dark:text-white">${member.name}</p>
-                      <p class="text-sm text-gray-500">${member.role}</p>
-                  </div>
-              </div>
-          `;
-          return slide;
-      }
-      
-      // Append each member to the marquee-content2 twice for seamless looping
-      members.forEach(member => {
-          const slide = createSlide(member);
-          marqueeContent2.appendChild(slide);
-      });
-      
-      // Duplicate the slides for seamless effect
-      members.forEach(member => {
-          const slide = createSlide(member);
-          marqueeContent2.appendChild(slide);
-      });
-
-
-      // Select all the cards
-      const cards = document.querySelectorAll(".card");
-      
-      // Pause marquee when hovering over a card
-      cards.forEach(card => {
-          card.addEventListener("mouseenter", () => {
-            cards.forEach(pausedCard => {
-                    pausedCard.style.animationPlayState = "paused";
-                
-          });
-      
-          card.addEventListener("mouseleave", () => {
-            cards.forEach(pausedCard => {
-                    pausedCard.style.animationPlayState = "running";
-          });
-      });
-
-      loadClient();
       
 });
-      })})
 
 function dropdown() {
     var dropdownMenu = document.getElementById('dropdown-menu');

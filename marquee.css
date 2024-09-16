@@ -1,102 +1,46 @@
-.marquee-wrapper {
-    width: 100%;  /* Full width */
-    height: 42px;  /* Set a fixed height */
-  }
+.team-card {
+  width: 300px; /* Adjust card width */
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 
-  .marquee-content {
-    display: flex;
-    white-space: nowrap;  /* Prevent line breaks */
-    animation: marquee 45s linear infinite;  /* Animation for scrolling */
+  img {
+    transition: 0.5s;
   }
+}
 
-  .marquee-content img {
-    width: 80px;  /* Set the image width */
-    margin-right: 20px;  /* Spacing between images */
+@media (max-width: 640px) {
+  .team-card {
+    width: 300px; /* Adjust card width */
+    height: 400px;
+   
   }
+}
 
-  @keyframes marquee {
-    from {
-      transform: translateX(0%);
-    }
-    to {
-      transform: translateX(-100%);
-    }
+.team-card:hover {
+  img {
+    transform: scale(110%);
   }
+}
 
-  
+
+.team-wrapper, .middle-wrapper{
+  -webkit-transition-timing-function:linear!important;    transition-timing-function:linear!important; 
+  position: relative;
+}
 
 .text-content {
-    position: absolute;
-    bottom: 4%;
-    left: 5%;
-    width: 90%;
-    height: 24%; /* Bottom quarter of the card */
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-}
-
-.dark .text-content {
-    background-color: black;
-}
-
-.text-lg {
-    font-size: 1.125rem;
-    font-weight: bold;
-    color: #2E2E2E;
-}
-
-.dark .text-lg {
-    color: white;
-}
-
-.text-sm {
-    font-size: 0.875rem;
-    color: #737373;
-}
-
-.marquee-wrapper2 {
-    width: 45vw; 
-    height: 350px; 
-    position: relative;
-    overflow: hidden;
-  }
-
-.card img {
-    width: 100%;
-    transition: 1s;
-}
-
-  .card {
-    position: relative;
-    width: 250px;
-    height: 330px;
-    border-radius: 0.5rem;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    animation: marquee2 5s linear infinite; 
-}
-
-.card:hover img {
-    transform: scale(1.1); /* Slight zoom (10% larger) */
-}
-
-.marquee-content2 {
-    display: flex;
-    white-space: nowrap; 
-}
-
-.marquee-content2 div {
-    flex: 0 0 auto; 
-}
-
-@keyframes marquee2 {
-    0% {
-        transform: translateX(160%); 
-    }
-    100% {
-        transform: translateX(-400%); 
-    }
+  position: absolute;
+  bottom: 4%;
+  left: 5%;
+  width: 90%;
+  height: 24%; /* Bottom quarter of the card */
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }

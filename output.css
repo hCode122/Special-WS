@@ -666,6 +666,10 @@ video {
   z-index: -1;
 }
 
+.m-0 {
+  margin: 0px;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -701,10 +705,6 @@ video {
 
 .mr-2 {
   margin-right: 0.5rem;
-}
-
-.mr-8 {
-  margin-right: 2rem;
 }
 
 .mr-\[5\%\] {
@@ -755,10 +755,6 @@ video {
   margin-top: 30px;
 }
 
-.mt-\[56px\] {
-  margin-top: 56px;
-}
-
 .mt-\[66px\] {
   margin-top: 66px;
 }
@@ -807,12 +803,20 @@ video {
   height: 22vw;
 }
 
-.h-\[35vh\] {
-  height: 35vh;
+.h-\[400px\] {
+  height: 400px;
 }
 
 .h-\[450px\] {
   height: 450px;
+}
+
+.h-\[48px\] {
+  height: 48px;
+}
+
+.h-\[50px\] {
+  height: 50px;
 }
 
 .h-\[538px\] {
@@ -953,10 +957,6 @@ video {
 
 .justify-evenly {
   justify-content: space-evenly;
-}
-
-.gap-12 {
-  gap: 3rem;
 }
 
 .gap-16 {
@@ -1292,11 +1292,17 @@ body {
 }
 
 .scrolled {
-  top: 5px;
   background-color: white;
   color: white !important;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   /* Optional, for shadow effect */
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .dark p {
@@ -1355,7 +1361,7 @@ p {
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 800px) {
   .colorSwitch {
     background-repeat: no-repeat;
     background-position: center;
@@ -1363,12 +1369,13 @@ p {
     p {
       margin-top: 0.4rem;
       color:white;
-      font-size: 0.6rem;
+      font-size: 0.5rem;
       transition: 0.5s;
     }
     img {
       margin-top: 0.5rem;
       transition: 0.5s;
+      width: 15px;
       filter: brightness(0) invert(1);
     }
   }
@@ -1376,7 +1383,7 @@ p {
   .colorSwitch:hover {
     animation: colorSwitch 0.3s ease forwards ;
     p {
-      font-size: 0.8rem;
+      font-size: 0.6rem;
       color: black
     }
     img {
@@ -1982,6 +1989,10 @@ p {
     margin-right: 0px;
   }
 
+  .md\:mr-8 {
+    margin-right: 2rem;
+  }
+
   .md\:mr-\[0px\] {
     margin-right: 0px;
   }
@@ -1992,6 +2003,10 @@ p {
 
   .md\:mr-auto {
     margin-right: auto;
+  }
+
+  .md\:mt-0 {
+    margin-top: 0px;
   }
 
   .md\:mt-12 {
@@ -2040,6 +2055,10 @@ p {
 
   .md\:h-\[400px\] {
     height: 400px;
+  }
+
+  .md\:h-\[55px\] {
+    height: 55px;
   }
 
   .md\:h-\[750px\] {
