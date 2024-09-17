@@ -843,10 +843,6 @@ video {
   height: 870px;
 }
 
-.h-\[900px\] {
-  height: 900px;
-}
-
 .h-full {
   height: 100%;
 }
@@ -1321,6 +1317,7 @@ body {
   position: fixed;
   z-index: 1000;
   transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
 }
 
 .dark p {
@@ -1331,22 +1328,16 @@ p {
   color:#5C5C5C;
 }
 
-#nav-menu {
-  transition: 1s;
-  /* Initially hidden off screen */
-  top: 10%
-}
-
-/* Menu is visible (on screen) */
-
 .nav-on {
-  display: block;
+  right: 15vw;
+  top: 4vh
 }
 
 /* Menu off screen */
 
 .nav-off {
-  display: none;
+  right: -100vw;
+  top: 4vh
 }
 
 .colorSwitch {
@@ -2090,10 +2081,6 @@ p {
     height: 55px;
   }
 
-  .md\:h-\[850px\] {
-    height: 850px;
-  }
-
   .md\:h-\[900px\] {
     height: 900px;
   }
@@ -2222,10 +2209,6 @@ p {
 
   .lg\:mt-4 {
     margin-top: 1rem;
-  }
-
-  .lg\:h-\[700px\] {
-    height: 700px;
   }
 
   .lg\:h-\[800px\] {
