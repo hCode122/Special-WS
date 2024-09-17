@@ -1,179 +1,223 @@
-.border-grad {
+.border-grad, .border-grad2, .border-grad3 {
     box-sizing: border-box;
     position: relative;
     background-color: black; 
     border: none;
     height: 450px;
     background-clip: padding-box; 
-    
-  
-    &:before {
-        content: '';
-        position: absolute;
-        top: -2px;
-        left: -2px;
-        right: -2px;
-        bottom: -2px;
-        z-index: -1; 
-        border-radius: inherit; 
-        background: linear-gradient(180deg, #707070 0%, #141414 115.5%);
-        padding: 2px; 
-    }
 }
 
-
-.border-grad2 {
-    box-sizing: border-box;
-    position: relative;
-    background-color: black; 
-    border: none;
-    height: 450px;
-    background-clip: padding-box; 
-
-  
-    &:before {
-        content: '';
-        position: absolute;
-        top: -2px;
-        left: -2px;
-        right: -2px;
-        bottom: -2px;
-        z-index: -1; 
-        border-radius: inherit; 
-        background: linear-gradient(180deg, #707070 0%, #141414 115.5%);
-        padding: 2px; 
-    }
-}
-
-.border-grad3 {
-    box-sizing: border-box;
-    position: relative;
-    background-color: black; 
-    border: none;
-    height: 450px;
-    background-clip: padding-box; 
-
-  
-    &:before {
-        content: '';
-        position: absolute;
-        top: -2px;
-        left: -2px;
-        right: -2px;
-        bottom: -2px;
-        z-index: -1; 
-        border-radius: inherit; 
-        background: linear-gradient(180deg, #707070 0%, #141414 115.5%);
-        padding: 2px; 
-    }
+.border-grad::before, .border-grad2::before, .border-grad3::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    z-index: -1; 
+    border-radius: inherit; 
+    background: linear-gradient(180deg, #707070 0%, #141414 115.5%);
+    padding: 2px; 
 }
 
 .dark .client-animation {
     background-color: black;
     transition: 0.5s;
-    p {
-        color: white
-    }
+}
 
-    img {
-        background-color: white;
-    }
+.dark .client-animation p {
+    color: white;
 }
 
 .dark .client-animation:hover {
     background-color: white;
-
-    p {
-        color: black
-    }
-
-    img {
-        background-color: black;
-    }
 }
+
+.dark .client-animation:hover p {
+    color: black;
+}
+
+
 
 .client-animation {
     transition: 0.5s;
     background-color: #F5F5F5;
-    p {
-        color: #2E2E2E
-    }
-
-    img {
-        background-color: rgb(255, 255, 255);
-    }
 }
 
- .client-animation:hover {
+.client-animation p {
+    color: #2E2E2E;
+}
+
+
+
+.client-animation:hover {
     background-color: black;
-
-    transition: 0.5s;
-    p {
-        color: white
-    }
-
-    img {
-        background-color: rgb(255, 255, 255);
-    }
 }
+
+.client-animation:hover p {
+    color: white;
+}
+
+
 
 .custom-nav {
     position: absolute;
-    top: 73% !important;
-    transform: translateY(-60%);
-    background-color: transparent; /* Adjust as needed */
+    background-color: transparent;
     border: none;
     cursor: pointer;
     z-index: 10;
-}
-
-.swiper-container {
-    overflow: hidden;
+   
 }
 
 .swiper-button-prev {
-    left: 70px !important;  /* Push the previous button outside the Swiper container */
+    left: 5% !important;
+    background-image: url("./assets/icons/plus.svg") !important;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-button-prev:hover {
+    background-image: url("./assets/icons/arrow-btn-circle2.svg") !important;
+    animation: opacityHide 0.3s ease;
 }
 
 .swiper-button-next {
-    right: 40px !important;  /* Push the next button outside the Swiper container */
+    right: 0 !important;
+    background-image: url("./assets/icons/plus.svg") !important;
+    background-repeat: no-repeat;
+}
+
+.swiper-button-next:hover {
+    background-image: url("./assets/icons/arrow-btn-circle.svg") !important;
+    animation: opacityHide 0.3s ease;
 }
 
 .custom-nav img {
-    width: auto; /* Adjust size as needed */
+    width: auto;
     height: auto;
 }
 
-
 .swiper-button-next, .swiper-button-prev {
    color: rgba(0, 0, 0, 0) !important;
-   width: 150px !important; /* Adjust size as needed */
+   width: 150px !important;
    height: 150px !important;
 }
 
-
 .client-card {
-    margin-top: 25px;
+    margin-top: 20px;
     width: 20vw;
-    height: 400px;
+    height: auto;
+    margin-inline: auto;
 }
 
-@media (max-width: 810px) {
-    .client-card {
-        margin-top: 25px;
-        width: 65vw;
-        height: 300px;
-        border-radius: 12px;
+/* Mobile First Approach */
+@media (max-width: 500px) {
+    .client-container {
+        overflow: hidden; /* Fixed to prevent content from scrolling horizontally */
+        width: 90%;
+       margin-inline: auto;
     }
+
+    .swiper-slide {
+        margin-inline: auto;
+        width: 20vw;
+    }
+
+    .client-card {
+        width: 50vw;
+        border-radius: 12px;
+        height:300px;
+    }
+
     .custom-nav {
-        top: 90% !important
+        top: 80% !important;
+    }
+
+    .swiper-button-prev {
+        left: 1vw !important;
+    }
+
+    .swiper-button-next {
+        right: -10vw !important;
+    }
+}
+
+/* Larger Screen Styling */
+@media (min-width: 500px) and (max-width: 768px) {
+    .client-container {
+        overflow: hidden; /* Fixed to prevent content from scrolling horizontally */
+       margin-inline: auto;
+    }
+    .client-card {
+        width: 45vw;
+        height:350px;
+        border-radius: 12px;
+        margin-inline: auto;
+    }
+
+    .custom-nav {
+        top: 85% !important;
     }
     .swiper-button-prev {
-        left: 20px !important;  /* Push the previous button outside the Swiper container */
+        left: 1vw !important;
     }
-    
+
     .swiper-button-next {
-        right: 0px !important;  /* Push the next button outside the Swiper container */
+        right: -6vw !important;
     }
-    
+}
+
+@media (min-width: 768px) and (max-width: 1025px) {
+
+    .client-container {
+        overflow: hidden; /* Fixed to prevent content from scrolling horizontally */
+       margin-inline: auto;
+    }
+    .client-card {
+        width: 32vw;
+        height:350px;
+        border-radius: 12px;
+        margin-inline: auto;
+    }
+
+    .custom-nav {
+        top: 85% !important;
+    }
+    .swiper-button-prev {
+        left: 1vw !important;
+    }
+
+    .swiper-button-next {
+        right: -5vw !important;
+    }
+
+}
+/* Desktop */
+@media (min-width: 1025px) {
+    .client-container {
+        overflow: hidden; /* Fixed to prevent content from scrolling horizontally */
+       margin-inline: auto;
+    }
+    .client-card {
+        width: 22vw;
+        height: 400px;
+    }
+
+    .swiper-slide {
+        margin-inline: auto;
+    }
+
+    .custom-nav {
+        top: 70% !important;
+        transform: translateY(-60%);
+    }
+
+    .swiper-button-prev {
+        left: 5% !important;
+    }
+
+    .swiper-button-next {
+        right: 0 !important;
+    }
 }

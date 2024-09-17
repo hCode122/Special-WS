@@ -1,12 +1,30 @@
 let currentIndex = 0;
 
 const clients = [
-  { name: 'Client 1', description: 'Description 1', imageSrc: './assets/icons/user.svg', position: 'Position 1' },
-  { name: 'Client 2', description: 'Description 2', imageSrc: './assets/icons/user.svg', position: 'Position 2' },
-  { name: 'Client 3', description: 'Description 3', imageSrc: './assets/icons/user.svg', position: 'Position 3' },
-  { name: 'Client 4', description: 'Description 4', imageSrc: './assets/icons/user.svg', position: 'Position 4' },
-  { name: 'Client 5', description: 'Description 5', imageSrc: './assets/icons/user.svg', position: 'Position 5' },
-  { name: 'Client 5', description: 'Description 5', imageSrc: './assets/icons/user.svg', position: 'Position 5' }
+  { name: 'name', description: `
+    Lorem ipsum dolor sit amet, dolor consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsumsito dolor sit amet, consectetur Lorem adipiscing consectetur sed dolor o
+Lorem ipsum dolor sit amet, dolor 
+    `, imageSrc: './assets/icons/user.svg', position: 'CEO example agency' },
+  { name: 'name', description: `
+    Lorem ipsum dolor sit amet, dolor consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsumsito dolor sit amet, consectetur Lorem adipiscing consectetur sed dolor o
+Lorem ipsum dolor sit amet, dolor 
+    `, imageSrc: './assets/icons/user.svg', position: 'CEO example agency' },
+  { name: 'name', description: `
+    Lorem ipsum dolor sit amet, dolor consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsumsito dolor sit amet, consectetur Lorem adipiscing consectetur sed dolor o
+Lorem ipsum dolor sit amet, dolor 
+    `, imageSrc: './assets/icons/user.svg', position: 'CEO example agency' },
+  { name: 'name', description: `
+    Lorem ipsum dolor sit amet, dolor consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsumsito dolor sit amet, consectetur Lorem adipiscing consectetur sed dolor o
+Lorem ipsum dolor sit amet, dolor 
+    `, imageSrc: './assets/icons/user.svg', position: 'CEO example agency' },
+  { name: 'name', description: `
+    Lorem ipsum dolor sit amet, dolor consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsumsito dolor sit amet, consectetur Lorem adipiscing consectetur sed dolor o
+Lorem ipsum dolor sit amet, dolor 
+    `, imageSrc: './assets/icons/user.svg', position: 'CEO example agency' },
+  { name: 'name', description: `
+    Lorem ipsum dolor sit amet, dolor consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsumsito dolor sit amet, consectetur Lorem adipiscing consectetur sed dolor o
+Lorem ipsum dolor sit amet, dolor 
+    `, imageSrc: './assets/icons/user.svg', position: 'CEO example agency' }
 ];
 
 function loadClients() {
@@ -42,11 +60,11 @@ function loadClients() {
 
         // Client card content
         clientCard.innerHTML = `
-            <p class="lg:text-[0.9rem] md:text-[0.8rem] text-[0.8rem] text-center text-gray-400 md:p-8 p-2">
+            <p class="lg:text-[1rem] md:text-[0.8rem] text-[0.8rem] text-center text-gray-400 md:p-8 p-2">
                 ${client.description}
             </p>
-            <img src="${client.imageSrc}" class="mt-4 rounded-full h-12 p-2">
-            <p class="text-[0.9rem] text-white mt-4">${client.name}</p>
+            <img src="${client.imageSrc}" class="mt-16 rounded-full h-12 ">
+            <p class="text-[1.2rem] text-white mt-4">${client.name}</p>
             <p>${client.position}</p>
         `;
 
@@ -58,23 +76,27 @@ function loadClients() {
     });
 
 
-    const swiper = new Swiper('.swiper-container', {
+    const swiper = new Swiper('.client-container', {
         spaceBetween: 10,   // Space between cards in px
+        slidesPerView: 1,  // Show 1.5 slides on mobile
+        // Adjust space between slides for mobile
+      slidesPerGroup: 1,
         loop: false,         // Enable looping of slides
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
         breakpoints: {
-            810: {
-                slidesPerView: 1,  // Show 1.5 slides on mobile
-                spaceBetween: 5,   // Adjust space between slides for mobile
-                slidesPerGroup: 3,
+          
+            768: {
+                slidesPerView: 2,  // Default for larger screens
+                spaceBetween: 5,
+                        slidesPerGroup: 2,
             },
-            1024: {
+            1224: {
                 slidesPerView: 3,  // Default for larger screens
                 spaceBetween: 10,
-                        slidesPerGroup: 1,
+                        slidesPerGroup: 3,
             }
         }
        

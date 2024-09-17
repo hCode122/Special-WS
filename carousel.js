@@ -11,7 +11,7 @@ const swiper = new Swiper('.team-container', {
     speed: 9000,
     breakpoints: {
     810: {
-        slidesPerView: 1.5,  // Show 1.5 slides on mobile
+        slidesPerView: 1,  // Show 1.5 slides on mobile
         spaceBetween: 5,   // Adjust space between slides for mobile
     },
     // when the screen width is > 768px (tablet and above)
@@ -34,7 +34,7 @@ const swiper2 = new Swiper('.middle-container', {
     loop: true,
     speed: 22000,
     breakpoints: {
-    810: {
+    300: {
         slidesPerView: 5,  // Show 1.5 slides on mobile
         spaceBetween: 5,   // Adjust space between slides for mobile
     },
