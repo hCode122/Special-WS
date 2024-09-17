@@ -24,7 +24,7 @@ function loadClients() {
         const clientCard = document.createElement('div');
         
         // Shared class names
-        let baseClass = 'flex gap-[10px] flex-col items-center justify-center client-animation w-[70vw] md:w-[30%] lg:w-[22vw]';
+        let baseClass = 'client-card flex gap-[10px] flex-col items-center justify-center client-animation';
         let gradientClass = ''; // Placeholder for border-grad classes
 
         // Assign specific border-grad class based on counter
@@ -59,51 +59,29 @@ function loadClients() {
 
 
     const swiper = new Swiper('.swiper-container', {
-        slidesPerView: 3,   // Display 3 cards at a time
-        spaceBetween: 5,   // Space between cards in px
+        spaceBetween: 10,   // Space between cards in px
         loop: false,         // Enable looping of slides
-        slidesPerGroup: 3,
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
-        on: {
-          
-        // Event when swiper reaches the beginning
-        reachBeginning: function() {
-            document.getElementById('swiperPrev').classList.add('none');
-        },
-        // Event when swiper leaves the beginning (so previous button shows again)
-        fromEdge: function() {
-            document.getElementById('swiperPrev').classList.remove('hidden');
-            document.getElementById('swiperNext').classList.remove('hidden');
-        },
-        // Event when swiper reaches the end
-        reachEnd: function() {
-            document.getElementById('swiperNext').classList.add('hidden');
-        },
-    },
+        breakpoints: {
+            810: {
+                slidesPerView: 1,  // Show 1.5 slides on mobile
+                spaceBetween: 5,   // Adjust space between slides for mobile
+                slidesPerGroup: 3,
+            },
+            1024: {
+                slidesPerView: 3,  // Default for larger screens
+                spaceBetween: 10,
+                        slidesPerGroup: 1,
+            }
+        }
+       
     });
     
 
-    function toggleNavButtons(swiper) {
-        const prevButton = document.getElementById('swiperPrev');
-        const nextButton = document.getElementById('swiperNext');
-        
-        // Show/hide the previous button
-        if (swiper.isBeginning) {
-            prevButton.classList.add('hidden');
-        } else {
-            prevButton.classList.remove('hidden');
-        }
-        
-        // Show/hide the next button
-        if (swiper.isEnd) {
-            nextButton.classList.add('hidden');
-        } else {
-            nextButton.classList.remove('hidden');
-        }
-    }
+    
 
     
 }

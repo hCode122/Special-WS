@@ -2,13 +2,12 @@ const nav = document.querySelector("nav");
 
 // Function to handle scroll event
 function handleScroll() {
-  if (window.scrollY > 10) {
+  if (window.scrollY > 5) {
     nav.classList.add("scrolled");
   } else {
     nav.classList.remove("scrolled");
   }
 }
-handleScroll();
 document.addEventListener("DOMContentLoaded", function () {
   handleScroll();
 
