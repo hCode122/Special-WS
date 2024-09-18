@@ -5,13 +5,12 @@ export function toggle(className) {
         btn.classList.add("toggle-off")
         btn.classList.remove("toggle-on")
         document.documentElement.classList.toggle('dark');
-
+        switchDarkIcons()
     } else {
         btn.classList.remove("toggle-off")
         btn.classList.add("toggle-on")
         document.documentElement.classList.toggle('dark');
-
-    }
+        switchDarkIcons()    }
 }
 
 //Nav Menu
@@ -53,41 +52,26 @@ document.addEventListener("DOMContentLoaded", function () {
     const btnToggle = document.getElementById('btn-toggle');
     btnToggle.addEventListener('click', () => toggle('btn-toggle'));
     const btnToggle2 = document.getElementById('btn-toggle2');
-    btnToggle2.addEventListener('click',() => toggle('btn-toggle2'));
-
-
-    const members2 = [
-        {src:"./assets/icons/f.svg"},
-        {src:"./assets/icons/ps.svg"},
-        {src:"./assets/icons/pr.svg"},
-        {src:"./assets/icons/ai.svg"},
-        {src:"./assets/icons/html.svg"},
-        {src:"./assets/icons/js.svg"},
-        {src:"./assets/icons/cs.svg"},
-        {src:"./assets/icons/flut.svg"},
-        {src:"./assets/icons/ruby.svg"},
-        {src:"./assets/icons/b.svg"},
-        {src:"./assets/icons/ps.svg"},
-        {src:"./assets/icons/word.svg"},
-        {src:"./assets/icons/f.svg"},
-        {src:"./assets/icons/f-dark.svg"},
-        {src:"./assets/icons/ps.svg"},
-        {src:"./assets/icons/pr.svg"},
-        {src:"./assets/icons/ai.svg"},
-        {src:"./assets/icons/html.svg"},
-        {src:"./assets/icons/js.svg"},
-        {src:"./assets/icons/cs.svg"},
-        {src:"./assets/icons/flut.svg"},
-        {src:"./assets/icons/ruby.svg"},
-        {src:"./assets/icons/b.svg"},
-        {src:"./assets/icons/ps.svg"},
-        {src:"./assets/icons/word.svg"},
-    ];
+    btnToggle2.addEventListener('click',() => toggle('btn-toggle2'))
     
-    
-
-      
 });
+
+
+function switchDarkIcons() {
+    const members2 = document.getElementsByClassName('switchDark'); 
+    const isDarkMode = document.documentElement.classList.contains('dark');  // Check if dark mode is active on <html>
+
+    Array.from(members2).forEach(img => {
+        if (img.src.includes("f.svg") || img.src.includes("f-dark.svg")) {
+            img.src = isDarkMode ? "./assets/icons/f-dark.svg" : "./assets/icons/f.svg";
+        }
+
+        if (img.src.includes("ai.svg") || img.src.includes("ai-dark.svg")) {
+            img.src = isDarkMode ? "./assets/icons/ai-dark.svg" : "./assets/icons/ai.svg";
+        }
+    });
+}
+
 
 function dropdown() {
     var dropdownMenu = document.getElementById('dropdown-menu');

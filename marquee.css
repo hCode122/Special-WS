@@ -1,6 +1,11 @@
+.team-container{
+  width: 50vw;
+  overflow-x: hidden;
+}
+
 .team-card {
-  width: 300px; /* Adjust card width */
-  height: 400px;
+  width: 250px; /* Adjust card width */
+  height: 350px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,10 +19,31 @@
 
 @media (max-width: 640px) {
   .team-card {
-    width: 300px; /* Adjust card width */
-    height: 400px;
+    width: 270px; /* Adjust card width */
+    height: 320px;
    
   }
+  .team-container{
+    width: 98vw;
+    overflow-x: hidden;
+  }
+}
+ 
+@media (min-width: 640px) and  (max-width: 1024px) {
+  .team-container{
+    width: 95vw;
+    overflow-x: hidden;
+  }
+}
+
+@media (min-width: 1024px) {
+    .our-team {
+      flex-direction: row;
+    }
+    .team-container{
+      width: 95vw;
+      overflow-x: hidden;
+    }
 }
 
 .team-card:hover {

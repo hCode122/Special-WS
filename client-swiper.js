@@ -29,59 +29,62 @@ Lorem ipsum dolor sit amet, dolor
 
 function loadClients() {
     const clientContainer = document.getElementById('clientContainer');
-    clientContainer.innerHTML = ''; // Clear existing content
+    clientContainer.innerHTML = '';
 
     let counter = 0;
 
-    clients.forEach(client => {
-        // Create the slide container
+    clients.forEach((client, index) => {
         const slide = document.createElement('div');
-        slide.className = 'swiper-slide '; // Each slide will have this class
+        slide.className = 'swiper-slide '; 
 
-        // Create the clientCard element
         const clientCard = document.createElement('div');
-        
-        // Shared class names
+        const size = getScreenSizeClass();
         let baseClass = 'client-card flex gap-[10px] flex-col items-center justify-center client-animation';
-        let gradientClass = ''; // Placeholder for border-grad classes
+        let gradientClass = ''; 
 
-        // Assign specific border-grad class based on counter
-        if (counter === 0) {
-            gradientClass = 'border-grad rounded-tl-[100px]';  // Every third item but not zero
-        } else if (counter === 1) {
-            gradientClass = 'border-grad2';  // Every second item
-        } else if (counter === 2) {
-            gradientClass = 'border-grad3 rounded-br-[100px]';  // All other items
+        if (size == "client-card-large" ) {
+            if (counter === 0) {
+                gradientClass = 'border-grad rounded-tl-[100px]'; 
+            } else if (counter === 1) {
+                gradientClass = 'border-grad2';  
+            } else if (counter === 2) {
+                gradientClass = 'border-grad3 rounded-br-[100px]'; 
+            }
+            
+            clientCard.className = `${baseClass} ${gradientClass}`;
+            counter = (counter + 1) % 3
+        } else if (size == "client-card-small") {
+            if (index == 0) {
+                gradientClass = 'border-grad rounded-tl-[100px]'; 
+            } else if (index == clients.length -1) {
+                gradientClass = 'border-grad3 rounded-br-[100px]'; 
+            } else {
+                gradientClass = 'border-grad2';  
+            }
+            clientCard.className = `${baseClass} ${gradientClass}`;
         }
-        
-        // Combine the classes
-        clientCard.className = `${baseClass} ${gradientClass}`;
-        counter = (counter + 1) % 3
-
-        // Client card content
+ 
         clientCard.innerHTML = `
             <p class="lg:text-[1rem] md:text-[0.8rem] text-[0.8rem] text-center text-gray-400 md:p-8 p-2">
                 ${client.description}
             </p>
-            <img src="${client.imageSrc}" class="mt-16 rounded-full h-12 ">
+            <img src="${client.imageSrc}" class="md:mt-16 mt-8 rounded-full h-12 ">
             <p class="text-[1.2rem] text-white mt-4">${client.name}</p>
             <p>${client.position}</p>
         `;
 
-        // Append the clientCard inside the slide
         slide.appendChild(clientCard);
 
-        // Append the slide to the client container (swiper-wrapper)
         clientContainer.appendChild(slide);
     });
 
 
     const swiper = new Swiper('.client-container', {
-        spaceBetween: 10,   // Space between cards in px
-        slidesPerView: 1,  // Show 1.5 slides on mobile
-        // Adjust space between slides for mobile
-      slidesPerGroup: 1,
-        loop: false,         // Enable looping of slides
+        spaceBetween: 10,   
+        slidesPerView: 1,  
+
+        slidesPerGroup: 1,
+        loop: false,         
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
@@ -89,24 +92,29 @@ function loadClients() {
         breakpoints: {
           
             768: {
-                slidesPerView: 2,  // Default for larger screens
+                slidesPerView: 2,  
                 spaceBetween: 5,
                         slidesPerGroup: 2,
             },
             1224: {
-                slidesPerView: 3,  // Default for larger screens
+                slidesPerView: 3, 
                 spaceBetween: 10,
                         slidesPerGroup: 3,
             }
         }
        
     });
-    
-
-    
-
-    
 }
 
-// Initialize the Swiper
+function getScreenSizeClass() {
+    if (window.innerWidth < 770) {
+        return 'client-card-small'; 
+    } else if (window.innerWidth < 1024) {
+        return 'client-card-medium';  
+    } else {
+        return 'client-card-large';  
+    }
+}
+
+
 loadClients();

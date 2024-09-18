@@ -10,13 +10,20 @@ const swiper = new Swiper('.team-container', {
     loop: true,
     speed: 9000,
     breakpoints: {
-    810: {
-        slidesPerView: 1,  // Show 1.5 slides on mobile
-        spaceBetween: 5,   // Adjust space between slides for mobile
+    768: {
+        slidesPerView: 2, 
+        spaceBetween: 5,  
     },
-    // when the screen width is > 768px (tablet and above)
     1024: {
-        slidesPerView: 2.5,  // Default for larger screens
+        slidesPerView: 1.5, 
+        spaceBetween: 5, 
+    },
+    1220: {
+        slidesPerView: 2, 
+        spaceBetween: 5, 
+    },
+    1378: {
+        slidesPerView: 2.5,
         spaceBetween: 15,
     }
 }
@@ -35,11 +42,11 @@ const swiper2 = new Swiper('.middle-container', {
     speed: 22000,
     breakpoints: {
     300: {
-        slidesPerView: 5,  // Show 1.5 slides on mobile
-        spaceBetween: 5,   // Adjust space between slides for mobile
+        slidesPerView: 3,  
+        spaceBetween: 5,   
     },
     1024: {
-        slidesPerView: 12,  // Default for larger screens
+        slidesPerView: 12,  
         spaceBetween: 15,
     }
     
@@ -49,6 +56,11 @@ const swiper2 = new Swiper('.middle-container', {
 
 function createClientCards() {
     const members = [
+        { name: 'Ahmad Ahmad', role: 'Frontend Developer', image: "./assets/imgs/person1.png" },
+        { name: 'Sameer Ahmad', role: 'Frontend Developer', image: "./assets/imgs/person1.png" },
+        { name: 'Tawfeeq Ahmad', role: 'Frontend Developer', image: "./assets/imgs/person1.png" },
+        { name: 'Ahmad Ahmad', role: 'Frontend Developer', image: "./assets/imgs/person1.png" },
+        { name: 'Ahmad Ahmad', role: 'Frontend Developer', image: "./assets/imgs/person1.png" },
         { name: 'Ahmad Ahmad', role: 'Frontend Developer', image: "./assets/imgs/person1.png" },
         { name: 'Sameer Ahmad', role: 'Frontend Developer', image: "./assets/imgs/person1.png" },
         { name: 'Tawfeeq Ahmad', role: 'Frontend Developer', image: "./assets/imgs/person1.png" },
@@ -115,29 +127,36 @@ function createCodeCards() {
       ];
     
       const middleWeapper = document.querySelector('.middle-wrapper');
-    
+      const isDarkMode = document.documentElement.classList.contains('dark'); 
+
       members2.forEach(member => {
         const slide = document.createElement('div');
         slide.classList.add('swiper-slide'); // Add Swiper slide class
     
         const img = document.createElement('img');
-        img.src = member.src;
-        img.alt = ''; // Optionally add alt text for accessibility
     
+        if (member.src === "./assets/icons/f.svg" | member.src === "./assets/icons/f-dark.svg") {
+            if (isDarkMode) {
+                img.src= "./assets/icons/f-dark.svg"
+            } else {
+                img.src ="./assets/icons/f.svg"
+            }
+            img.classList.add("switchDark")
+        } else if (member.src === "./assets/icons/ai.svg" | member.src === "./assets/icons/ai-dark.svg") {
+            if (isDarkMode) {
+                img.src= "./assets/icons/ai-dark.svg"
+            } else {
+                img.src = "./assets/icons/ai.svg"
+            }
+            img.classList.add("switchDark")
+        } else {
+            img.src = member.src;
+        }
+
         slide.appendChild(img);
         middleWeapper.appendChild(slide);
       });
-      members2.forEach(member => {
-        const slide = document.createElement('div');
-        slide.classList.add('swiper-slide'); // Add Swiper slide class
-    
-        const img = document.createElement('img');
-        img.src = member.src;
-        img.alt = ''; // Optionally add alt text for accessibility
-    
-        slide.appendChild(img);
-        middleWeapper.appendChild(slide);
-      });
+      
 }
 
 createCodeCards();
