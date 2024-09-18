@@ -33,6 +33,7 @@ const swiper = new Swiper('.team-container', {
 const swiper2 = new Swiper('.middle-container', {
     spaceBetween: 15,  
     slidesPerGroup: 12,
+    slidesPerView: 3,  
     autoplay: {
         delay: 1,
         reverseDirection: true,
@@ -41,8 +42,8 @@ const swiper2 = new Swiper('.middle-container', {
     loop: true,
     speed: 22000,
     breakpoints: {
-    300: {
-        slidesPerView: 3,  
+    500: {
+        slidesPerView: 5,  
         spaceBetween: 5,   
     },
     1024: {
@@ -99,7 +100,6 @@ function createClientCards() {
 
 function createCodeCards() {
     const members2 = [
-        { src: "./assets/icons/f.svg" },
         { src: "./assets/icons/ps.svg" },
         { src: "./assets/icons/pr.svg" },
         { src: "./assets/icons/ai.svg" },
@@ -112,7 +112,6 @@ function createCodeCards() {
         { src: "./assets/icons/ps.svg" },
         { src: "./assets/icons/word.svg" },
         { src: "./assets/icons/f.svg" },
-        { src: "./assets/icons/f-dark.svg" },
         { src: "./assets/icons/ps.svg" },
         { src: "./assets/icons/pr.svg" },
         { src: "./assets/icons/ai.svg" },

@@ -39,7 +39,7 @@ function loadClients() {
 
         const clientCard = document.createElement('div');
         const size = getScreenSizeClass();
-        let baseClass = 'client-card flex gap-[10px] flex-col items-center justify-center client-animation';
+        let baseClass = 'client-card flex gap-[10px] flex-col items-center justify-center client-animation min-w-[200px]';
         let gradientClass = ''; 
 
         if (size == "client-card-large" ) {
@@ -65,10 +65,10 @@ function loadClients() {
         }
  
         clientCard.innerHTML = `
-            <p class="lg:text-[1rem] md:text-[0.8rem] text-[0.8rem] text-center text-gray-400 md:p-8 p-2">
+            <p class="lg:text-[1rem] md:text-[0.8rem] text-[0.7rem] text-center text-gray-400 md:p-8 ">
                 ${client.description}
             </p>
-            <img src="${client.imageSrc}" class="md:mt-16 mt-8 rounded-full h-12 ">
+            <img src="${client.imageSrc}" class="md:mt-16 md:mt-8 mt-4 rounded-full">
             <p class="text-[1.2rem] text-white mt-4">${client.name}</p>
             <p>${client.position}</p>
         `;
