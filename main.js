@@ -44,6 +44,12 @@ if (navMenu.classList.contains('nav-off')) {
 
 
 document.addEventListener("DOMContentLoaded", function () {
+    // use system mode preferance by default
+    if (! window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        toggle('btn-toggle')
+    }
+   
+
     const navBtn = document.getElementById('nav-btn');
     navBtn.addEventListener('click', toggleNav);
 
