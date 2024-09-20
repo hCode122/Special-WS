@@ -23,6 +23,7 @@ module.exports = {
     'nav-on',
     'text-[0.8rem]',
     'lg:text-[1rem]', 'md:text-[0.8rem]', 'text-[0.7rem]', 'min-w-[200px]',
+    'team-card',
 
     'hover:bg-[#D9D9D9]',
       'flex',
