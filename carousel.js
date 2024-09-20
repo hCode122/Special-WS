@@ -11,8 +11,8 @@ const swiper = new Swiper('.team-container', {
     speed: 9000,
     breakpoints: {
     768: {
-        slidesPerView: 2, 
-        spaceBetween: 5,  
+        slidesPerView: 3, 
+        spaceBetween: 15,  
     },
     1024: {
         slidesPerView: 1.5, 
@@ -32,7 +32,7 @@ const swiper = new Swiper('.team-container', {
 
 const swiper2 = new Swiper('.middle-container', {
     spaceBetween: 15,  
-    slidesPerGroup: 12,
+    slidesPerGroup: 11,
     slidesPerView: 3,  
     autoplay: {
         delay: 1,
@@ -58,15 +58,16 @@ const swiper2 = new Swiper('.middle-container', {
 function createClientCards() {
     const members = [
         { name: 'Ahmad Ahmad', role: 'Frontend Developer', image: "./assets/imgs/person1.png" },
-        { name: 'Sameer Ahmad', role: 'Frontend Developer', image: "./assets/imgs/person1.png" },
+        { name: 'Sameer Ahmad', role: 'Frontend Developer', image: "./assets/imgs/person2.png" },
         { name: 'Tawfeeq Ahmad', role: 'Frontend Developer', image: "./assets/imgs/person1.png" },
+        { name: 'Ahmad Ahmad', role: 'Frontend Developer', image: "./assets/imgs/person2.png" },
         { name: 'Ahmad Ahmad', role: 'Frontend Developer', image: "./assets/imgs/person1.png" },
-        { name: 'Ahmad Ahmad', role: 'Frontend Developer', image: "./assets/imgs/person1.png" },
-        { name: 'Ahmad Ahmad', role: 'Frontend Developer', image: "./assets/imgs/person1.png" },
+        { name: 'Ahmad Ahmad', role: 'Frontend Developer', image: "./assets/imgs/person2.png" },
         { name: 'Sameer Ahmad', role: 'Frontend Developer', image: "./assets/imgs/person1.png" },
-        { name: 'Tawfeeq Ahmad', role: 'Frontend Developer', image: "./assets/imgs/person1.png" },
+        { name: 'Tawfeeq Ahmad', role: 'Frontend Developer', image: "./assets/imgs/person2.png" },
         { name: 'Ahmad Ahmad', role: 'Frontend Developer', image: "./assets/imgs/person1.png" },
-        { name: 'Ahmad Ahmad', role: 'Frontend Developer', image: "./assets/imgs/person1.png" }
+        { name: 'Ahmad Ahmad', role: 'Frontend Developer', image: "./assets/imgs/person2.png" },
+        { name: 'Ahmad Ahmad', role: 'Frontend Developer', image: "./assets/imgs/person2.png" }
     ];
 
     const container = document.querySelector(".team-wrapper");
@@ -75,6 +76,7 @@ function createClientCards() {
         const slide = document.createElement("div");
         slide.classList.add('swiper-slide');
         slide.classList.add('pausable');  
+        slide.classList.add('overflow-hidden');  
         slide.innerHTML = `
             <div class="team-card relative rounded-lg overflow-hidden shadow-lg">
                 <img src="${member.image}" class="h-full">
@@ -141,13 +143,7 @@ function createCodeCards() {
                 img.src ="./assets/icons/f.svg"
             }
             img.classList.add("switchDark")
-        } else if (member.src === "./assets/icons/ai.svg" | member.src === "./assets/icons/ai-dark.svg") {
-            if (isDarkMode) {
-                img.src= "./assets/icons/ai-dark.svg"
-            } else {
-                img.src = "./assets/icons/ai.svg"
-            }
-            img.classList.add("switchDark")
+       
         } else {
             img.src = member.src;
         }
