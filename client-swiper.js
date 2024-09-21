@@ -101,9 +101,36 @@ function loadClients() {
                 spaceBetween: 10,
                         slidesPerGroup: 3,
             }
+        },
+        on: {
+            init: function () {
+                updateNavButtons(this);
+            },
+            slideChange: function () {
+                updateNavButtons(this);
+            }
         }
        
     });
+}
+
+function updateNavButtons(swiper) {
+    const prevButton = document.querySelector('.swiper-button-prev');
+    const nextButton = document.querySelector('.swiper-button-next');
+
+    // Check if at the first slide
+    if (swiper.isBeginning) {
+        prevButton.style.display = 'none'; // Hide prev button
+    } else {
+        prevButton.style.display = 'block'; // Show prev button
+    }
+
+    // Check if at the last slide
+    if (swiper.isEnd) {
+        nextButton.style.display = 'none'; // Hide next button
+    } else {
+        nextButton.style.display = 'block'; // Show next button
+    }
 }
 
 function getScreenSizeClass() {

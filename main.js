@@ -18,28 +18,26 @@ export function toggle(className) {
 export function toggleNav() {
     const btn = document.getElementById("nav-btn");
     const navMenu = document.getElementById("nav-menu");
-const isDarkMode = document.documentElement.classList.contains('dark');  // Check if dark mode is active on <html>
-const navIconLight = document.getElementById('nav-icon-light');
-const navIconDark = document.getElementById('nav-icon-dark');
-const navIcon = isDarkMode ? navIconDark : navIconLight;
+    const isDarkMode = document.documentElement.classList.contains('dark');  // Check if dark mode is active on <html>
+    const navIconLight = document.getElementById('nav-icon-light');
+    const navIconDark = document.getElementById('nav-icon-dark');
+    const navIcon = isDarkMode ? navIconDark : navIconLight;
 
-if (navMenu.classList.contains('nav-off')) {
-    // Toggle to menu-on state
-    if (navIcon.src.includes("menu-off")) {
-        navIcon.src = isDarkMode ? "./assets/icons/menu-on.svg" : "./assets/icons/menu-on-black.svg";
+    if (navMenu.classList.contains('nav-off')) {
+        // Toggle to menu-on state
+        if (navIcon.src.includes("menu-off")) {
+            navIcon.src = isDarkMode ? "./assets/icons/menu-on.svg" : "./assets/icons/menu-on-black.svg";
+        }
+        navMenu.classList.remove("nav-off");
+        navMenu.classList.add("nav-on");
+    } else {
+        // Toggle to menu-off state
+        if (navIcon.src.includes("menu-on")) {
+            navIcon.src = isDarkMode ? "./assets/icons/menu-off.svg" : "./assets/icons/menu-off-black.svg";
+        }
+        navMenu.classList.remove("nav-on");
+        navMenu.classList.add("nav-off");
     }
-    navMenu.classList.remove("nav-off");
-    navMenu.classList.add("nav-on");
-} else {
-    // Toggle to menu-off state
-    if (navIcon.src.includes("menu-on")) {
-        navIcon.src = isDarkMode ? "./assets/icons/menu-off.svg" : "./assets/icons/menu-off-black.svg";
-    }
-    navMenu.classList.remove("nav-on");
-    navMenu.classList.add("nav-off");
-}
-
-    
 }
 
 
@@ -71,7 +69,26 @@ document.addEventListener("DOMContentLoaded", function () {
                 toggleNav();
             }
         }
+        
     };
+
+    document.querySelectorAll('#nav-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+        
+            const navMenu = document.getElementById('nav-menu');
+            const targetId = link.getAttribute('href');
+         
+            const targetElement = document.getElementById(targetId);
+           
+            window.scrollTo({
+                top: targetElement.offsetTop,
+                behavior: 'smooth'
+            });
+    
+            navMenu.classList.remove('nav-on');
+            navMenu.classList.add('nav-off');
+        });
+    });
       
     const btnToggle = document.getElementById('btn-toggle');
     btnToggle.addEventListener('click', () => toggle('btn-toggle'));
@@ -83,7 +100,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function switchDarkIcons() {
     const members2 = document.getElementsByClassName('switchDark'); 
-    const isDarkMode = document.documentElement.classList.contains('dark');  // Check if dark mode is active on <html>
+    const isDarkMode = document.documentElement.classList.contains('dark'); 
 
     Array.from(members2).forEach(img => {
         if (img.src.includes("f.svg") || img.src.includes("f-dark.svg")) {

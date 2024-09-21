@@ -1,5 +1,6 @@
 const swiper = new Swiper('.team-container', {
     spaceBetween: 15,  
+    slidesPerView: 3, 
     slidesPerGroup: 3,
     autoplay: {
         delay: 1,
@@ -12,14 +13,17 @@ const swiper = new Swiper('.team-container', {
     breakpoints: {
     768: {
         slidesPerView: 3, 
+        slidesPerGroup: 3,
         spaceBetween: 15,  
     },
     1024: {
         slidesPerView: 1.5, 
+        slidesPerGroup: 1.5,
         spaceBetween: 5, 
     },
     1220: {
         slidesPerView: 2, 
+        slidesPerGroup: 2,
         spaceBetween: 5, 
     },
     1378: {
@@ -32,7 +36,7 @@ const swiper = new Swiper('.team-container', {
 
 const swiper2 = new Swiper('.middle-container', {
     spaceBetween: 15,  
-    slidesPerGroup: 11,
+    slidesPerGroup: 3,
     slidesPerView: 3,  
     autoplay: {
         delay: 1,
@@ -45,10 +49,12 @@ const swiper2 = new Swiper('.middle-container', {
     500: {
         slidesPerView: 5,  
         spaceBetween: 5,   
+        slidesPerGroup: 5,
     },
     1024: {
         slidesPerView: 12,  
         spaceBetween: 15,
+        slidesPerGroup: 12,
     }
     
 }
@@ -130,6 +136,27 @@ function createCodeCards() {
       const middleWeapper = document.querySelector('.middle-wrapper');
       const isDarkMode = document.documentElement.classList.contains('dark'); 
 
+      members2.forEach(member => {
+        const slide = document.createElement('div');
+        slide.classList.add('swiper-slide'); // Add Swiper slide class
+    
+        const img = document.createElement('img');
+    
+        if (member.src === "./assets/icons/f.svg" | member.src === "./assets/icons/f-dark.svg") {
+            if (isDarkMode) {
+                img.src= "./assets/icons/f-dark.svg"
+            } else {
+                img.src ="./assets/icons/f.svg"
+            }
+            img.classList.add("switchDark")
+       
+        } else {
+            img.src = member.src;
+        }
+
+        slide.appendChild(img);
+        middleWeapper.appendChild(slide);
+      });
       members2.forEach(member => {
         const slide = document.createElement('div');
         slide.classList.add('swiper-slide'); // Add Swiper slide class

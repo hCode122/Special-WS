@@ -16,35 +16,22 @@
 </head>
 
 <body class="dark:bg-black bg-[#F5F5F5]">
-    <img loading="lazy" class="block absolute top-[1050px] md:top-[730px] left-[-12vw] md:left-[9vw] dark:hidden z-[-1]" src="./assets/imgs/leaf.png" />
-    <img loading="lazy" class="block absolute top-[2100px] md:top-[1350px] left-[-12vw] md:left-[9vw] dark:hidden z-[-1]" src="./assets/imgs/leaf.png" />
-    <img loading="lazy" class="block absolute top-[3000px] md:top-[1920px] left-[-12vw] md:left-[9vw] dark:hidden z-[-1]" src="./assets/imgs/leaf.png" />
-    <img loading="lazy" class="block absolute top-[3800px] md:top-[2880px] left-[-12vw] md:left-[9vw] dark:hidden z-[-1]" src="./assets/imgs/leaf.png" />
-    <img loading="lazy" class="block absolute top-[4500px] md:top-[3640px] left-[-12vw] md:left-[9vw] dark:hidden z-[-1]" src="./assets/imgs/leaf.png" />
-    <img loading="lazy" class="block absolute top-[5100px] md:top-[4190px] left-[-12vw] md:left-[9vw] dark:hidden z-[-1]" src="./assets/imgs/leaf.png" />
+
 
     <img loading="lazy" class="hidden md:block absolute top-[1400px] right-[1vw] dark:hidden z-[-1]" src="./assets/imgs/bg-logo.png" />
     <img loading="lazy" class="hidden md:block absolute top-[4500px] right-[1vw] dark:hidden z-[-1]" src="./assets/imgs/bg-logo.png" />
 
-    <img loading="lazy" class="block absolute top-[1050px] md:top-[730px] left-[-12vw] md:left-[9vw] hidden dark:block z-[-1]"
-        src="./assets/imgs/leaf-dark.png" />
-    <img loading="lazy" class="block absolute top-[2100px] md:top-[1350px] left-[-12vw] md:left-[9vw] hidden dark:block z-[-1]"
-        src="./assets/imgs/leaf-dark.png" />
-    <img loading="lazy" class="block absolute top-[3000px] md:top-[1920px] left-[-12vw] md:left-[9vw] hidden dark:block z-[-1]"
-        src="./assets/imgs/leaf-dark.png" />
-    <img loading="lazy" class="block absolute top-[3800px] md:top-[2880px] left-[-12vw] md:left-[9vw] hidden dark:block z-[-1]"
-        src="./assets/imgs/leaf-dark.png" />
-    <img loading="lazy" class="block absolute top-[4500px] md:top-[3640px] left-[-12vw] md:left-[9vw] hidden dark:block z-[-1]"
-        src="./assets/imgs/leaf-dark.png" />
-    <img loading="lazy" class="block absolute top-[5100px] md:top-[4190px] left-[-12vw] md:left-[9vw] hidden dark:block z-[-1]"
-        src="./assets/imgs/leaf-dark.png" />
+    
 
     <img loading="lazy" class="hidden md:block absolute top-[1400px] right-[1vw] hidden md:dark:block z-[-1]"
         src="./assets/imgs/bg-logo-dark.png" />
     <img loading="lazy" class="hidden md:block absolute top-[4500px] right-[1vw] hidden md:dark:block z-[-1]"
         src="./assets/imgs/bg-logo-dark.png" />
 
-    <nav name="mobile-nav" class="flex md:hidden nav items-center top-0 w-full h-12 mt-4 p-2">
+
+    <div name="upper" class="md:ml-0 mt-2 md:mr-0 w-full">
+        
+    <nav name="mobile-nav" class="flex md:hidden nav items-center top-0 w-full h-14 p-2">
         <img loading="lazy" src="./assets/icons/logo-dark.svg" class="h-8 ml-[5%] mr-auto cursor-pointer block dark:hidden" />
         <img loading="lazy" src="./assets/icons/logo.svg" class="h-8 ml-[5%] mr-auto cursor-pointer hidden dark:block" />
 
@@ -59,23 +46,24 @@
             class="nav-off fixed w-[200px] h-[200px] rounded-[10px] bg-white dark:bg-[#1a1a1a] transition-all duration-300 z-50">
             <ul class="flex flex-col justify-evenly m-0 h-full gap-2 mt-2 ml-4">
                 <li class="dark:text-white flex-1 dark:hover:text-white hover:text-black">
-                    <a class="cursor-pointer" href="">Home</a>
+                    <a class="cursor-pointer" href="#home">Home</a>
                 </li>
                 <li class="text-gray-400 flex-1 dark:hover:text-white hover:text-black">
-                    <a class="cursor-pointer" href="#about">About us</a>
+                    <a class="cursor-pointer" href="#about2">About us</a>
                 </li>
                 <li class="text-gray-400 flex-1 dark:hover:text-white hover:text-black">
-                    <a class="cursor-pointer">Services</a>
+                    <a class="cursor-pointer" href="#services">Services</a>
                 </li>
                 <li class="text-gray-400 flex-1 dark:hover:text-white hover:text-black">
-                    <a class="cursor-pointer">Contact</a>
+                    <a class="cursor-pointer" href="#testimonials">Testimonials</a>
+                </li>
+                <li class="text-gray-400 flex-1 dark:hover:text-white hover:text-black">
+                    <a class="cursor-pointer" href="#contact">Contact</a>
                 </li>
             </ul>
         </div>
     </nav>
-
-    <div name="upper" class="md:ml-0 mt-2 md:mr-0 w-full">
-        <div name="hero" class=" md:ml-[7%]  h-auto">
+        <div name="hero" id="home" class=" md:ml-[7%]  h-auto">
             <div name="colomns-container" class="flex flex-col md:flex-row justify-center items-center">
                 <div name="nav-title-section"
                     class="md:ml-auto flex flex-col md:w-[4vw] md:justify-between items-center self-start flex-1">
@@ -85,7 +73,7 @@
 
                         <ul class="flex gap-4 lg:gap-8">
                             <li class="dark:text-white dark:hover:text-white hover:text-black">
-                                <a class="cursor-pointer">Home</a>
+                                <a class="cursor-pointer" href="#home">Home</a>
                             </li>
                             <li class="text-gray-400 dark:hover:text-white hover:text-black">
                                 <a class="cursor-pointer" href="#about">About us</a>
@@ -122,7 +110,7 @@
                     <div
                         class="flex md:flex-row flex-col md:items-start items-center md:mr-auto mt-8 md:mt-32 gap-4 w-[54vw]">
                         <a
-                            class="w-[45vw] sm:w-[31.7vw] h-[48px] md:h-[55px] p-[2px] md:w-48 border-2 dark:border-white border-black rounded-[99px] cursor-pointer contact-container relative">
+                            class="w-[100px] sm:w-[200px] sm:h-[50px] h-[48px] md:h-[55px] p-[2px] md:w-[200px] border-2 dark:border-white border-black rounded-[99px] cursor-pointer contact-container relative">
                             <div
                                 class="relative contact-animation dark:hover:text-[#2A2A2A] hover:text-white dark:text-white text-[#2A2A2A]">
                                 <img loading="lazy" class="absolute bg-white dark:block hidden"
@@ -156,10 +144,13 @@
             </div>
         </div>
 
-        <div id="who-is"
-            class="hidden md:flex flex-col md:flex-row md:ml-[15%] md:mr-[6%] justify-center lg:mt-4 gap-18 mt-4 md:mt-32 h-[538px]">
-            <div name="left" class="flex-1 flex flex-col">
-                <span class="flex-col self-start">
+        <div name="who-is" id="about"
+            class="hidden md:flex flex-col md:flex-row md:ml-[15%] md:mr-[6%] justify-center lg:mt-4 gap-18 mt-4 md:mt-32 h-[538px] relative">
+            <img loading="lazy" class="block absolute dark:hidden left-[-8vw]  top-[-2vh] z-[-1]" src="./assets/imgs/leaf.png" />
+            <img loading="lazy" class="hidden absolute dark:block left-[-8vw]  top-[-2vh] z-[-1]" src="./assets/imgs/leaf-dark.png" />
+
+            <div name="left" class="flex-1 flex flex-col ">
+                <span class="flex-col self-start ">
                     <h2 class="text-[2rem] ml-2  ml-2 md:ml-auto mr-auto font-bold text-[#2A2A2A] dark:text-white">
                         Who is <span class="text-blue-500">Special Team</span>
                     </h2>
@@ -173,7 +164,7 @@
                         alt="Who is Special Team Image" />
                 </div>
             </div>
-            <div name="right" id="about" class="flex-1 flex flex-col justify-between">
+            <div name="right"  class="flex-1 flex flex-col justify-between">
                 <span class="flex flex-col gap-2">
                     <h3 class="text-[#2E2E2E] font-bold dark:text-white text-[1.5rem]">
                         About us
@@ -201,7 +192,7 @@
                         <span class="text-[#2E2E2E] dark:text-[#BBBBBB]">inspire positive change.</span>
                     </p>
                 </span>
-                <span class="flex flex-col">
+                <span class="flex flex-col gap-2">
                     <h3 class="text-[#2E2E2E] font-bold dark:text-white text-[1.5rem]">
                         Our mission
                     </h3>
@@ -217,7 +208,9 @@
                 </span>
             </div>
         </div>
-        <div id="who-is-mobile" class="flex ml-2 flex-col justify-center w-full gap-4 mt-44 h-[870px] md:hidden">
+        <div name="who-is-mobile" id="about2" class="flex ml-2 flex-col justify-center w-full gap-4 mt-44 h-[870px] md:hidden relative">
+            <img loading="lazy" class="block absolute dark:hidden  md:left-[-8vw] md:left-[6vw] top-[-2vh] z-[-1]" src="./assets/imgs/leaf.png" />
+            <img loading="lazy" class="hidden absolute dark:block  md:left-[-8vw] md:left-[6vw]  top-[-2vh] z-[-1]" src="./assets/imgs/leaf-dark.png" />
             <div name="left" class="flex-1 flex flex-col">
                 <span class="self-start">
                     <h2 class="text-[2rem] ml-2  font-bold text-[#2A2A2A] dark:text-white">
@@ -279,9 +272,11 @@
             </div>
         </div>
 
-        <div id="services" class="md:mt-16 mt-32  md:h-[400px]">
+        <div id="services" class="md:mt-16 mt-32  md:h-[400px] relative">
+            <img loading="lazy" class="block absolute dark:hidden left-[-8vw] md:left-[6vw] top-[-2vh] z-[-1]" src="./assets/imgs/leaf.png" />
+            <img loading="lazy" class="hidden absolute dark:block left-[-8vw] md:left-[6vw]  top-[-2vh] z-[-1]" src="./assets/imgs/leaf-dark.png" />
             <h2 class="text-[2rem] ml-4  md:ml-[15%] mt-12 mr-auto font-bold text-[#2A2A2A] dark:text-white">
-                What we <span class="text-blue-500">do?</span>
+                What we <span class="text-blue-500 font-bold">do?</span>
             </h2>
             <p class="mt-4 ml-4 text-[1.1rem] md:ml-[15%] mr-auto text-[#5C5C5C]">
                 We offer tailored Tech Services
@@ -327,8 +322,10 @@
     </div>
 
     <div name="bottom" class="mt-[66px] ml-2 mr-2 md:ml-0 md:mr-0">
-        <div name="pr-flow" class="flex flex-col">
-            <h2 class="text-[2rem] ml-2  md:ml-[15%] mr-auto font-bold text-[#2A2A2A] dark:text-white">
+        <div name="pr-flow" class="flex flex-col relative">
+            <img loading="lazy" class="block absolute dark:hidden left-[-8vw] md:left-[6vw] top-[-2vh] md:top-0 top-[-2vh] md:top-0 z-[-1]" src="./assets/imgs/leaf.png" />
+            <img loading="lazy" class="hidden absolute dark:block left-[-8vw] md:left-[6vw] top-[-2vh] md:top-0 md:top-0  top-[-2vh] md:top-0 z-[-1]" src="./assets/imgs/leaf-dark.png" />
+            <h2 class="text-[2rem] ml-2  md:ml-[15%] mr-auto font-bold text-[#2A2A2Atop-[-2vh] md:top-0t-white">
                 Project <span class="text-blue-500">workflow</span>
             </h2>
             <p class="text-gray-500 text-[1.1rem] ml-2 mr-auto mt-4 md:ml-[15%]">
@@ -382,7 +379,9 @@
             </div>
         </div>
 
-        <div name="testimonials" id="testimonials" class="flex relative flex-col ml-2 mt-16 h-[650px]">
+        <div name="testimonials" id="testimonials" class="flex relative flex-col ml-2  relative mt-16 h-[650px]">
+            <img loading="lazy" class="block absolute dark:hidden  left-[-8vw] md:left-[6vw] top-[-2vh] md:top-0 z-[-1]" src="./assets/imgs/leaf.png" />
+            <img loading="lazy" class="hidden absolute dark:block left-[-8vw] md:left-[6vw]  top-[-2vh] md:top-0 z-[-1]" src="./assets/imgs/leaf-dark.png" />
             <h2 class="text-[#2A2A2A] dark:text-white text-[2rem] md:ml-[15%] md:mr-auto mr-auto font-bold">
                 What <span class="text-blue-500">clients</span> say
             </h2>
@@ -406,8 +405,10 @@
             </button>
         </div>
 
-        <div name="our-team" class="our-team mt-4 lg:mt-16 ml-2 flex flex-col  gap-16">
-            <div name="textArea" class="self-start md:ml-[15%] md:mr-[0px]">
+        <div name="our-team" class="our-team mt-4 lg:mt-16 ml-2 flex flex-col relative gap-16">
+            <img loading="lazy" class="block absolute dark:hidden left-[-8vw] md:left-[6vw] top-[-2vh] md:top-0 z-[-1]" src="./assets/imgs/leaf.png" />
+            <img loading="lazy" class="hidden absolute dark:block left-[-8vw] md:left-[6vw]  top-[-2vh] md:top-0 z-[-1]" src="./assets/imgs/leaf-dark.png" />
+            <div name="textArea" class="self-start md:ml-[15%] md:mr-[0px] relative">
                 <h2 class="text-[#2A2A2A] dark:text-white text-[2rem] font-bold">
                     Our <span class="text-blue-500">Team</span>
                 </h2>
@@ -423,7 +424,9 @@
             </div>
         </div>
 
-        <div name="collab" id="contact" class="mt-16 ml-2 flex flex-col">
+        <div name="collab" id="contact" class="mt-16 ml-2 flex flex-col relative">
+            <img loading="lazy" class="block absolute dark:hidden left-[-8vw] md:left-[6vw] z-[-1]" src="./assets/imgs/leaf.png" />
+            <img loading="lazy" class="hidden absolute dark:block left-[-8vw] md:left-[6vw]  top-[-2vh] z-[-1]" src="./assets/imgs/leaf-dark.png" />
             <h2 class="text-[#2A2A2A] dark:text-white text-[2rem] md:ml-[15%] font-bold flex-1">
                 let's <span class="text-blue-500">collaborate</span>
             </h2>
