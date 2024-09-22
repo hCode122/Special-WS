@@ -1,5 +1,5 @@
 //Dark Mode
-export function toggle(className) {
+ function toggle(className) {
     var btn = document.getElementById(className)
     if (btn.classList.contains('toggle-on')) {
         btn.classList.add("toggle-off")
@@ -15,7 +15,7 @@ export function toggle(className) {
 }
 
 //Nav Menu
-export function toggleNav() {
+ function toggleNav() {
     const btn = document.getElementById("nav-btn");
     const navMenu = document.getElementById("nav-menu");
     const isDarkMode = document.documentElement.classList.contains('dark');  // Check if dark mode is active on <html>
@@ -94,6 +94,8 @@ document.addEventListener("DOMContentLoaded", function () {
     btnToggle.addEventListener('click', () => toggle('btn-toggle'));
     const btnToggle2 = document.getElementById('btn-toggle2');
     btnToggle2.addEventListener('click',() => toggle('btn-toggle2'))
+    const btnToggle3 = document.getElementById('btn-toggle3');
+    btnToggle3.addEventListener('click',() => toggle('btn-toggle3'))
     
 });
 
@@ -128,71 +130,9 @@ function dropdown() {
 
 
 
-export function setSelectedItem(itemText) {
+ function setSelectedItem(itemText) {
     const selectedItemDiv = document.getElementById('selected-item');
     selectedItemDiv.textContent = itemText;
     dropdown(); 
 }
 
-const clients = [
-    {
-        description: "Lorem ipsum dolor sit amet, dolor consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur Lorem adipiscing consectetur sed dolor o Lorem ipsum dolor sit amet, dolor",
-        imageSrc: "./assets/icons/user.svg",
-        name: "name",
-        position: "CEO agency"
-    },
-    {
-        description: "Lorem ipsum dolor sit amet, dolor consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur Lorem adipiscing consectetur sed dolor o Lorem ipsum dolor sit amet, dolor",
-        imageSrc: "./assets/icons/user.svg",
-        name: "name",
-        position: "CEO agency"
-    },
-    {
-        description: "Lorem ipsum dolor sit amet, dolor consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur Lorem adipiscing consectetur sed dolor o Lorem ipsum dolor sit amet, dolor",
-        imageSrc: "./assets/icons/user.svg",
-        name: "name",
-        position: "CEO agency"
-    },
-    {
-        description: "Lorem ipsum dolor sit amet, dolor consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur Lorem adipiscing consectetur sed dolor o Lorem ipsum dolor sit amet, dolor",
-        imageSrc: "./assets/icons/user.svg",
-        name: "AAA",
-        position: "CEO agency"
-    },
-    {
-        description: "Lorem ipsum dolor sit amet, dolor consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur Lorem adipiscing consectetur sed dolor o Lorem ipsum dolor sit amet, dolor",
-        imageSrc: "./assets/icons/user.svg",
-        name: "AAA",
-        position: "CEO agency"
-    },
-    {
-        description: "Lorem ipsum dolor sit amet, dolor consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur Lorem adipiscing consectetur sed dolor o Lorem ipsum dolor sit amet, dolor",
-        imageSrc: "./assets/icons/user.svg",
-        name: "AAA",
-        position: "CEO agency"
-    },
-    {
-        description: "Lorem ipsum dolor sit amet, dolor consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur Lorem adipiscing consectetur sed dolor o Lorem ipsum dolor sit amet, dolor",
-        imageSrc: "./assets/icons/user.svg",
-        name: "3",
-        position: "CEO agency"
-    },
-    {
-        description: "Lorem ipsum dolor sit amet, dolor consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur Lorem adipiscing consectetur sed dolor o Lorem ipsum dolor sit amet, dolor",
-        imageSrc: "./assets/icons/user.svg",
-        name: "3",
-        position: "CEO agency"
-    },
-    {
-        description: "Lorem ipsum dolor sit amet, dolor consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur Lorem adipiscing consectetur sed dolor o Lorem ipsum dolor sit amet, dolor",
-        imageSrc: "./assets/icons/user.svg",
-        name: "3",
-        position: "CEO agency"
-    },
-    {
-        description: "Lorem ipsum dolor sit amet, dolor consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur Lorem adipiscing consectetur sed dolor o Lorem ipsum dolor sit amet, dolor",
-        imageSrc: "./assets/icons/user.svg",
-        name: "name",
-        position: "CEO agency"
-    },
-]

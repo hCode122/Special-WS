@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script type="module" src="./main.js"></script>
+    <script  src="./main.js"></script>
 
     <title>Special Website</title>
 </head>
@@ -29,11 +29,11 @@
         src="./assets/imgs/bg-logo-dark.png" />
 
 
-    <div name="upper" class="md:ml-0 mt-2 md:mr-0 w-full">
+    <div name="upper" class="md:ml-0  md:mr-0 w-full">
         
-    <nav name="mobile-nav" class="flex md:hidden nav items-center top-0 w-full h-14 p-2">
-        <img loading="lazy" src="./assets/icons/logo-dark.svg" class="h-8 ml-[5%] mr-auto cursor-pointer block dark:hidden" />
-        <img loading="lazy" src="./assets/icons/logo.svg" class="h-8 ml-[5%] mr-auto cursor-pointer hidden dark:block" />
+    <nav id="mobile-nav" class="flex md:hidden nav items-center top-0 w-full h-14 p-2">
+        <img loading="lazy" src="./assets/icons/logo-dark.svg" class="h-8 ml-2 mr-auto cursor-pointer block dark:hidden" />
+        <img loading="lazy" src="./assets/icons/logo.svg" class="h-8 ml-2 mr-auto cursor-pointer hidden dark:block" />
 
         <button class="h-16 w-16 mr-[5%] p-0 flex items-center justify-center" id="nav-btn">
             <img loading="lazy" src="./assets/icons/menu-off.svg" class="h-20 w-20 dark:block hidden cursor-pointer"
@@ -43,55 +43,74 @@
         </button>
 
         <div id="nav-menu"
-            class="nav-off fixed w-[200px] h-[200px] rounded-[10px] bg-white dark:bg-[#1a1a1a] transition-all duration-300 z-50">
-            <ul class="flex flex-col justify-evenly m-0 h-full gap-2 mt-2 ml-4">
-                <li class="dark:text-white flex-1 dark:hover:text-white hover:text-black">
-                    <a class="cursor-pointer" href="#home">Home</a>
+            class="nav-off fixed w-[100vw] h-[100%] bg-black transition-all duration-300 z-50
+            flex flex-col">
+            <img src="./assets/icons/close.svg" class="ml-auto w-6 h-6 mr-8 mt-12 cursor-pointer" onclick="toggleNav()">
+            <ul class="flex flex-col justify-evenly  gap-4 ml-8 mt-12">
+                <li class="text-gray-400 dark:hover:text-white hover:text-white flex justify-between items-center mr-8">
+                    <a class="cursor-pointer text-[3rem]"  href="#home">Home</a>
+                    <img class="h-8 w-8" src="./assets/icons/link-off.svg" >
                 </li>
-                <li class="text-gray-400 flex-1 dark:hover:text-white hover:text-black">
-                    <a class="cursor-pointer" href="#about2">About us</a>
+                <li class="text-gray-400 dark:hover:text-white hover:text-white flex justify-between items-center mr-8">
+                    <a class="cursor-pointer text-[3rem]"  href="#about2">About us</a>
+                    <img class="h-8 w-8" src="./assets/icons/link-off.svg">
                 </li>
-                <li class="text-gray-400 flex-1 dark:hover:text-white hover:text-black">
-                    <a class="cursor-pointer" href="#services">Services</a>
+                <li class="text-gray-400 dark:hover:text-white hover:text-white flex justify-between items-center mr-8">
+                    <a class="cursor-pointer text-[3rem]"  href="#services">Services</a>
+                    <img class="h-8 w-8" src="./assets/icons/link-off.svg">
                 </li>
-                <li class="text-gray-400 flex-1 dark:hover:text-white hover:text-black">
-                    <a class="cursor-pointer" href="#testimonials">Testimonials</a>
+                <li class="text-gray-400 dark:hover:text-white hover:text-white flex justify-between items-center mr-8">
+                    <a class="cursor-pointer text-[3rem]"  href="#testimonials">Testimonials</a>
+                    <img class="h-8 w-8" src="./assets/icons/link-off.svg">
                 </li>
-                <li class="text-gray-400 flex-1 dark:hover:text-white hover:text-black">
-                    <a class="cursor-pointer" href="#contact">Contact</a>
+                <li class="text-gray-400 dark:hover:text-white hover:text-white flex justify-between items-center mr-8">
+                    <a class="cursor-pointer text-[3rem]"  href="#contact">Contact</a>
+                    <img class="h-8 w-8" src="./assets/icons/link-off.svg">
                 </li>
             </ul>
+            <div class="dark:bg-[#303030] bg-[#E2E2E2] relative rounded-full w-14 h-8 ml-8 mt-16 toggle-on flex items-center"
+                id="btn-toggle2">
+                <div class="absolute h-7 w-7 rounded-full bg-blue-500 "
+                    id="circle-toggle" ></div>
+            </div>
         </div>
     </nav>
+    <nav id="desktop-nav" class="md:pl-[7%] gap-[10vw] fixed  md:self-start h-16 w-full justify-start items-center min-w-[500px] hidden md:flex">
+        <img loading="lazy" src="./assets/icons/logo-dark.svg" class="h-8  cursor-pointer block dark:hidden" />
+        <img loading="lazy" src="./assets/icons/logo.svg" class="h-8  cursor-pointer hidden dark:block" />
+
+        <ul class="flex gap-4 lg:gap-8">
+            <li class="dark:text-white dark:hover:text-white hover:text-black">
+                <a class="cursor-pointer" href="#home">Home</a>
+            </li>
+            <li class="text-gray-400 dark:hover:text-white hover:text-black">
+                <a class="cursor-pointer" href="#about">About us</a>
+            </li>
+            <li class="text-gray-400 dark:hover:text-white hover:text-black">
+                <a class="cursor-pointer" href="#services">Services</a>
+            </li>
+            <li class="text-gray-400 dark:hover:text-white hover:text-black">
+                <a class="cursor-pointer" href="#testimonials">Testimonials</a>
+            </li>
+            <li class="text-gray-400 dark:hover:text-white hover:text-black">
+                <a class="cursor-pointer" href="#contact">Contact</a>
+            </li>
+        </ul>
+    </nav>
         <div name="hero" id="home" class=" md:ml-[7%]  h-auto">
+           
             <div name="colomns-container" class="flex flex-col md:flex-row justify-center items-center">
                 <div name="nav-title-section"
-                    class="md:ml-auto flex flex-col md:w-[4vw] md:justify-between items-center self-start flex-1">
-                    <nav class="mt-8 md:self-start h-8 w-[40vw] min-w-[500px] hidden md:flex">
-                        <img loading="lazy" src="./assets/icons/logo-dark.svg" class="h-8 mr-auto cursor-pointer block dark:hidden" />
-                        <img loading="lazy" src="./assets/icons/logo.svg" class="h-8 mr-auto cursor-pointer hidden dark:block" />
-
-                        <ul class="flex gap-4 lg:gap-8">
-                            <li class="dark:text-white dark:hover:text-white hover:text-black">
-                                <a class="cursor-pointer" href="#home">Home</a>
-                            </li>
-                            <li class="text-gray-400 dark:hover:text-white hover:text-black">
-                                <a class="cursor-pointer" href="#about">About us</a>
-                            </li>
-                            <li class="text-gray-400 dark:hover:text-white hover:text-black">
-                                <a class="cursor-pointer" href="#services">Services</a>
-                            </li>
-                            <li class="text-gray-400 dark:hover:text-white hover:text-black">
-                                <a class="cursor-pointer" href="#testimonials">Testimonials</a>
-                            </li>
-                            <li class="text-gray-400 dark:hover:text-white hover:text-black">
-                                <a class="cursor-pointer" href="#contact">Contact</a>
-                            </li>
-                        </ul>
-                    </nav>
-
+                    class="md:ml-auto flex flex-col ml-[2vw] md:ml-0 md:w-[4vw] md:justify-between items-center self-start flex-1">
+                    
+                    <div class="flex w-[42vw] md:w-[17vw]  justify-start items-center self-start mt-16 ">
+                        <img loading="lazy" class="md:w-[50px] w-[6vw] pulse-shadow" src="./assets/icons/blue-circle.svg" />
+                        <p class="dark:text-white text-[#2A2A2A] md:text-[0.9rem] text-center text-[0.6rem]">
+                            Available for new projects
+                        </p>
+                    </div>
                     <h1
-                        class="text-[#868686] text-[2.2rem] md:ml-0 ml-[2vw] self-start md:text-[4rem] mt-16 text-start md:w-[41vw]">
+                        class="text-[#868686] text-[2.2rem] md:ml-0  self-start md:text-[4rem] text-start md:w-[41vw]">
                         <span
                             class="dark:bg-[#2E2E2E] bg-[#EBEBEB] dark:text-white text-[#2E2E2E] rounded-lg p-1">Special</span>
                         Solutions for a
@@ -99,7 +118,7 @@
                             class="dark:bg-[#2E2E2E] bg-[#EBEBEB] dark:text-white text-[#2E2E2E] rounded-lg p-1">Special</span>
                         future
                     </h1>
-                    <p class="md:w-[30vw] w-[85%] mt-8  mr-[5vw] text-[1.2rem] text-start md:mr-auto">
+                    <p class="md:w-[30vw]  self-start mt-8  mr-[5vw] text-[1rem] text-start md:mr-auto">
                         At Special Team, we create
                         <span class="text-[#2E2E2E] dark:text-white">custom web and app solutions</span>
                         to bring your ideas to life. Let our tech and design experts help
@@ -108,9 +127,20 @@
                         and achieve your business goals.
                     </p>
                     <div
-                        class="flex md:flex-row flex-col md:items-start items-center md:mr-auto mt-8 md:mt-32 gap-4 w-[54vw]">
+                        class="flex md:flex-row flex-col md:ml-[6%] md:items-start justify-start self-start items-center md:mr-auto mt-8 md:mt-32 gap-4 w-[54vw]">
+
                         <a
-                            class="w-[100px] sm:w-[200px] sm:h-[50px] h-[48px] md:h-[55px] p-[2px] md:w-[200px] border-2 dark:border-white border-black rounded-[99px] cursor-pointer contact-container relative">
+                        class="w-[100%] sm:h-[50px] h-[55px] md:h-[65px] p-[2px] md:w-[200px] bg-white border-2 dark:border-white border-black rounded-[99px] cursor-pointer
+                        flex justify-evenly items-center get-animation">
+                            <span class="">Get your website</span>
+
+                            <img loading="lazy" class=" dark:block hidden"
+                                src="./assets/icons/right-arrow-dark.svg " />
+                            <img loading="lazy" class="  dark:hidden block "
+                                src="./assets/icons/right-arrow2.svg " />
+                          </a>
+                        <a
+                            class="w-[100%] sm:h-[80px] h-[55px] md:h-[60px] p-[2px] md:w-[200px] border-2 dark:border-white border-black rounded-[99px] cursor-pointer contact-container relative">
                             <div
                                 class="relative contact-animation dark:hover:text-[#2A2A2A] hover:text-white dark:text-white text-[#2A2A2A]">
                                 <img loading="lazy" class="absolute bg-white dark:block hidden"
@@ -120,16 +150,11 @@
                             </div>
                             <span class="contact-text">Contact us</span>
                         </a>
-                        <div class="flex w-[42vw] md:w-[17vw] justify-center items-center">
-                            <img loading="lazy" class="md:w-[50px] w-[6vw] pulse-shadow" src="./assets/icons/blue-circle.svg" />
-                            <p class="dark:text-white text-[#2A2A2A] md:text-[0.9rem] text-center text-[0.6rem]">
-                                Available for new projects
-                            </p>
-                        </div>
+                        
                     </div>
                 </div>
 
-                <div name="hero-image" class="relative  md:mt-8 w-[75vw] md:mr-8 md:h-auto md:w-[35vw] block">
+                <div name="hero-image" class="relative hidden md:block md:mt-8 w-[75vw] md:mr-8 md:h-auto md:w-[35vw] block">
                     <img loading="lazy" src="./assets/imgs/hero-img-dark.png" class="dark:block hidden" />
                     <img loading="lazy" src="./assets/imgs/hero-img.png" class="dark:hidden block" />
 
@@ -208,25 +233,25 @@
                 </span>
             </div>
         </div>
-        <div name="who-is-mobile" id="about2" class="flex ml-2 flex-col justify-center w-full gap-4 mt-44 h-[870px] md:hidden relative">
+        <div name="who-is-mobile" id="about2" class="flex ml-2 flex-col justify-center w-full gap-4 mt-24  md:hidden relative">
             <img loading="lazy" class="block absolute dark:hidden  md:left-[-8vw] md:left-[6vw] top-[-2vh] z-[-1]" src="./assets/imgs/leaf.png" />
             <img loading="lazy" class="hidden absolute dark:block  md:left-[-8vw] md:left-[6vw]  top-[-2vh] z-[-1]" src="./assets/imgs/leaf-dark.png" />
             <div name="left" class="flex-1 flex flex-col">
                 <span class="self-start">
-                    <h2 class="text-[2rem] ml-2  font-bold text-[#2A2A2A] dark:text-white">
+                    <h2 class="text-[1.2rem] ml-4  font-bold text-[#2A2A2A] dark:text-white">
                         Who is <span class="text-blue-500">Special Team</span>
                     </h2>
-                    <p class="text-[1.2rem] ml-2 text-[#5C5C5C]">
+                    <p class="text-[0.8rem] ml-4 text-[#5C5C5C]">
                         Your Partner in Innovative Tech Solutions
                     </p>
                 </span>
             </div>
             <div name="right" class="flex-1 w-[90%] ml-4 flex gap-6 flex-col justify-between">
                 <span class="flex flex-col gap-2">
-                    <h3 class="text-[#2E2E2E] font-bold dark:text-white text-[1.5rem]">
+                    <h3 class="text-[#2E2E2E] font-bold dark:text-white text-[1rem]">
                         About us
                     </h3>
-                    <p class="mt-2">
+                    <p class="mt-2 text-[0.8rem]">
                         Our journey began with the belief that
                         <span class="text-[#2E2E2E] dark:text-[#BBBBBB]">every individual has the potential</span>
                         to make a difference. With passion and perseverance, we are on the
@@ -237,10 +262,10 @@
                     </p>
                 </span>
                 <span class="flex flex-col gap-2">
-                    <h3 class="text-[#2E2E2E] font-bold dark:text-white text-[1.5rem]">
+                    <h3 class="text-[#2E2E2E] font-bold dark:text-white text-[1rem]">
                         Our vision
                     </h3>
-                    <p class="mt-2">
+                    <p class="mt-2 text-[0.8rem]">
                         Our vision is rooted in the belief that technology has the power
                         to transform lives.
                         <span class="text-[#2E2E2E] dark:text-[#BBBBBB]">We aspire to lead innovation</span>
@@ -250,10 +275,10 @@
                     </p>
                 </span>
                 <span class="flex flex-col gap-2">
-                    <h3 class="text-[#2E2E2E] font-bold dark:text-white text-[1.5rem]">
+                    <h3 class="text-[#2E2E2E] font-bold dark:text-white text-[1rem]">
                         Our mission
                     </h3>
-                    <p class="mt-2">
+                    <p class="mt-2 text-[0.8rem]">
                         At Special Team, our mission is to
                         <span class="text-[#2E2E2E] dark:text-[#BBBBBB]">empower tech talent</span>
                         and redefine what's possible in the industry. We strive to deliver
@@ -264,25 +289,20 @@
                     </p>
                 </span>
             </div>
-            <div class="mt-4 relative ml-auto mr-auto md:ml-0 md:mr-0">
-                <img loading="lazy" src="./assets/imgs/who-is.png" class="block dark:hidden w-[75vw]"
-                    alt="Who is Special Team Image" />
-                <img loading="lazy" src="./assets/imgs/who-is-dark.png" class="dark:block hidden w-[75vw]"
-                    alt="Who is Special Team Image" />
-            </div>
+          
         </div>
 
-        <div id="services" class="md:mt-16 mt-32  md:h-[400px] relative">
+        <div id="services" class="md:mt-16 ml-2 md:ml-0 mt-12 md:h-[400px] relative">
             <img loading="lazy" class="block absolute dark:hidden left-[-8vw] md:left-[6vw] top-[-2vh] z-[-1]" src="./assets/imgs/leaf.png" />
             <img loading="lazy" class="hidden absolute dark:block left-[-8vw] md:left-[6vw]  top-[-2vh] z-[-1]" src="./assets/imgs/leaf-dark.png" />
-            <h2 class="text-[2rem] ml-4  md:ml-[15%] mt-12 mr-auto font-bold text-[#2A2A2A] dark:text-white">
+            <h2 class="text-[1.2rem] ml-4  md:ml-[15%] mt-12 mr-auto font-bold text-[#2A2A2A] dark:text-white">
                 What we <span class="text-blue-500 font-bold">do?</span>
             </h2>
-            <p class="mt-4 ml-4 text-[1.1rem] md:ml-[15%] mr-auto text-[#5C5C5C]">
+            <p class="ml-4 text-[0.8rem] md:ml-[15%] mr-auto text-[#5C5C5C]">
                 We offer tailored Tech Services
             </p>
             <div class="flex flex-col md:flex-row justify-evenly items-center gap-4 mt-12 md:mt-24">
-                <div class="service-block bar rounded-[10px] w-[90%] md:max-w-[368px]">
+                <div class="service-block bar rounded-[10px] w-[80%] mr-2 md:max-w-[368px]">
                     <div class="h-48 flex flex-col justify-center ml-12">
                         <h3 class="text-[1.5rem] font-bold dark:text-white text-[#2E2E2E]">
                             Web development
@@ -292,7 +312,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="service-block2 bar2 rounded-[10px] w-[90%] md:max-w-[368px]">
+                <div class="service-block2 bar2 rounded-[10px]  w-[80%] mr-2 md:max-w-[368px]">
                     <div class="h-48 flex flex-col justify-center ml-12">
                         <h3 class="text-[1.5rem] font-bold dark:text-white text-[#2E2E2E]">
                             UI UX Design
@@ -303,7 +323,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="service-block3 bar3 rounded-[10px] w-[90%] md:max-w-[368px]">
+                <div class="service-block3 bar3 rounded-[10px]  w-[80%] mr-2 md:max-w-[368px]">
                     <div class="h-48 flex flex-col justify-center ml-12">
                         <h3 class="text-[1.5rem] font-bold dark:text-white text-[#2E2E2E]">
                             App Development
@@ -321,14 +341,14 @@
         <div class="middle-wrapper swiper-wrapper mx-auto"></div>
     </div>
 
-    <div name="bottom" class="mt-[66px] ml-2 mr-2 md:ml-0 md:mr-0">
+    <div name="bottom" class="mt-[66px] ml-6 mr-2 md:ml-0 md:mr-0">
         <div name="pr-flow" class="flex flex-col relative">
             <img loading="lazy" class="block absolute dark:hidden left-[-8vw] md:left-[6vw] top-[-2vh] md:top-0 top-[-2vh] md:top-0 z-[-1]" src="./assets/imgs/leaf.png" />
             <img loading="lazy" class="hidden absolute dark:block left-[-8vw] md:left-[6vw] top-[-2vh] md:top-0 md:top-0  top-[-2vh] md:top-0 z-[-1]" src="./assets/imgs/leaf-dark.png" />
-            <h2 class="text-[2rem] ml-2  md:ml-[15%] mr-auto font-bold text-[#2A2A2Atop-[-2vh] md:top-0t-white">
+            <h2 class="text-[1.2rem] ml-2  md:ml-[15%] mr-auto font-bold text-[#2A2A2Atop-[-2vh] md:top-0t-white">
                 Project <span class="text-blue-500">workflow</span>
             </h2>
-            <p class="text-gray-500 text-[1.1rem] ml-2 mr-auto mt-4 md:ml-[15%]">
+            <p class="text-gray-500 text-[0.8rem] ml-2 mr-auto  md:ml-[15%]">
                 From Concept to Completion, Seamlessly
             </p>
             <div class="flex mt-12 ml-auto mr-auto">
@@ -379,13 +399,13 @@
             </div>
         </div>
 
-        <div name="testimonials" id="testimonials" class="flex relative flex-col ml-2  relative mt-16 h-[650px]">
+        <div name="testimonials" id="testimonials" class="flex relative flex-col relative mt-16 h-[650px]">
             <img loading="lazy" class="block absolute dark:hidden  left-[-8vw] md:left-[6vw] top-[-2vh] md:top-0 z-[-1]" src="./assets/imgs/leaf.png" />
             <img loading="lazy" class="hidden absolute dark:block left-[-8vw] md:left-[6vw]  top-[-2vh] md:top-0 z-[-1]" src="./assets/imgs/leaf-dark.png" />
-            <h2 class="text-[#2A2A2A] dark:text-white text-[2rem] md:ml-[15%] md:mr-auto mr-auto font-bold">
+            <h2 class="text-[#2A2A2A] ml-2 dark:text-white text-[1.2rem] md:ml-[15%] md:mr-auto mr-auto font-bold">
                 What <span class="text-blue-500">clients</span> say
             </h2>
-            <p class="text-gray-500 mt-4 ml-2 text-[1.1rem] md:ml-[15%] mr-auto">
+            <p class="text-gray-500  ml-2 text-[0.8rem] md:ml-[15%] mr-auto">
                 Our Success Stories and Testimonials
             </p>
 
@@ -409,10 +429,10 @@
             <img loading="lazy" class="block absolute dark:hidden left-[-8vw] md:left-[6vw] top-[-2vh] md:top-0 z-[-1]" src="./assets/imgs/leaf.png" />
             <img loading="lazy" class="hidden absolute dark:block left-[-8vw] md:left-[6vw]  top-[-2vh] md:top-0 z-[-1]" src="./assets/imgs/leaf-dark.png" />
             <div name="textArea" class="self-start md:ml-[15%] md:mr-[0px] relative">
-                <h2 class="text-[#2A2A2A] dark:text-white text-[2rem] font-bold">
+                <h2 class="text-[#2A2A2A] dark:text-white text-[1.2rem] font-bold">
                     Our <span class="text-blue-500">Team</span>
                 </h2>
-                <p class="text-gray-500 text-[1.1rem] mt-4 w-[300px]">
+                <p class="text-gray-500 text-[0.8rem] w-[300px]">
                     Meet the Experts Behind Our Success Join our team from
                     <a class="text-blue-800 underline" href="#">here</a>
                 </p>
@@ -424,17 +444,17 @@
             </div>
         </div>
 
-        <div name="collab" id="contact" class="mt-16 ml-2 flex flex-col relative">
+        <div name="collab" id="contact" class="mt-16  flex flex-col relative">
             <img loading="lazy" class="block absolute dark:hidden left-[-8vw] md:left-[6vw] z-[-1]" src="./assets/imgs/leaf.png" />
             <img loading="lazy" class="hidden absolute dark:block left-[-8vw] md:left-[6vw]  top-[-2vh] z-[-1]" src="./assets/imgs/leaf-dark.png" />
-            <h2 class="text-[#2A2A2A] dark:text-white text-[2rem] md:ml-[15%] font-bold flex-1">
+            <h2 class="text-[#2A2A2A] dark:text-white text-[1.2rem] ml-2 md:ml-[15%] font-bold flex-1">
                 let's <span class="text-blue-500">collaborate</span>
             </h2>
-            <p class="text-gray-500 text-[1.1rem] md:ml-[15%] mt-4 flex-1">
+            <p class="text-gray-500 text-[0.8rem] md:ml-[15%] ml-2 flex-1">
                 Join Forces with Us for Your Next Big Idea
             </p>
 
-            <form class="mt-12  md:ml-[15%] lg:ml-[20%] md:mr-auto  md:w-[75vw] lg:w-[70vw] xl:w-[68vw] max-w-[90vw] flex flex-col gap-4 flex-1 dark:text-white">
+            <form class="mt-12 mr-4 md:ml-[15%] lg:ml-[20%] md:mr-auto  md:w-[75vw] lg:w-[70vw] xl:w-[68vw] max-w-[90vw] flex flex-col gap-4 flex-1 dark:text-white">
                 <div class="flex gap-8 justify-center flex-col md:flex-row w-full">
                     <div class="flex flex-1 flex-col gap-4">
                         <label>First Name</label>
@@ -506,29 +526,24 @@
             </div>
         </div>
 
-        <div name="mobile-footer" class="flex flex-col justify-center items-center md:hidden">
-            <div class="flex w-[90%] justify-between items-center">
+        <div name="mobile-footer" class="flex flex-col justify-evenly items-center md:hidden">
                 <div class="flex gap-4 items-center">
                     <img loading="lazy" src="./assets/icons/logo-dark.svg" class="w-[7vw] cursor-pointer block dark:hidden" />
-                    <img loading="lazy" src="./assets/icons/logo.svg" class="cursor-pointer hidden dark:block" />
-                    <p class="text-[#2E2E2E] text-[0.8rem] dark:text-white">
-                        Special Team
-                    </p>
+                    <img loading="lazy" src="./assets/icons/logo.svg" class="w-[7vw] cursor-pointer hidden dark:block" />
+                   
                 </div>
-                <div class="flex gap-4 items-center">
-                    <p class="dark:text-gray-500 text-[0.8rem] text-[#2E2E2E]">
-                        Dark Mode
-                    </p>
-                    <div class="dark:bg-[#303030] bg-[#E2E2E2] relative rounded-full w-16 h-8 toggle-on"
-                        id="btn-toggle2">
-                        <img loading="lazy" src="./assets/icons/circle.svg" class="absolute h-8 w-8 cursor-pointer"
-                            id="circle-toggle" />
+                <p class="text-center mt-8  text-[0.8rem] text-[#2E2E2E]">
+                    Copyright © 2024 Specialteam.com
+                </p>
+                <div class="flex mt-8 gap-4 items-center ml-auto mr-4 mb-2">
+                  
+                    <div class="dark:bg-[#303030] bg-[#E2E2E2] relative rounded-full w-16 h-10 toggle-on flex items-center cursor-pointer"
+                        id="btn-toggle3">
+                        <div class="absolute h-8 w-8 rounded-full bg-blue-500 "
+                            id="circle-toggle" ></div>
                     </div>
                 </div>
-            </div>
-            <p class="text-center mt-12 mb-4 font-[0.7rem] text-[#2E2E2E]">
-                Copyright © 2024 Specialteam.com
-            </p>
+           
         </div>
     </footer>
 

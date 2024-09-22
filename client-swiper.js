@@ -80,8 +80,8 @@ function loadClients() {
 
 
     const swiper = new Swiper('.client-container', {
-        spaceBetween: 10,   
-        slidesPerView: 1,  
+        spaceBetween: 5,   
+        slidesPerView: 1.5,  
 
         slidesPerGroup: 1,
         loop: false,         
@@ -91,12 +91,12 @@ function loadClients() {
         },
         breakpoints: {
           
-            768: {
+            700: {
                 slidesPerView: 2,  
                 spaceBetween: 5,
                         slidesPerGroup: 2,
             },
-            1224: {
+            1024: {
                 slidesPerView: 3, 
                 spaceBetween: 10,
                         slidesPerGroup: 3,

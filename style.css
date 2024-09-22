@@ -7,11 +7,12 @@
     src: url('./assets/fonts/ibrand/Ibrand.woff2') format('woff2'),
          url('./assets/fonts/ibrand/Ibrand.woff') format('woff'),
          url('./assets/fonts/ibrand/Ibrand.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+
 }
 
-
+html {
+    overflow-x: hidden;
+}
 :root {
     --gray-text: rgba(92, 92, 92, 1);
     --gray-bg: #303030;
@@ -30,13 +31,22 @@ body {
     height: 100%;
 }
 
+.scrolled-desktop {
+    z-index: 1000;
+    gap: 30vw !important;
+    background-color: #EBEBEBCC;
+}
 
 .scrolled {
-    background-color: white;
+    background-color: #EBEBEBCC;
     color: white !important;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional, for shadow effect */
-
 }
+
+.dark .scrolled , .dark .scrolled-desktop {
+    background-color: #2E2E2ECC;
+}
+
 .nav {
     position: fixed;
     z-index: 1000;
@@ -55,14 +65,14 @@ p {
 
 
 .nav-on {
-right: 9%;
-top: 5vh
+    right: 0%;
+    top: 0px
 }
 
 /* Menu off screen */
 .nav-off {
     right: -100vw;
-    top: 5vh
+    top: 0px
 
 }
 
@@ -404,13 +414,20 @@ top: 5vh
 
 
 .toggle-off #circle-toggle {
-    left: 0; 
+    left: 1%; 
     transition: all 0.3s ease-in-out; 
+    background-image: url("./assets/icons/sun.svg");
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .toggle-on #circle-toggle {
     left: calc(100% - 100% / 2); 
     transition: all 0.3s ease-in-out; 
+    background-image: url("./assets/icons/moon.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: black;
 }
 
 
@@ -428,6 +445,22 @@ top: 5vh
     background-color: var(--gray-bg);
 }
 
+.get-animation {
+    transition: 1s;
+    span,img {
+        transition: 1.5s;
+    }
+}
+
+.get-animation:hover {
+    background-color: #E7E7E7;
+    span {
+        color:white
+    }
+    img {
+        filter:  invert(1);
+    }
+}
 
 .contact-animation {
     position: relative;
@@ -656,3 +689,12 @@ top: 5vh
     }
 }
 
+.cursor-pointer {
+
+}
+
+.cursor-pointer2 {
+    background-image: url("./assets/icons/moon.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+}
