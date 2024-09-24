@@ -110,40 +110,34 @@
     height: auto;
     margin-inline: auto;
     padding-inline: 2rem;
+    margin-bottom: 1rem;
 }
 
 /* Mobile First Approach */
 @media (max-width: 500px) {
     .client-container {
-        overflow: hidden; /* Fixed to prevent content from scrolling horizontally */
-        width: 95%;
-
-       margin-inline: auto;
+        width: 100%;
     }
 
     .swiper-slide {
-        margin-inline: auto;
-        width: 20vw;
+        width: 25vw;
     }
 
     .client-card {
-        width: 50vw;
-                height:350px;
 
-        padding: 1rem;
-        height:300px;
+        padding: 0.5rem;
+        height:330px;
     }
 
-    .custom-nav {
-        top: 80% !important;
-    }
+ 
 
     .swiper-button-prev {
-        left: 1vw !important;
+        display: none !important;
+
     }
 
     .swiper-button-next {
-        right: -10vw !important;
+        display: none !important;
     }
 }
 
@@ -151,27 +145,24 @@
 @media (min-width: 500px)  and (max-width: 767px) {
 
     .client-container {
-        overflow: hidden; /* Fixed to prevent content from scrolling horizontally */
         width: 95%;
-       margin-inline: auto;
     }
     .client-card {
-        width: 50vw;
+        width: 55vw;
         height:350px;
         max-width: 250px;
         margin-inline: auto;
         padding-inline: 2rem;
     }
 
-    .custom-nav {
-        top: 85% !important;
-    }
+   
     .swiper-button-prev {
-        left: 1vw !important;
+        display: none !important;
+
     }
 
     .swiper-button-next {
-        right: -5vw !important;
+        display: none !important;
     }
 
 }
@@ -179,7 +170,6 @@
 @media (min-width: 768px)  and (max-width: 1024px) {
 
     .client-container {
-        overflow: hidden; /* Fixed to prevent content from scrolling horizontally */
         width: 95%;
        margin-inline: auto;
     }
@@ -195,23 +185,25 @@
         top: 85% !important;
     }
     .swiper-button-prev {
-        left: 1vw !important;
+        display: none !important;
+
     }
 
     .swiper-button-next {
-        right: -5vw !important;
+        display: none !important;
     }
 
 }
 
 /* Desktop */
-@media (min-width: 1025px) {
+@media (min-width: 1024px)  and (max-width: 1280px) {
     .client-container {
-        overflow: hidden; /* Fixed to prevent content from scrolling horizontally */
        margin-inline: auto;
+       overflow: hidden;
+     
     }
     .client-card {
-        width: 22vw;
+        width: 25vw;
         height: 400px;
         padding-inline: 2rem;
 
@@ -234,4 +226,36 @@
     .swiper-button-next {
         right: 0 !important;
     }
+}
+
+@media (min-width: 1280px)   {
+    .client-container {
+        margin-inline: auto;
+        overflow: hidden;
+      
+     }
+     .client-card {
+         width: 20vw;
+         height: 400px;
+         padding-inline: 2rem;
+ 
+   
+     }
+ 
+     .swiper-slide {
+         margin-inline: auto;
+     }
+ 
+     .custom-nav {
+         top: 70% !important;
+         transform: translateY(-60%);
+     }
+ 
+     .swiper-button-prev {
+         left: 5% !important;
+     }
+ 
+     .swiper-button-next {
+         right: 0 !important;
+     }
 }

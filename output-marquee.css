@@ -18,7 +18,7 @@
 
 @media (max-width: 640px) {
   .text-content {
-    font-size: 0.4rem !important;
+    font-size: 0.8rem !important;
   }
 
   .team-container{
@@ -29,7 +29,7 @@
 
 @media (min-width: 640px) and  (max-width: 1024px) {
   .text-content {
-    font-size: 0.7rem !important;
+    font-size: 0.8rem !important;
   }
 
   .team-container{

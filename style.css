@@ -29,6 +29,7 @@ body {
     margin: 0;
     padding: 0;
     height: 100%;
+    letter-spacing: 0.05rem;
 }
 
 .scrolled-desktop {
@@ -39,6 +40,7 @@ body {
 
 .scrolled {
     background-color: #EBEBEBCC;
+    z-index: 1000;
     color: white !important;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional, for shadow effect */
 }
@@ -49,7 +51,7 @@ body {
 
 .nav {
     position: fixed;
-    z-index: 1000;
+    z-index: 99000;
     transition: background-color 0.3s ease, color 0.3s ease;
     overflow-x: hidden;
 }
@@ -379,14 +381,13 @@ p {
     box-sizing: border-box;
     position: relative;
     z-index: 1;
-    overflow: hidden;
 
     &::after {
         position: absolute;
         height: 1px; 
         width: 100%;
         left: 0;
-        top: 0;
+        bottom: 0;
         content: "";
         background: linear-gradient(90deg, #FFFFFF 0%, #000000 50%, #FFFFFF 100%);
         z-index: 2;
@@ -397,7 +398,6 @@ p {
     box-sizing: border-box;
     position: relative;
     z-index: 1;
-    overflow: hidden;
 
     &::after {
         position: absolute;
@@ -405,6 +405,38 @@ p {
         width: 100%;
         left: 0;
         top: 0;
+        content: "";
+        background: linear-gradient(90deg, #000000 0%, #FFFFFF 52%, #000000 100%);
+        z-index: 2;
+    }
+}
+
+.header-border {
+    box-sizing: border-box;
+    z-index: 1;
+
+    &::after {
+        position: absolute;
+        height: 1px; 
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        content: "";
+        background: linear-gradient(90deg, #FFFFFF 0%, #000000 50%, #FFFFFF 100%);
+        z-index: 2;
+    }
+}
+
+.dark .header-border {
+    box-sizing: border-box;
+    z-index: 1;
+
+    &::after {
+        position: absolute;
+        height: 1px; 
+        width: 100%;
+        left: 0;
+        bottom: 0;
         content: "";
         background: linear-gradient(90deg, #000000 0%, #FFFFFF 52%, #000000 100%);
         z-index: 2;

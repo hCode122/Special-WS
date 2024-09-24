@@ -1,7 +1,6 @@
 const swiper = new Swiper('.team-container', {
     spaceBetween: 15,  
-    slidesPerView: 3, 
-    slidesPerGroup: 3,
+    slidesPerView: 1.5, 
     autoplay: {
         delay: 1,
             reverseDirection: true,
@@ -12,23 +11,20 @@ const swiper = new Swiper('.team-container', {
     speed: 9000,
     breakpoints: {
     768: {
-        slidesPerView: 3, 
-        slidesPerGroup: 3,
+        slidesPerView: 2, 
         spaceBetween: 15,  
     },
     1024: {
         slidesPerView: 1.5, 
-        slidesPerGroup: 1.5,
         spaceBetween: 5, 
     },
     1220: {
         slidesPerView: 2, 
-        slidesPerGroup: 2,
         spaceBetween: 5, 
     },
     1378: {
         slidesPerView: 2.5,
-        spaceBetween: 15,
+        spaceBetween: 5,
     }
 }
 
@@ -36,25 +32,19 @@ const swiper = new Swiper('.team-container', {
 
 const swiper2 = new Swiper('.middle-container', {
     spaceBetween: 15,  
-    slidesPerGroup: 3,
-    slidesPerView: 3,  
+    slidesPerView: 10,  
     autoplay: {
         delay: 1,
         reverseDirection: true,
         disableOnInteraction: false,
     },
     loop: true,
-    speed: 22000,
+    speed: 5000,
     breakpoints: {
-    500: {
-        slidesPerView: 5,  
-        spaceBetween: 5,   
-        slidesPerGroup: 5,
-    },
+   
     1024: {
         slidesPerView: 12,  
         spaceBetween: 15,
-        slidesPerGroup: 12,
     }
     
 }
@@ -100,6 +90,10 @@ function createClientCards() {
         container.appendChild(slide);
     });
 
+    members.forEach(member => {
+        const slide = createSlide(member);
+        container.appendChild(slide);
+    });
     members.forEach(member => {
         const slide = createSlide(member);
         container.appendChild(slide);

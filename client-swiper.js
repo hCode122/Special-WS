@@ -91,16 +91,20 @@ function loadClients() {
         },
         breakpoints: {
           
-            700: {
+            768: {
                 slidesPerView: 2,  
                 spaceBetween: 5,
-                        slidesPerGroup: 2,
             },
             1024: {
-                slidesPerView: 3, 
-                spaceBetween: 10,
-                        slidesPerGroup: 3,
+                slidesPerView: 2,  
+                spaceBetween: 5,
+                slidesPerGroup: 2
+            },
+            1280: {
+                slidesPerView: 3,  
+                spaceBetween: 5,
             }
+       
         },
         on: {
             init: function () {
@@ -118,7 +122,6 @@ function updateNavButtons(swiper) {
     const prevButton = document.querySelector('.swiper-button-prev');
     const nextButton = document.querySelector('.swiper-button-next');
 
-    // Check if at the first slide
     if (swiper.isBeginning) {
         prevButton.style.display = 'none'; // Hide prev button
     } else {
