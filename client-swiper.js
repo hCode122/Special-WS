@@ -53,7 +53,7 @@ function loadClients() {
             
             clientCard.className = `${baseClass} ${gradientClass}`;
             counter = (counter + 1) % 3
-        } else if (size == "client-card-small") {
+        } else {
             if (index == 0) {
                 gradientClass = 'border-grad rounded-tl-[100px]'; 
             } else if (index == clients.length -1) {

@@ -14,14 +14,7 @@ const swiper = new Swiper('.team-container', {
         slidesPerView: 2, 
         spaceBetween: 15,  
     },
-    1024: {
-        slidesPerView: 1.5, 
-        spaceBetween: 5, 
-    },
-    1220: {
-        slidesPerView: 2, 
-        spaceBetween: 5, 
-    },
+  
     1378: {
         slidesPerView: 2.5,
         spaceBetween: 5,

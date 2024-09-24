@@ -895,12 +895,12 @@ video {
   width: 42vw;
 }
 
-.w-\[45vw\] {
-  width: 45vw;
-}
-
 .w-\[54vw\] {
   width: 54vw;
+}
+
+.w-\[60vw\] {
+  width: 60vw;
 }
 
 .w-\[6vw\] {
@@ -937,6 +937,10 @@ video {
 
 .min-w-\[500px\] {
   min-width: 500px;
+}
+
+.max-w-\[250px\] {
+  max-width: 250px;
 }
 
 .max-w-\[90vw\] {
@@ -1214,10 +1218,6 @@ video {
   font-size: 2rem;
 }
 
-.text-\[3rem\] {
-  font-size: 3rem;
-}
-
 .text-\[80px\] {
   font-size: 80px;
 }
@@ -1375,6 +1375,10 @@ p {
 .nav-off {
   right: -100vw;
   top: 0px
+}
+
+.active-link {
+  color: white !important
 }
 
 .colorSwitch {
@@ -1666,7 +1670,7 @@ p {
     height: 1px;
     width: 100%;
     left: 0;
-    bottom: 0;
+    top: 0;
     content: "";
     background: linear-gradient(90deg, #FFFFFF 0%, #000000 50%, #FFFFFF 100%);
     z-index: 2;
@@ -1691,7 +1695,8 @@ p {
 
 .header-border {
   box-sizing: border-box;
-  z-index: 1;
+  z-index: 15;
+  overflow: hidden;
   &::after {
     position: absolute;
     height: 1px;
@@ -1793,14 +1798,20 @@ p {
 .contact-animation img {
   border-radius: 6rem;
   top: 50%;
-  left: 0;
+  left: 5%;
   transform: translateY(-50%);
   position: absolute;
 }
 
+@media (min-width: 519px) and (max-width: 1024px) {
+  .contact-animation img {
+    left: 15%;
+  }
+}
+
 .contact-text {
   position: absolute;
-  top: 0.9rem;
+  top: 30%;
   left: calc(100% - 60%);
   transition: 1s;
 }
@@ -1808,12 +1819,12 @@ p {
 .dark  .contact-text {
   color: white;
   position: absolute;
-  top: 0.9rem;
+  top: 30%;
   left: calc(100% - 60%);
   transition: 1s;
 }
 
-@media (max-width: 810px) {
+@media (min-width: 769px) {
   .contact-text {
     position: absolute;
     top: 0.7rem;
@@ -2095,6 +2106,14 @@ p {
   .sm\:w-\[38vw\] {
     width: 38vw;
   }
+
+  .sm\:w-\[45vw\] {
+    width: 45vw;
+  }
+
+  .sm\:max-w-\[300px\] {
+    max-width: 300px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -2356,8 +2375,8 @@ p {
     width: 10.4vw;
   }
 
-  .lg\:w-\[17vw\] {
-    width: 17vw;
+  .lg\:w-\[20vw\] {
+    width: 20vw;
   }
 
   .lg\:w-\[22vw\] {

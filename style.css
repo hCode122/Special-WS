@@ -78,6 +78,10 @@ p {
 
 }
 
+.active-link {
+    color: white !important
+}
+
 .colorSwitch {
     background-repeat: no-repeat;
     background-position: center;
@@ -387,7 +391,7 @@ p {
         height: 1px; 
         width: 100%;
         left: 0;
-        bottom: 0;
+        top: 0;
         content: "";
         background: linear-gradient(90deg, #FFFFFF 0%, #000000 50%, #FFFFFF 100%);
         z-index: 2;
@@ -413,8 +417,8 @@ p {
 
 .header-border {
     box-sizing: border-box;
-    z-index: 1;
-
+    z-index: 15;
+    overflow: hidden;
     &::after {
         position: absolute;
         height: 1px; 
@@ -520,14 +524,20 @@ p {
 .contact-animation img {
     border-radius: 6rem;
     top: 50%;
-    left: 0;
+    left: 5%;
     transform: translateY(-50%);
     position: absolute;
 }
 
+@media (min-width: 519px) and (max-width: 1024px) {
+    .contact-animation img {
+        left: 15%;
+    }
+}
+
  .contact-text {
     position: absolute;
-    top: 0.9rem;
+    top: 30%;
     left: calc(100% - 60%);
     transition: 1s;
 }
@@ -535,21 +545,22 @@ p {
 .dark  .contact-text {
     color: white;
     position: absolute;
-    top: 0.9rem;
+    top: 30%;
+
     left: calc(100% - 60%);
     transition: 1s;
 }
 
-@media (max-width: 810px) {
+
+
+@media (min-width: 769px) {
     .contact-text {
         position: absolute;
         top: 0.7rem;
     }
     .dark  .contact-text {
         top: 0.7rem;
-    }
-    
-        
+    }  
 }
 
 .contact-container:hover .contact-animation { 
