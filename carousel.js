@@ -10,9 +10,13 @@ const swiper = new Swiper('.team-container', {
     loop: true,
     speed: 9000,
     breakpoints: {
-    768: {
+    600: {
         slidesPerView: 2, 
-        spaceBetween: 15,  
+        spaceBetween: 15, 
+    },
+    768: {
+        slidesPerView: 2.5, 
+        spaceBetween: 10,  
     },
   
     1378: {

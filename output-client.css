@@ -64,26 +64,18 @@
 
 .swiper-button-prev {
   left: 5% !important;
-  background-image: url("./assets/icons/plus.svg") !important;
+  background-image: url("./assets/icons/arrow-btn-circle2.svg") !important;
   background-repeat: no-repeat;
   width: 100%;
   height: 100%;
-}
-
-.swiper-button-prev:hover {
-  background-image: url("./assets/icons/arrow-btn-circle2.svg") !important;
-  animation: opacityHide 0.3s ease;
+  transition: 03s;
 }
 
 .swiper-button-next {
   right: 0 !important;
-  background-image: url("./assets/icons/plus.svg") !important;
-  background-repeat: no-repeat;
-}
-
-.swiper-button-next:hover {
   background-image: url("./assets/icons/arrow-btn-circle.svg") !important;
-  animation: opacityHide 0.3s ease;
+  background-repeat: no-repeat;
+  transition: 03s;
 }
 
 .custom-nav img {
@@ -99,7 +91,7 @@
 
 .client-card {
   margin-top: 20px;
-  width: 20vw;
+  width: 33vw;
   height: auto;
   margin-inline: auto;
   padding-inline: 2rem;
@@ -111,15 +103,14 @@
 @media (max-width: 500px) {
   .client-container {
     width: 100%;
-  }
-
-  .swiper-slide {
-    width: 25vw;
+    min-width: 350px;
   }
 
   .client-card {
+    width:210px;
     padding: 0.5rem;
-    height:330px;
+    height: 320px;
+    min-width: 230px;
   }
 
   .swiper-button-prev {
@@ -128,6 +119,12 @@
 
   .swiper-button-next {
     display: none !important;
+  }
+
+  .text-styles {
+    text-align: center;
+    font-size: 0.8rem;
+    margin-top: 2rem;
   }
 }
 
@@ -139,11 +136,12 @@
   }
 
   .client-card {
-    width: 55vw;
-    height:350px;
-    max-width: 250px;
+    width: 42vw;
+    height:380px;
     margin-inline: auto;
     padding-inline: 2rem;
+    min-width: 250px;
+    max-width: 278px;
   }
 
   .swiper-button-prev {
@@ -152,6 +150,12 @@
 
   .swiper-button-next {
     display: none !important;
+  }
+
+  .text-styles {
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 2rem;
   }
 }
 
@@ -162,9 +166,9 @@
   }
 
   .client-card {
-    width: 36vw;
+    width: 34vw;
     height:360px;
-    max-width: 250px;
+    max-width: 275px;
     margin-inline: auto;
     padding-inline: 2rem;
   }
@@ -180,6 +184,12 @@
   .swiper-button-next {
     display: none !important;
   }
+
+  .text-styles {
+    text-align: center;
+    font-size: 0.8rem;
+    margin-top: 2rem;
+  }
 }
 
 /* Desktop */
@@ -191,9 +201,10 @@
   }
 
   .client-card {
-    width: 25vw;
-    height: 400px;
+    width: 29vw;
+    height: 420px;
     padding-inline: 2rem;
+    max-width: 320px;
   }
 
   .swiper-slide {
@@ -211,6 +222,11 @@
 
   .swiper-button-next {
     right: 0 !important;
+  }
+
+  .text-styles {
+    text-align: center;
+    margin-top: 3rem;
   }
 }
 
@@ -221,8 +237,8 @@
   }
 
   .client-card {
-    width: 20vw;
-    height: 400px;
+    width: 22.5vw;
+    height: 430px;
     padding-inline: 2rem;
   }
 
@@ -241,5 +257,10 @@
 
   .swiper-button-next {
     right: 0 !important;
+  }
+
+  .text-styles {
+    text-align: center;
+    margin-top: 3rem;
   }
 }

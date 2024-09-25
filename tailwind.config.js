@@ -36,6 +36,7 @@ module.exports = {
       'rounded-full',
       'w-32',
       'h-32',
+      'mt-4',
       'md:w-32',
       'md:h-32',
       'btn-cont'

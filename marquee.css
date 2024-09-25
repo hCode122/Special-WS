@@ -51,11 +51,11 @@
     }
 
     .team-card {
-      width: 20vw !important;
+      width: 22.5vw !important;
       
   img {
     transition: 0.5s;
-    width: 20vw;
+    width: 22.5vw ;
   }
     }
    
@@ -78,7 +78,7 @@
   bottom: 4%;
   left: 10%;
   width: 80%;
-  height: 24%; /* Bottom quarter of the card */
+  height: 24%; 
   padding: 1rem;
   display: flex;
   font-size: 1rem ;

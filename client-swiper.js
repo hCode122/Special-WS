@@ -65,7 +65,7 @@ function loadClients() {
         }
  
         clientCard.innerHTML = `
-            <p class="lg:text-[1rem] md:text-[0.8rem] text-[0.7rem] text-center text-gray-400 md:p-8 ">
+            <p class="text-styles ">
                 ${client.description}
             </p>
             <img src="${client.imageSrc}" class="md:mt-16 md:mt-8 mt-4 rounded-full">
@@ -92,7 +92,8 @@ function loadClients() {
         breakpoints: {
           
             768: {
-                slidesPerView: 2,  
+                slidesPerView: 2.5,  
+                slidesPerGroup: 2,
                 spaceBetween: 5,
             },
             1024: {
@@ -102,7 +103,8 @@ function loadClients() {
             },
             1280: {
                 slidesPerView: 3,  
-                spaceBetween: 5,
+                spaceBetween: 0,
+                slidesPerGroup: 3
             }
        
         },
