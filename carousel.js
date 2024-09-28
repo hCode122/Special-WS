@@ -73,9 +73,9 @@ function createClientCards() {
         slide.innerHTML = `
             <div class="team-card relative rounded-lg overflow-hidden shadow-lg">
                 <img src="${member.image}" class="h-full">
-                <div class="text-content dark:bg-black text-center bg-white dark:text-white rounded-[10px]">
+                <div class="text-content dark:bg-black bg-white dark:text-white rounded-[10px]">
                     <p class="text-lg font-bold text-[#2E2E2E] dark:text-white">${member.name}</p>
-                    <p class="text-sm text-gray-500">${member.role}</p>
+                    <p class="text-sm text-gray-500 mt-2">${member.role}</p>
                 </div>
             </div>
         `;
@@ -129,7 +129,7 @@ function createCodeCards() {
 
       members2.forEach(member => {
         const slide = document.createElement('div');
-        slide.classList.add('swiper-slide'); // Add Swiper slide class
+        slide.classList.add('swiper-slide'); 
     
         const img = document.createElement('img');
     

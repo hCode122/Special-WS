@@ -1,6 +1,15 @@
 //Dark Mode
- function toggle(className) {
-    var btn = document.getElementById(className)
+ function toggle() {
+    var btn = document.getElementById('btn-toggle')
+    var btn2 = document.getElementById('btn-toggle2')
+    var btn3 = document.getElementById('btn-toggle3')
+    toggleDark(btn)
+    toggleDark(btn2)
+    toggleDark(btn3)
+
+}
+
+function toggleDark(btn) {
     if (btn.classList.contains('toggle-on')) {
         btn.classList.add("toggle-off")
         btn.classList.remove("toggle-on")
@@ -16,9 +25,8 @@
 
 
 document.addEventListener("DOMContentLoaded", function () {
-    // use system mode preferance by default
     if (! window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        toggle('btn-toggle')
+        toggle()
     }
    
 
@@ -49,11 +57,11 @@ document.addEventListener("DOMContentLoaded", function () {
     
       
     const btnToggle = document.getElementById('btn-toggle');
-    btnToggle.addEventListener('click', () => toggle('btn-toggle'));
+    btnToggle.addEventListener('click', () => toggle());
     const btnToggle2 = document.getElementById('btn-toggle2');
-    btnToggle2.addEventListener('click',() => toggle('btn-toggle2'))
+    btnToggle2.addEventListener('click',() => toggle())
     const btnToggle3 = document.getElementById('btn-toggle3');
-    btnToggle3.addEventListener('click',() => toggle('btn-toggle3'))
+    btnToggle3.addEventListener('click',() => toggle())
     
 });
 

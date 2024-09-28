@@ -33,16 +33,23 @@ body {
 }
 
 .scrolled-desktop {
+    position: fixed;
+    top: 0;
+    margin-top: 0;
     z-index: 1000;
     gap: 30vw !important;
+    backdrop-filter: blur(8px);
     background-color: #EBEBEBCC;
 }
 
 .scrolled {
+    position: fixed;
+    top: 0;
     background-color: #EBEBEBCC;
     z-index: 1000;
+    backdrop-filter: blur(10px);
     color: white !important;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional, for shadow effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
 
 .dark .scrolled , .dark .scrolled-desktop {
@@ -50,7 +57,6 @@ body {
 }
 
 .nav {
-    position: fixed;
     z-index: 99000;
     transition: background-color 0.3s ease, color 0.3s ease;
     overflow-x: hidden;
@@ -161,31 +167,35 @@ p {
 
 
 .hero-anim1 {
-    animation: hero-anim1 14s ease infinite forwards;   
+    animation: hero-anim1 8s ease infinite forwards;   
 }
 
 .hero-anim2 {
-    animation: hero-anim2 14s ease infinite forwards;   
+    animation: hero-anim2 8s ease infinite forwards;   
 }
 
 @keyframes hero-anim1 {
    20% {
-    top: 1%
+    top: 1%;
+    left: 1.5%
+
    }
     60% {
-        top: 51.5%
+        top: 26%
     }
     100% {
-        top:1%
+        top:1%;
+        left: 1.5%
+
     }
 } 
 
 @keyframes hero-anim2 {
-   25% {
+   20% {
     left: 1%
    }
-    65% {
-        left: 70%
+    60% {
+        left: 35%
     }
     100% {
         left:1%
@@ -417,8 +427,10 @@ p {
 
 .header-border {
     box-sizing: border-box;
-    z-index: 15;
+    z-index: 1;
     overflow: hidden;
+    position: relative;
+
     &::after {
         position: absolute;
         height: 1px; 
@@ -434,6 +446,7 @@ p {
 .dark .header-border {
     box-sizing: border-box;
     z-index: 1;
+    position: relative;
 
     &::after {
         position: absolute;
@@ -450,7 +463,7 @@ p {
 
 
 .toggle-off #circle-toggle {
-    left: 4%; 
+    left: 5%; 
     transition: all 0.3s ease-in-out; 
     background-image: url("./assets/icons/sun.svg");
     background-position: center;
@@ -490,11 +503,16 @@ p {
 
 .get-animation:hover {
     background-color: #E7E7E7;
+   
+   
+}
+
+.get-animation:active {
     span {
-        color:white
+        color:white !important
     }
     img {
-        filter:  invert(1);
+        filter:  invert(1) !important;
     }
 }
 
@@ -537,7 +555,8 @@ p {
 
  .contact-text {
     position: absolute;
-    top: 30%;
+    transform: translateY( -50%);
+    top: 50%;
     left: calc(100% - 60%);
     transition: 1s;
 }
@@ -545,7 +564,8 @@ p {
 .dark  .contact-text {
     color: white;
     position: absolute;
-    top: 30%;
+    transform: translateY( -50%);
+    top: 50%;
 
     left: calc(100% - 60%);
     transition: 1s;
@@ -556,10 +576,12 @@ p {
 @media (min-width: 769px) {
     .contact-text {
         position: absolute;
-        top: 0.7rem;
+        transform: translateY( -50%);
+        top: 50%;
     }
     .dark  .contact-text {
-        top: 0.7rem;
+        transform: translateY( -50%);
+        top: 50%;
     }  
 }
 
@@ -588,20 +610,36 @@ p {
 .pulse-shadow {
     animation: pulse 2s infinite ease;
     border-radius: 50%; /* Make the image rounded */
-    filter: drop-shadow(0px 0px 0px #047EE0);
+    transform: scale(1);
+    box-shadow: 0px 0px 0.59px 0px #56e078;
+    
+box-shadow: 0px 0px 1.18px 0px #56e078;
+
+box-shadow: 0px 0px 4.13px 0px #56e078;
+
+box-shadow: 0px 0px 8.27px 0px #56e078;
+
+box-shadow: 0px 0px 14.17px 0px #56e078;
+
+box-shadow: 0px 0px 24.8px 0px #56e078;
 
   }
+  @keyframes pulse {
+	0% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 #56e078;
+	}
 
-@keyframes pulse {
-  
-    0%, 100% {
-        filter: drop-shadow(0px 0px 0px #047EE0);
-    }
+	70% {
+		transform: scale(1);
+		box-shadow: 0 0 0 7px rgba(0, 0, 0, 0);
+	}
 
-    50% {
-        filter: drop-shadow(0px 0px 20px #047EE0);
-    }
-  }
+	100% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+	}
+}
 
   .submit-animation {
     transition: 0.5s;

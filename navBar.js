@@ -2,15 +2,17 @@ function handleScroll() {
   const navM = document.getElementById('mobile-nav');
   const navD = document.getElementById('desktop-nav');
   const size = getScreenSizeClass()
-  if (window.scrollY > 0) {
+  if (window.scrollY > navD.offsetHeight) {
     if (size == 'client-card-small') {
       navM.classList.add("scrolled");
+      navM.classList.remove("header-border");
     } else {
       navD.classList.add("scrolled-desktop");
     }
   } else {
     if (size == 'client-card-small') {
       navM.classList.remove("scrolled");
+      navM.classList.add("header-border");
     } else {
       navD.classList.remove("scrolled-desktop");
     }

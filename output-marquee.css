@@ -79,13 +79,13 @@
 .text-content {
   position: absolute;
   bottom: 4%;
-  left: 10%;
-  width: 80%;
-  height: 24%;
+  left: 7%;
+  width: 85%;
+  height: 22%;
   padding: 1rem;
   display: flex;
   font-size: 1rem ;
   flex-direction: column;
   justify-content: center;
-  text-align: center;
+  text-align: start;
 }
