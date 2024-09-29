@@ -24,7 +24,19 @@ Lorem ipsum dolor sit amet, dolor
   { name: 'name', description: `
     Lorem ipsum dolor sit amet, dolor consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsumsito dolor sit amet, consectetur Lorem adipiscing consectetur sed dolor o
 Lorem ipsum dolor sit amet, dolor 
-    `, imageSrc: './assets/icons/user.svg', position: 'CEO example agency' }
+    `, imageSrc: './assets/icons/user.svg', position: 'CEO example agency' },
+    { name: 'name', description: `
+        Lorem ipsum dolor sit amet, dolor consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsumsito dolor sit amet, consectetur Lorem adipiscing consectetur sed dolor o
+    Lorem ipsum dolor sit amet, dolor 
+        `, imageSrc: './assets/icons/user.svg', position: 'CEO example agency' },
+      { name: 'name', description: `
+        Lorem ipsum dolor sit amet, dolor consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsumsito dolor sit amet, consectetur Lorem adipiscing consectetur sed dolor o
+    Lorem ipsum dolor sit amet, dolor 
+        `, imageSrc: './assets/icons/user.svg', position: 'CEO example agency' },
+      { name: 'name', description: `
+        Lorem ipsum dolor sit amet, dolor consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsumsito dolor sit amet, consectetur Lorem adipiscing consectetur sed dolor o
+    Lorem ipsum dolor sit amet, dolor 
+        `, imageSrc: './assets/icons/user.svg', position: 'CEO example agency' }
 ];
 
 function loadClients() {

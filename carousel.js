@@ -5,10 +5,9 @@ const swiper = new Swiper('.team-container', {
         delay: 1,
             reverseDirection: true,
             disableOnInteraction: false,
-            pauseOnMouseEnter: true,
     },
     loop: true,
-    speed: 9000,
+    speed: 4000,
     breakpoints: {
     600: {
         slidesPerView: 2, 
@@ -24,8 +23,18 @@ const swiper = new Swiper('.team-container', {
         spaceBetween: 5,
     }
 }
-
 })
+    
+
+    document.addEventListener("DOMContentLoaded", function ()  {
+        const swiperContainer = document.getElementById("teamCard");
+        swiperContainer.addEventListener("mouseover", (e) => {
+            swiper.autoplay.stop();
+        });
+        swiperContainer.addEventListener("mouseout", () => {
+            swiper.autoplay.start();
+        });
+    })
 
 const swiper2 = new Swiper('.middle-container', {
     spaceBetween: 15,  
@@ -71,7 +80,7 @@ function createClientCards() {
         slide.classList.add('pausable');  
         slide.classList.add('overflow-hidden');  
         slide.innerHTML = `
-            <div class="team-card relative rounded-lg overflow-hidden shadow-lg">
+            <div id="teamCard" class="team-card relative rounded-lg overflow-hidden shadow-lg">
                 <img src="${member.image}" class="h-full">
                 <div class="text-content dark:bg-black bg-white dark:text-white rounded-[10px]">
                     <p class="text-lg font-bold text-[#2E2E2E] dark:text-white">${member.name}</p>

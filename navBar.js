@@ -47,12 +47,10 @@ function toggleNav() {
   const body = document.body;
 
   if (!navMenu.classList.contains('nav-off')) {
-    // Disable scrolling
-    body.style.overflow = 'hidden';
-} else {
-    // Enable scrolling
-    body.style.overflow = '';
-}
+ 
+  } else {
+
+  }
 
   if (navMenu.classList.contains('nav-off')) {
       // Toggle to menu-on state
@@ -82,7 +80,10 @@ links.forEach(link => {
     });
 
     link.classList.add('active-link');
-    link.nextElementSibling.src = link.getAttribute('data-img-active'); 
+    if (! window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      link.nextElementSibling.src = link.getAttribute('data-img-light'); 
+    }
+    else link.nextElementSibling.src = link.getAttribute('data-img-active'); 
        
     toggleNav()
   });
@@ -101,7 +102,10 @@ function setActiveLinkOnScroll() {
       links.forEach(link => {
         if (link.getAttribute('href') === `#${sectionId}`) {
           link.classList.add('active-link');
-          link.nextElementSibling.src = link.getAttribute('data-img-active');
+          if (! window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            link.nextElementSibling.src = link.getAttribute('data-img-light'); 
+          }
+          else link.nextElementSibling.src = link.getAttribute('data-img-active'); 
         } else {
           link.classList.remove('active-link');
           link.nextElementSibling.src = link.getAttribute('data-img-inactive');

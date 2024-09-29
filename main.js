@@ -7,6 +7,7 @@
     toggleDark(btn2)
     toggleDark(btn3)
 
+    
 }
 
 function toggleDark(btn) {
