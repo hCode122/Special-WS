@@ -7,7 +7,7 @@ const swiper = new Swiper('.team-container', {
             disableOnInteraction: false,
     },
     loop: true,
-    speed: 4000,
+    speed: 6000,
     breakpoints: {
     600: {
         slidesPerView: 2, 

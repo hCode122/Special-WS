@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./output-style.css" />
     <link rel="stylesheet" href="./output-marquee.css" />
+    <link rel="stylesheet" href="./output-nav.css" />
     <link rel="stylesheet" href="./output-client.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
@@ -17,9 +18,9 @@
 
 <body class="dark:bg-black bg-[#fff]">
 
-    <div name="upper" class="md:ml-0  md:mr-0 w-full">
+    <div name="upper" id="home" class="md:ml-0  md:mr-0 w-full">
         
-    <nav id="mobile-nav" class="flex md:hidden nav items-center top-0 w-full h-14 pt-2 header-border">
+    <nav id="mobile-nav" class="flex md:hidden nav items-center top-0 w-full h-14 pt-2">
         <img loading="lazy" src="./assets/icons/logo-dark.svg" class="h-8 ml-2 mr-auto cursor-pointer block dark:hidden" />
         <img loading="lazy" src="./assets/icons/logo.svg" class="h-8 ml-2 mr-auto cursor-pointer hidden dark:block" />
 
@@ -29,8 +30,9 @@
             <img loading="lazy" src="./assets/icons/menu-off-black.svg" class="h-20 w-20 dark:hidden block cursor-pointer"
                 id="nav-icon-light" />
         </button>
+    </nav>
 
-        <div id="nav-menu"
+    <div id="nav-menu"
             class="nav-off   fixed w-[100vw] h-[100%] bg-white dark:bg-black transition-all duration-300 z-50
             flex flex-col">
             <img src="./assets/icons/close-dark.svg" class="dark:hidden block ml-auto w-6 h-6 mr-8 mt-12 cursor-pointer" onclick="toggleNav()">
@@ -74,7 +76,7 @@
                     id="circle-toggle" ></div>
             </div>
         </div>
-    </nav>
+
     <nav id="desktop-nav" class="md:pl-[7%] gap-[10vw] fixed md:self-start h-16 mt-4 w-full justify-start items-center min-w-[500px] hidden md:flex">
         <img loading="lazy" src="./assets/icons/logo-dark.svg" class="h-8  cursor-pointer block dark:hidden" />
         <img loading="lazy" src="./assets/icons/logo.svg" class="h-8  cursor-pointer hidden dark:block" />
@@ -97,7 +99,7 @@
             </li>
         </ul>
     </nav>
-        <section name="hero" id="home" class=" md:ml-[7%] mt-2 md:mt-8 h-auto">
+        <section name="hero"  class=" md:ml-[7%] ml-[2%] mt-2 md:mt-8 h-auto">
            
             <div name="colomns-container" class="flex flex-col lg:flex-row justify-center items-center">
                 <div name="nav-title-section"
@@ -130,7 +132,7 @@
                         class="flex lg:flex-row flex-col  items-start justify-start self-start  lg:mr-auto mt-8 lg:mt-32 gap-4 w-[54vw]">
 
                         <a
-                        class="lg:max-w-[220px] md:max-w-[290px] w-[60vw] max-w-[250px] sm:max-w-[300px] sm:h-[7vh] md:w-[36vw] md:h-[8vh] lg:h-[7vh] xl:h-[8vh] h-[7vh]   p-[2px] bg-white border-2 dark:border-white border-black rounded-[99px] cursor-pointer
+                        class="lg:w-[230px] md:w-[270px]  w-[250px]   h-[65px] md:h-[70px] lg:h-[65px]    p-[2px] bg-white border-2 dark:border-white border-black rounded-[99px] cursor-pointer
                         flex justify-evenly items-center get-animation">
                             <span class="">Get your website</span>
 
@@ -139,7 +141,7 @@
                                 src="./assets/icons/right-arrow2.svg " />
                           </a>
                         <a
-                            class="lg:max-w-[220px] md:max-w-[290px] w-[60vw] max-w-[250px] sm:max-w-[300px] sm:w-[45vw] h-[7vh] sm:w-[38vw] sm:h-[8vh] md:w-[36vw] md:h-[8vh] lg:h-[7vh] xl:h-[8vh]  p-[2px] border-2 dark:border-white border-black rounded-[99px] cursor-pointer contact-container relative">
+                            class="lg:w-[230px] md:w-[270px]  w-[250px]   h-[65px] md:h-[70px] lg:h-[65px]    p-[2px] border-2 dark:border-white border-black rounded-[99px] cursor-pointer contact-container relative">
                             <div
                                 class="relative contact-animation dark:hover:text-[#2A2A2A] hover:text-white dark:text-white text-[#2A2A2A]">
                                 <img loading="lazy" class="absolute bg-white dark:block hidden"

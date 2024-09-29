@@ -1,6 +1,8 @@
 function handleScroll() {
   const navM = document.getElementById('mobile-nav');
   const navD = document.getElementById('desktop-nav');
+  const body = document.body;
+
   const size = getScreenSizeClass()
   if (window.scrollY > navD.offsetHeight) {
     if (size == 'client-card-small') {
@@ -44,13 +46,9 @@ function toggleNav() {
   const navIconLight = document.getElementById('nav-icon-light');
   const navIconDark = document.getElementById('nav-icon-dark');
   const navIcon = isDarkMode ? navIconDark : navIconLight;
-  const body = document.body;
 
-  if (!navMenu.classList.contains('nav-off')) {
- 
-  } else {
 
-  }
+
 
   if (navMenu.classList.contains('nav-off')) {
       // Toggle to menu-on state

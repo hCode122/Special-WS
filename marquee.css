@@ -27,7 +27,7 @@
   }
 }
  
-@media (min-width: 640px) and  (max-width: 1024px) {
+@media (min-width: 640px) and  (max-width: 1023px) {
   .text-content {
     font-size: 0.8rem !important;
   }
@@ -41,7 +41,7 @@
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1024px) and (max-width: 1279px) {
     .our-team {
       flex-direction: row;
     }
@@ -51,14 +51,38 @@
     }
 
     .team-card {
-      width: 22.5vw !important;
+      width: 20vw !important;
+      
       
   img {
     transition: 0.5s;
-    width: 22.5vw ;
+    width: 20vw ;
   }
-    }
-   
+      }
+      .text-content {
+        font-size: 0.7rem !important;
+        
+        padding: 0.5rem !important;
+  }
+}
+
+@media (min-width: 1280px) {
+  .our-team {
+    flex-direction: row;
+  }
+  .team-container{
+    width: 95vw;
+    overflow-x: hidden;
+  }
+  .team-card {
+    width: 22.5vw !important;
+    
+    
+img {
+  transition: 0.5s;
+  width: 22.5vw;
+}
+  }
 }
 
 .team-card:hover {
@@ -76,7 +100,6 @@
 .text-content {
   position: absolute;
   bottom: 4%;
-  left: 7%;
   width: 85%;
   height: 22%; 
   padding: 1rem;

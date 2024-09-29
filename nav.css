@@ -1,0 +1,50 @@
+
+.nav-on {
+    right: 0%;
+    top: 0px;
+    z-index: 222222;
+}
+
+.nav-off {
+    right: -100vw;
+    top: 0px;
+    z-index: 2222222;
+}
+
+.active-link {
+    color: black !important
+}
+
+.dark .active-link {
+    color: white !important;
+}
+
+.scrolled-desktop {
+    position: fixed;
+    top: 0;
+    margin-top: 0;
+    z-index: 99000;
+    gap: 30vw !important;
+    backdrop-filter: blur(8px);
+    background-color: #EBEBEBCC;
+}
+
+.scrolled {
+    position: fixed;
+    top: 0;
+    background-color: #EBEBEBCC;
+    z-index: 99000;
+    backdrop-filter: blur(10px);
+    color: white !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.dark .scrolled , .dark .scrolled-desktop {
+    background-color: #2E2E2ECC;
+}
+
+.nav {
+    z-index: 99000;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    overflow-x: hidden;
+}

@@ -7,7 +7,20 @@
     toggleDark(btn2)
     toggleDark(btn3)
 
-    
+    const links = document.querySelectorAll('#mobile-links li a');
+    links.forEach(link => {
+        links.forEach(link => {
+            link.classList.remove('active-link');
+            link.nextElementSibling.src = link.getAttribute('data-img-inactive');
+        });
+
+        link.classList.add('active-link');
+        if (!window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            link.nextElementSibling.src = link.getAttribute('data-img-active'); 
+        }
+        else link.nextElementSibling.src = link.getAttribute('data-img-light'); 
+        
+    });
 }
 
 function toggleDark(btn) {
