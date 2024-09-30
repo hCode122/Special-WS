@@ -24,17 +24,8 @@ const swiper = new Swiper('.team-container', {
     }
 }
 })
-    
 
-    document.addEventListener("DOMContentLoaded", function ()  {
-        const swiperContainer = document.getElementById("teamCard");
-        swiperContainer.addEventListener("mouseover", (e) => {
-            swiper.autoplay.stop();
-        });
-        swiperContainer.addEventListener("mouseout", () => {
-            swiper.autoplay.start();
-        });
-    })
+    
 
 const swiper2 = new Swiper('.middle-container', {
     spaceBetween: 15,  
@@ -58,6 +49,8 @@ const swiper2 = new Swiper('.middle-container', {
 })
 
 function createClientCards() {
+    const swiperPlayer = document.querySelector('.team-container').swiper
+
     const members = [
         { name: 'Ahmad Ahmad', role: 'Frontend Developer', image: "./assets/imgs/person1.png" },
         { name: 'Sameer Ahmad', role: 'Frontend Developer', image: "./assets/imgs/person2.png" },
@@ -94,15 +87,51 @@ function createClientCards() {
     members.forEach(member => {
         const slide = createSlide(member);
         container.appendChild(slide);
+        const teamCard = slide.querySelector('.team-card');
+        teamCard.addEventListener("mouseover", () => {
+            swiperPlayer.autoplay.stop();
+        });
+
+        teamCard.addEventListener("mouseout", () => {
+            swiperPlayer.autoplay.start();
+        });
+
+        teamCard.addEventListener("click", (e) => {
+            console.log('Card clicked');
+        });
     });
 
     members.forEach(member => {
         const slide = createSlide(member);
         container.appendChild(slide);
+        const teamCard = slide.querySelector('.team-card');
+        teamCard.addEventListener("mouseover", () => {
+            swiperPlayer.autoplay.stop();
+        });
+
+        teamCard.addEventListener("mouseout", () => {
+            swiperPlayer.autoplay.start();
+        });
+
+        teamCard.addEventListener("click", (e) => {
+            console.log('Card clicked');
+        });
     });
     members.forEach(member => {
         const slide = createSlide(member);
         container.appendChild(slide);
+        const teamCard = slide.querySelector('.team-card');
+        teamCard.addEventListener("mouseover", () => {
+            swiperPlayer.autoplay.stop();
+        });
+
+        teamCard.addEventListener("mouseout", () => {
+            swiperPlayer.autoplay.start();
+        });
+
+        teamCard.addEventListener("click", (e) => {
+            console.log('Card clicked');
+        });
     });
 }
 

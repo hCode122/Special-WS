@@ -1,26 +1,29 @@
 //Dark Mode
- function toggle() {
-    var btn = document.getElementById('btn-toggle')
-    var btn2 = document.getElementById('btn-toggle2')
-    var btn3 = document.getElementById('btn-toggle3')
-    toggleDark(btn)
-    toggleDark(btn2)
-    toggleDark(btn3)
+function toggle() {
+    var btn = document.getElementById('btn-toggle');
+    var btn2 = document.getElementById('btn-toggle2');
+    var btn3 = document.getElementById('btn-toggle3');
+    toggleDark(btn);
+    toggleDark(btn2);
+    toggleDark(btn3);
 
     const links = document.querySelectorAll('#mobile-links li a');
-    links.forEach(link => {
-        links.forEach(link => {
-            link.classList.remove('active-link');
-            link.nextElementSibling.src = link.getAttribute('data-img-inactive');
-        });
+    const isDarkMode = document.documentElement.classList.contains('dark'); 
+    const activeLink = document.querySelector('.active-link');
 
-        link.classList.add('active-link');
-        if (!window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            link.nextElementSibling.src = link.getAttribute('data-img-active'); 
-        }
-        else link.nextElementSibling.src = link.getAttribute('data-img-light'); 
-        
+    links.forEach(link => {
+        link.classList.remove('active-link');
+        link.nextElementSibling.src = link.getAttribute('data-img-inactive');
     });
+
+    if (activeLink) {
+        activeLink.classList.add('active-link'); 
+        if (isDarkMode) {
+            activeLink.nextElementSibling.src = activeLink.getAttribute('data-img-active'); 
+        } else {
+            activeLink.nextElementSibling.src = activeLink.getAttribute('data-img-light'); 
+        }
+    }
 }
 
 function toggleDark(btn) {
