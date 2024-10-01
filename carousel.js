@@ -1,29 +1,4 @@
-const swiper = new Swiper('.team-container', {
-    spaceBetween: 15,  
-    slidesPerView: 1.5, 
-    autoplay: {
-        delay: 1,
-            reverseDirection: true,
-            disableOnInteraction: false,
-    },
-    loop: true,
-    speed: 6000,
-    breakpoints: {
-    600: {
-        slidesPerView: 2, 
-        spaceBetween: 15, 
-    },
-    768: {
-        slidesPerView: 2.5, 
-        spaceBetween: 10,  
-    },
-  
-    1378: {
-        slidesPerView: 2.5,
-        spaceBetween: 5,
-    }
-}
-})
+
 
     
 
@@ -50,7 +25,32 @@ const swiper2 = new Swiper('.middle-container', {
 
 function createClientCards() {
     const swiperPlayer = document.querySelector('.team-container').swiper
-
+    const swiper = new Swiper('.team-container', {
+        spaceBetween: 15,  
+        slidesPerView: 1.5, 
+        autoplay: {
+            delay: 1,
+                reverseDirection: true,
+                disableOnInteraction: false,
+        },
+        loop: true,
+        speed: 6000,
+        breakpoints: {
+        600: {
+            slidesPerView: 2, 
+            spaceBetween: 15, 
+        },
+        768: {
+            slidesPerView: 2.5, 
+            spaceBetween: 10,  
+        },
+      
+        1378: {
+            slidesPerView: 2.5,
+            spaceBetween: 5,
+        }
+    }
+    })
     const members = [
         { name: 'Ahmad Ahmad', role: 'Frontend Developer', image: "./assets/imgs/person1.png" },
         { name: 'Sameer Ahmad', role: 'Frontend Developer', image: "./assets/imgs/person2.png" },
@@ -89,15 +89,13 @@ function createClientCards() {
         container.appendChild(slide);
         const teamCard = slide.querySelector('.team-card');
         teamCard.addEventListener("mouseover", () => {
-            swiperPlayer.autoplay.stop();
+            swiper.autoplay.stop();
+            swiper.update();   
+
         });
 
-        teamCard.addEventListener("mouseout", () => {
-            swiperPlayer.autoplay.start();
-        });
-
-        teamCard.addEventListener("click", (e) => {
-            console.log('Card clicked');
+        teamCard.addEventListener("mouseout", () => {  
+            swiper.autoplay.start();
         });
     });
 
@@ -105,16 +103,13 @@ function createClientCards() {
         const slide = createSlide(member);
         container.appendChild(slide);
         const teamCard = slide.querySelector('.team-card');
-        teamCard.addEventListener("mouseover", () => {
-            swiperPlayer.autoplay.stop();
+        teamCard.addEventListener("mouseover", () => {   
+            swiper.autoplay.stop();
+            swiper.update();
         });
 
-        teamCard.addEventListener("mouseout", () => {
-            swiperPlayer.autoplay.start();
-        });
-
-        teamCard.addEventListener("click", (e) => {
-            console.log('Card clicked');
+        teamCard.addEventListener("mouseout", () => {  
+            swiper.autoplay.start();
         });
     });
     members.forEach(member => {
@@ -122,15 +117,12 @@ function createClientCards() {
         container.appendChild(slide);
         const teamCard = slide.querySelector('.team-card');
         teamCard.addEventListener("mouseover", () => {
-            swiperPlayer.autoplay.stop();
+            swiper.autoplay.stop();
+            swiper.update();   
         });
 
-        teamCard.addEventListener("mouseout", () => {
-            swiperPlayer.autoplay.start();
-        });
-
-        teamCard.addEventListener("click", (e) => {
-            console.log('Card clicked');
+        teamCard.addEventListener("mouseout", () => {  
+            swiper.autoplay.start();
         });
     });
 }
@@ -210,5 +202,7 @@ function createCodeCards() {
       
 }
 
-createCodeCards();
-createClientCards();
+document.addEventListener("DOMContentLoaded", function () {
+    createCodeCards();
+    createClientCards();
+})

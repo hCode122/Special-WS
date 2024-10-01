@@ -450,16 +450,14 @@ p {
 }
 
 .get-animation {
-    transition: 1s;
+    transition: 0.5s;
     span,img {
-        transition: 1.5s;
+        transition: 0.002s;
     }
 }
 
 .get-animation:hover {
     background-color: #E7E7E7;
-   
-   
 }
 
 .get-animation:active {

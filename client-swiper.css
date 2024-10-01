@@ -66,8 +66,9 @@
     border: none;
     cursor: pointer;
     z-index: 10;
-   
 }
+
+
 
 .swiper-button-prev {
     left: 5% !important;
@@ -78,16 +79,38 @@
     transition: 03s;
 }
 
-
-
 .swiper-button-next {
     right: 0 !important;
     background-image: url("./assets/icons/arrow-btn-circle.svg") !important;
     background-repeat: no-repeat;
     transition: 03s;
 }
+.swiper-button-next:hover {
+    background-image: url("./assets/icons/arrow-btn-circle-dark.svg") !important;
+}
 
 
+.swiper-button-prev:hover {
+    background-image: url("./assets/icons/arrow-btn-circle2-dark.svg") !important;
+}
+
+.dark .swiper-button-prev {
+    background-image: url("./assets/icons/arrow-btn-circle2-dark.svg") !important;
+ 
+}
+
+.dark .swiper-button-next {
+    background-image: url("./assets/icons/arrow-btn-circle-dark.svg") !important;
+
+}
+.dark .swiper-button-next:hover {
+    background-image: url("./assets/icons/arrow-btn-circle.svg") !important;
+}
+
+
+.dark .swiper-button-prev:hover {
+    background-image: url("./assets/icons/arrow-btn-circle2.svg") !important;
+}
 
 .custom-nav img {
     width: auto;
