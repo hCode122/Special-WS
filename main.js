@@ -46,6 +46,9 @@ document.addEventListener("DOMContentLoaded", function () {
         toggle()
     }
    
+    const button = document.querySelector('.get-animation');
+
+   
 
     const navBtn = document.getElementById('nav-btn');
     navBtn.addEventListener('click', toggleNav);
@@ -118,4 +121,7 @@ function dropdown() {
     selectedItemDiv.textContent = itemText;
     dropdown(); 
 }
+
+
+
 

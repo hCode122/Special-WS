@@ -69,23 +69,40 @@ function toggleNav() {
 
 
 const links = document.querySelectorAll('#mobile-links li a');
-links.forEach(link => {
-  link.addEventListener('click', function(event) {
-    
-    links.forEach(link => {
-      link.classList.remove('active-link');
-      link.nextElementSibling.src = link.getAttribute('data-img-inactive');
-    });
+const links2 = document.querySelectorAll('#desktop-links li a');
+const size = getScreenSizeClass()
 
-    link.classList.add('active-link');
-    if (! window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      link.nextElementSibling.src = link.getAttribute('data-img-light'); 
-    }
-    else link.nextElementSibling.src = link.getAttribute('data-img-active'); 
-       
-    toggleNav()
+if (size == 'client-card-small') {
+
+  links.forEach(link => {
+    link.addEventListener('click', function(event) {
+      
+      links.forEach(link => {
+        link.classList.remove('active-link');
+        link.nextElementSibling.src = link.getAttribute('data-img-inactive');
+      });
+
+      link.classList.add('active-link');
+      if (! window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        link.nextElementSibling.src = link.getAttribute('data-img-light'); 
+      }
+      else link.nextElementSibling.src = link.getAttribute('data-img-active'); 
+        
+      toggleNav()
+    });
   });
-});
+} else {
+  links2.forEach(link => {
+    link.addEventListener('click', function(event) {
+      
+      links.forEach(link => {
+        link.classList.remove('active-link');
+      });
+  
+      link.classList.add('active-link');      
+    });
+  });
+}
 
 
 function setActiveLinkOnScroll() {
@@ -109,6 +126,15 @@ function setActiveLinkOnScroll() {
           link.nextElementSibling.src = link.getAttribute('data-img-inactive');
         }
       });
+      links2.forEach(link => {
+        if (link.getAttribute('href') === `#${sectionId}`) {
+          link.classList.add('active-link');
+       
+        } else {
+          link.classList.remove('active-link');
+        }
+      });
     }
   });
 }
+

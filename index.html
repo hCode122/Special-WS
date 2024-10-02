@@ -39,7 +39,7 @@
             <img src="./assets/icons/close.svg" class="dark:block hidden ml-auto w-6 h-6 mr-8 mt-12 cursor-pointer" onclick="toggleNav()">
 
             <ul id="mobile-links" class="flex flex-col justify-evenly  gap-4 ml-8 mt-12">
-                <li class="text-gray-400 flex justify-between items-center mr-8">
+                <li class="text-gray-400 flex justify-between items-center mr-8 active-link">
                     <a class="cursor-pointer text-[2rem]"  href="#home"
                     data-img-active="./assets/icons/link-on.svg" 
                     data-img-light="./assets/icons/link-black.svg" data-img-inactive="./assets/icons/link-off.svg">Home</a>
@@ -81,9 +81,9 @@
         <img loading="lazy" src="./assets/icons/logo-dark.svg" class="h-8  cursor-pointer block dark:hidden" />
         <img loading="lazy" src="./assets/icons/logo.svg" class="h-8  cursor-pointer hidden dark:block" />
 
-        <ul class="flex gap-4 lg:gap-8">
-            <li class="dark:text-white dark:hover:text-white hover:text-black">
-                <a class="cursor-pointer" href="#home">Home</a>
+        <ul id="desktop-links" class="flex gap-4 lg:gap-8">
+            <li class="text-gray-400 dark:hover:text-white hover:text-black ">
+                <a class="cursor-pointer active-link" href="#home">Home</a>
             </li>
             <li class="text-gray-400 dark:hover:text-white hover:text-black">
                 <a class="cursor-pointer" href="#about">About us</a>
@@ -99,9 +99,9 @@
             </li>
         </ul>
     </nav>
-        <section name="hero"  class=" md:ml-[7%] ml-[2%] mt-2 md:mt-8 h-auto">
+        <section   class=" md:ml-[7%] ml-[2%] mt-2 md:mt-8 h-auto">
            
-            <div name="colomns-container" class="flex flex-col lg:flex-row justify-center items-center">
+            <div id="hero" name="colomns-container" class="flex flex-col lg:flex-row justify-center items-center">
                 <div name="nav-title-section"
                     class="lg:ml-auto flex flex-col ml-[2vw] md:ml-0 lg:w-[4vw] lg:justify-between items-center self-start flex-1">
                     

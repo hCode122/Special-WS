@@ -1780,22 +1780,14 @@ p {
 }
 
 .get-animation {
-  transition: 0.5s;
-  span,img {
-    transition: 0.002s;
-  }
-}
-
-.get-animation:hover {
-  background-color: #E7E7E7;
-}
-
-.get-animation:active {
   span {
-    color:white !important
+    color: black;
   }
-  img {
-    filter:  invert(1) !important;
+}
+
+.get-animation-active {
+  span {
+    color: white;
   }
 }
 
