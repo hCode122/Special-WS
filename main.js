@@ -3,6 +3,8 @@ function toggle() {
     var btn = document.getElementById('btn-toggle');
     var btn2 = document.getElementById('btn-toggle2');
     var btn3 = document.getElementById('btn-toggle3');
+    
+    
     toggleDark(btn);
     toggleDark(btn2);
     toggleDark(btn3);
@@ -27,15 +29,18 @@ function toggle() {
 }
 
 function toggleDark(btn) {
+    var text = document.querySelector('#mode-text')
     if (btn.classList.contains('toggle-on')) {
         btn.classList.add("toggle-off")
         btn.classList.remove("toggle-on")
         document.documentElement.classList.toggle('dark');
+        text.innerHTML = "Light mode"
         switchDarkIcons()
     } else {
         btn.classList.remove("toggle-off")
         btn.classList.add("toggle-on")
         document.documentElement.classList.toggle('dark');
+        text.innerHTML = "Dark mode"
         switchDarkIcons()    
     }
 }
@@ -103,7 +108,7 @@ function switchDarkIcons() {
 
 
 function dropdown() {
-    var dropdownMenu = document.getElementById('dropdown-menu');
+    var dropdownMenu = document.querySelector('#dropdown-menu');
 
     if (dropdownMenu.classList.contains('dropdown-off')) {
         dropdownMenu.classList.remove('dropdown-off');
@@ -116,7 +121,8 @@ function dropdown() {
 
 
 
- function setSelectedItem(itemText) {
+ function setSelectedItem(item) {
+    var itemText = item.innerText;
     const selectedItemDiv = document.getElementById('selected-item');
     selectedItemDiv.textContent = itemText;
     dropdown(); 

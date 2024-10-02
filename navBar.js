@@ -104,18 +104,44 @@ if (size == 'client-card-small') {
   });
 }
 
+const heroLink = document.querySelector("#hero-link")
+const heroLink2 = document.querySelector("#hero-link2")
+const aboutUs = document.querySelector("#about")
+const aboutUs2 = document.querySelector("#about2")
+
+if (scrollY < aboutUs.offsetTop) {
+  heroLink.classList.add("active-link")
+}
+if (scrollY < aboutUs2.offsetTop) {
+  heroLink2.classList.add("active-link")
+}
 
 function setActiveLinkOnScroll() {
   const sections = document.querySelectorAll('section'); 
+  
   const scrollY = window.scrollY;
   sections.forEach(section => {
     const sectionTop = section.offsetTop - 100; 
     const sectionHeight = section.offsetHeight;
     const sectionId = section.getAttribute('id');
+  
+    if (scrollY < aboutUs.offsetTop) {
+      heroLink.classList.add("active-link")
+    }
+    if (scrollY < aboutUs2.offsetTop) {
+      links.forEach(link => {
+        
+          link.classList.remove('active-link');
+          link.nextElementSibling.src = link.getAttribute('data-img-inactive');
+        }
+      );
+      heroLink2.classList.add("active-link")
 
-    if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+    }
+     else if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
       links.forEach(link => {
         if (link.getAttribute('href') === `#${sectionId}`) {
+          console.log(link.getAttribute('href'))
           link.classList.add('active-link');
           if (! window.matchMedia('(prefers-color-scheme: dark)').matches) {
             link.nextElementSibling.src = link.getAttribute('data-img-light'); 

@@ -452,15 +452,27 @@ p {
 
 
 .get-animation {
+    transition: 0.5s;
     span {
         color: black;
+        transition: 0.2s;
+    }
+    img {
+        transition: 0.2s;
     }
 }
 
-.get-animation-active {
+.get-animation:active {
     span {
         color: white;
     }
+    img {
+        filter: invert(1);
+    }
+}
+
+.get-animation:hover {
+    background-color: #E7E7E7;
 }
 
 .contact-animation {

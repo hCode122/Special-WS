@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./output-style.css" />
+    <link rel="stylesheet" href="./output.css" />
     <link rel="stylesheet" href="./output-marquee.css" />
     <link rel="stylesheet" href="./output-nav.css" />
     <link rel="stylesheet" href="./output-client.css" />
@@ -39,8 +39,8 @@
             <img src="./assets/icons/close.svg" class="dark:block hidden ml-auto w-6 h-6 mr-8 mt-12 cursor-pointer" onclick="toggleNav()">
 
             <ul id="mobile-links" class="flex flex-col justify-evenly  gap-4 ml-8 mt-12">
-                <li class="text-gray-400 flex justify-between items-center mr-8 active-link">
-                    <a class="cursor-pointer text-[2rem]"  href="#home"
+                <li class="text-gray-400 flex justify-between items-center mr-8 ">
+                    <a class="cursor-pointer text-[2rem] " id="hero-link2" href="#home"
                     data-img-active="./assets/icons/link-on.svg" 
                     data-img-light="./assets/icons/link-black.svg" data-img-inactive="./assets/icons/link-off.svg">Home</a>
                     <img class="h-8 w-8 cursor-pointer" src="./assets/icons/link-off.svg" >
@@ -83,7 +83,7 @@
 
         <ul id="desktop-links" class="flex gap-4 lg:gap-8">
             <li class="text-gray-400 dark:hover:text-white hover:text-black ">
-                <a class="cursor-pointer active-link" href="#home">Home</a>
+                <a class="cursor-pointer " id="hero-link" href="#home">Home</a>
             </li>
             <li class="text-gray-400 dark:hover:text-white hover:text-black">
                 <a class="cursor-pointer" href="#about">About us</a>
@@ -101,8 +101,8 @@
     </nav>
         <section   class=" md:ml-[7%] ml-[2%] mt-2 md:mt-8 h-auto">
            
-            <div id="hero" name="colomns-container" class="flex flex-col lg:flex-row justify-center items-center">
-                <div name="nav-title-section"
+            <div  name="colomns-container" class="flex flex-col lg:flex-row justify-center items-center">
+                <div  name="nav-title-section"
                     class="lg:ml-auto flex flex-col ml-[2vw] md:ml-0 lg:w-[4vw] lg:justify-between items-center self-start flex-1">
                     
                     <div class="flex w-[55vw]  lg:w-[20vw]  justify-start items-center mt-2 self-start md:mt-24 ">
@@ -128,7 +128,7 @@
                         <span class="text-[#2E2E2E] dark:text-white">elevate your digital presence</span>
                         and achieve your business goals.
                     </p>
-                    <div
+                    <div id="hero"
                         class="flex lg:flex-row flex-col  items-start justify-start self-start  lg:mr-auto mt-8 lg:mt-32 gap-4 w-[54vw]">
 
                         <a
@@ -171,7 +171,7 @@
         </section>
 
         <section name="who-is" id="about"
-            class="hidden lg:flex flex-col lg:flex-row lg:ml-[15%] lg:mr-[6%] justify-center lg:mt-4 gap-18 mt-4 lg:mt-32 h-[538px] relative">
+            class="hidden lg:flex flex-col lg:flex-row lg:ml-[15%] lg:mr-[6%] justify-center  gap-18 mt-4 mt-[90px] h-[538px] relative">
             <img loading="lazy" class="block absolute dark:hidden left-[-8vw]  top-[-6vh] z-[-1] opacity-[0.7]" src="./assets/imgs/leaf.png" />
             <img loading="lazy" class="hidden absolute dark:block left-[-8vw]  top-[-6vh] z-[-1]" src="./assets/imgs/leaf-dark.png" />
 
@@ -234,7 +234,7 @@
                 </span>
             </div>
         </section>
-        <section name="who-is-mobile" id="about2" class="flex ml-2 flex-col justify-center w-full gap-4 mt-16  lg:hidden relative">
+        <section name="who-is-mobile" id="about2" class="flex ml-2 flex-col justify-center w-full gap-4 mt-[60px]  lg:hidden relative">
             <img loading="lazy" class="block absolute dark:hidden left-[-7vw] h-[120px] w-[120px] top-[-2vh] z-[-1] opacity-[0.7]" src="./assets/imgs/leaf.png" />
             <img loading="lazy" class="hidden absolute dark:block left-[-7vw]  h-[120px] top-[-2vh] z-[-1]" src="./assets/imgs/leaf-dark.png" />
             <div name="left" class="flex-1 flex flex-col">
@@ -247,7 +247,7 @@
                     </p>
                 </span>
             </div>
-            <div name="right" class="flex-1 w-[90%] ml-5  mt-8 flex gap-6 flex-col justify-between">
+            <div name="right" class="flex-1 w-[90%] ml-5  mt-4 flex gap-6 flex-col justify-between">
                 <span class="flex flex-col gap-2">
                     <h3 class="text-[#2E2E2E] font-bold dark:text-white text-[1rem] md:text-[1.2rem]">
                         About us
@@ -293,10 +293,10 @@
           
         </section>
 
-        <section id="services" class="lg:mt-16 ml-2 lg:ml-0 mt-12 lg:h-[400px] relative">
-            <img loading="lazy" class="hidden md:block absolute top-[-2vh] right-[1vw] hidden md:dark:block z-[-1]"
+        <section id="services" class="mt-[60px] lg:mt-[90px] ml-2 lg:ml-0  relative">
+            <img loading="lazy" class="hidden absolute top-[-2vh] right-[1vw] hidden lg:dark:block z-[-1]"
             src="./assets/imgs/bg-logo-dark.png" />
-            <img loading="lazy" class="hidden md:block absolute top-[-2vh] right-[1vw] dark:hidden z-[-1]" src="./assets/imgs/bg-logo.png" />
+            <img loading="lazy" class="hidden lg:block absolute top-[-2vh] right-[1vw] dark:hidden z-[-1]" src="./assets/imgs/bg-logo.png" />
             <img loading="lazy" class="block absolute dark:hidden h-[120px] md:h-auto left-[-7vw] lg:left-[6vw] top-[-2vh] z-[-1] opacity-[0.7]" src="./assets/imgs/leaf.png" />
             <img loading="lazy" class="hidden absolute dark:block h-[120px] md:h-auto left-[-7vw] lg:left-[6vw]  top-[-2vh] z-[-1]" src="./assets/imgs/leaf-dark.png" />
             <h2 class="text-[1.2rem] md:text-[2rem] ml-4  lg:ml-[15%] mt-12 mr-auto font-bold text-[#2A2A2A] dark:text-white">
@@ -307,7 +307,7 @@
             </p>
             <div class="flex flex-col lg:flex-row justify-evenly items-center  mt-12 lg:mt-24 w-full md:w-[80%] mx-auto">
                 <div class="service-block bar rounded-[10px] md:w-[70%] w-[85%] mr-2 h-[150px] md:h-[190px] max-w-[400px]">
-                    <div class="md:h-[80%] h-[90%] mt-8 flex flex-col justify-start  ml-12 ">
+                    <div class="md:h-[70%] h-[90%] mt-8 flex flex-col justify-start  ml-12 ">
                         <h3 class="md:text-[1.5rem] text-[1.2rem]  dark:text-white text-[#2E2E2E] h">
                             Web development
                         </h3>
@@ -316,7 +316,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="service-block2 bar2 rounded-[10px] md:w-[70%] w-[85%] mt-2 md:mx-2 md:mt-0 mr-2 h-[150px] md:h-[190px] md:h-[180px] max-w-[400px]">
+                <div class="service-block2 bar2 rounded-[10px] md:w-[70%] w-[85%] mt-[30px] md:mx-2 lg:mt-0 mr-2 h-[150px] md:h-[190px] md:h-[180px] max-w-[400px]">
                     <div class="md:h-[80%] h-[90%] mt-8 flex flex-col justify-start ml-12 ">
                         <h3 class="md:text-[1.5rem] text-[1.2rem] dark:text-white text-[#2E2E2E]">
                             UI UX Design
@@ -327,7 +327,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="service-block3 bar3 rounded-[10px] md:w-[70%] w-[85%] mt-2 md:mx-2 md:mt-0 mr-2 h-[150px] md:h-[190px] md:h-[180px] max-w-[400px]">
+                <div class="service-block3 bar3 rounded-[10px] md:w-[70%] w-[85%] mt-[30px] md:mx-2 lg:mt-0 mr-2 h-[150px] md:h-[190px] md:h-[180px] max-w-[400px]">
                     <div class="md:h-[80%] h-[90%] mt-8 flex flex-col justify-start ml-12 ">
                         <h3 class="md:text-[1.5rem] text-[1.2rem] dark:text-white text-[#2E2E2E]">
                             App Development
@@ -341,11 +341,11 @@
         </section>
     </div>
 
-    <div class="middle-container h-[50px] mt-16 swiper-container overflow-hidden relative">
+    <div class="middle-container h-[50px] mt-16 swiper-container overflow-hidden relative ">
         <div class="middle-wrapper swiper-wrapper mx-auto"></div>
     </div>
 
-    <div name="bottom" class="mt-[66px] ml-6 mr-2 lg:ml-0 lg:mr-0">
+    <div name="bottom" class="mt-[60px] lg:mt-[90px] ml-6 mr-2 lg:ml-0 lg:mr-0">
         <section name="pr-flow" class="flex flex-col relative">
             <img loading="lazy" class="block absolute dark:hidden h-[120px] md:h-auto left-[-10vw] md:left-[6vw] top-[-2vh] z-[-1] opacity-[0.7]" src="./assets/imgs/leaf.png" />
             <img loading="lazy" class="hidden absolute dark:block h-[120px] md:h-auto left-[-10vw] md:left-[6vw] top-[-2vh] z-[-1]" src="./assets/imgs/leaf-dark.png" />
@@ -403,7 +403,7 @@
             </div>
         </section>
 
-        <section name="testimonials" id="testimonials" class="flex relative flex-col relative mt-16">
+        <section name="testimonials" id="testimonials" class="flex relative flex-col relative mt-[60px] lg:mt-[90px]">
             <img loading="lazy" class="block absolute dark:hidden  h-[120px] md:h-auto left-[-10vw] lg:left-[6vw] top-[-2vh]  z-[-1] opacity-[0.7]" src="./assets/imgs/leaf.png" />
             <img loading="lazy" class="hidden absolute dark:block h-[120px] md:h-auto left-[-10vw] lg:left-[6vw]  top-[-2vh]  z-[-1]" src="./assets/imgs/leaf-dark.png" />
             <h2 class="text-[#2A2A2A] ml-2 dark:text-white text-[1.2rem] md:text-[2rem] lg:ml-[15%] lg:mr-auto mr-auto font-bold">
@@ -429,7 +429,7 @@
             </button>
         </section>
 
-        <section name="our-team" class="our-team mt-4 md:mt-16 ml-2 flex lg:flex-row flex-col relative gap-8">
+        <section name="our-team" class="our-team mt-[50px] lg:mt-[90px] ml-2 flex lg:flex-row flex-col relative gap-8">
             <img loading="lazy" class="block absolute dark:hidden h-[120px] md:h-auto left-[-12vw] lg:left-[6vw] top-[-2vh]  z-[-1] opacity-[0.7]" src="./assets/imgs/leaf.png" />
             <img loading="lazy" class="hidden absolute dark:block h-[120px] md:h-auto left-[-12vw] lg:left-[6vw]  top-[-2vh]  z-[-1]" src="./assets/imgs/leaf-dark.png" />
             <div name="textArea" class="self-start lg:ml-[15%] lg:mr-[0px] relative">
@@ -443,14 +443,14 @@
             </div>
 
             <div
-                class="team-container swiper-container text-white  md:mr-[0px]  mt-12  ">
+                class="team-container swiper-container text-white  md:mr-[0px] mt-2  lg:mt-12  ">
                 <div class="team-wrapper swiper-wrapper mx-auto"></div>
             </div>
         </section>
 
-        <section name="collab" id="contact" class="mt-16 flex flex-col relative">
-            <img loading="lazy" class="hidden md:block absolute bottom-[-6vh] right-[1vw] dark:hidden z-[-1]" src="./assets/imgs/bg-logo.png" />
-            <img loading="lazy" class="hidden md:block absolute bottom-[-6vh] right-[1vw] hidden md:dark:block z-[-1]"
+        <section name="collab" id="contact" class="mt-[70px] lg:mt-[90px] flex flex-col relative">
+            <img loading="lazy" class="hidden lg:block absolute bottom-[-6vh] right-[1vw] dark:hidden z-[-1]" src="./assets/imgs/bg-logo.png" />
+            <img loading="lazy" class="hidden lg:block absolute bottom-[-6vh] right-[1vw] hidden md:dark:block z-[-1]"
                 src="./assets/imgs/bg-logo-dark.png" />
             <img loading="lazy" class="block absolute dark:hidden h-[120px] md:h-auto left-[-10vw] lg:left-[6vw] top-[-2vh] z-[-1] opacity-[0.7]" src="./assets/imgs/leaf.png" />
             <img loading="lazy" class="hidden absolute dark:block h-[120px] md:h-auto left-[-10vw] lg:left-[6vw]  top-[-2vh] z-[-1]" src="./assets/imgs/leaf-dark.png" />
@@ -461,18 +461,18 @@
                 Join Forces with Us for Your Next Big Idea
             </p>
 
-            <form class="mt-12 mr-4 lg:ml-[15%] lg:ml-[20%] lg:mr-auto  lg:w-[75vw] lg:w-[70vw] xl:w-[57vw] max-w-[90vw] flex flex-col gap-4 flex-1 dark:text-white">
-                <div class="flex gap-8 justify-center flex-col lg:flex-row w-full">
-                    <div class="flex flex-1 flex-col gap-4">
+            <form class="mt-12 mt-[20px] mr-4 lg:ml-[15%] lg:ml-[20%] lg:mr-auto  lg:w-[75vw] lg:w-[70vw] xl:w-[57vw] max-w-[90vw] flex flex-col  flex-1 dark:text-white">
+                <div class="flex justify-center flex-col lg:flex-row w-full">
+                    <div class="flex flex-1 flex-col ">
                         <label>First Name</label>
                         <input class="rounded-md dark:bg-[#303030] bg-[#E2E2E2] h-[55px] w-full form-inpt" />
-                        <label>Email Address</label>
+                        <label class="mt-[25px]">Email Address</label>
                         <input class="rounded-md dark:bg-[#303030] bg-[#E2E2E2] h-[55px] w-full form-inpt" />
                     </div>
-                    <div class="flex flex-1 flex-col gap-4">
+                    <div class="flex flex-1 flex-col lg:ml-[20px]">
                         <label>Last Name</label>
                         <input class="rounded-md dark:bg-[#303030] bg-[#E2E2E2] h-[55px] w-full form-inpt" />
-                        <label>Choose Service</label>
+                        <label class="mt-[25px]">Choose Service</label>
                         <div class="rounded-md h-[55px] relative cursor-pointer dark:bg-[#303030] bg-[#E2E2E2] w-full"
                             id="dropdown-toggle">
                             <p id="selected-item"
@@ -490,22 +490,22 @@
                                 <ul class="rounded-lg">
                                     <li
                                         class="item bg-[#E2E2E2] text-[#2E2E2E] border-[1px] dark:border-[#262626] border-[#CCCCCC] hover:bg-[#CCCCCC] dark:bg-[#262626] w-full h-full text-start pl-4 pb-4 pt-[18px] text-[14px]">
-                                        <p class="dark:text-white ">App Development</p>
+                                        <p class="dark:text-white " onclick="setSelectedItem(this)">App Development</p>
                                     </li>
                                     <li
                                         class="item bg-[#E2E2E2] text-[#2E2E2E] border-[1px] dark:border-[#262626] border-[#CCCCCC] hover:bg-[#CCCCCC] dark:bg-[#262626] w-full h-full text-start pl-4 pb-4 pt-[18px] text-[14px]">
-                                        <p class="dark:text-white ">Web Development</p>
+                                        <p class="dark:text-white " onclick="setSelectedItem(this)">Web Development</p>
                                     </li>
                                     <li
                                         class="item bg-[#E2E2E2] text-[#2E2E2E] border-[1px] dark:border-[#262626] border-[#CCCCCC] hover:bg-[#CCCCCC] dark:bg-[#262626] w-full h-full text-start pl-4 pb-4 pt-[18px] text-[14px]">
-                                        <p class="dark:text-white ">UI UX Design</p>
+                                        <p class="dark:text-white " onclick="setSelectedItem(this)">UI UX Design</p>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
-                <label class="mt-6">Tell Us More</label>
+                <label class="mt-[25px]">Tell Us More</label>
                 <textarea class="dark:bg-[#303030] bg-[#E2E2E2] h-[200px] w-full rounded-md pt-2 form-inpt"></textarea>
                 <button
                     class=" mr-auto md:ml-0 border-[1px] dark:border-white border-[#2E2E2E] rounded-[24px] mt-[30px] w-[200px] p-2 submit-animation">
@@ -515,18 +515,18 @@
         </section>
     </div>
 
-    <footer class="mt-12 w-full ml-auto mr-auto pt-4 md:w-[80%] h-[17vh] footer-border">
+    <footer class="mt-[90px] w-full ml-auto mr-auto pt-4 md:w-[80%] h-[17vh] footer-border">
         <div class="lg:flex  hidden  justify-between items-center  h-full">
             <div class="flex gap-4">
                 <img loading="lazy" src="./assets/icons/logo-dark.svg" class="cursor-pointer block dark:hidden" />
                 <img loading="lazy" src="./assets/icons/logo.svg" class="cursor-pointer hidden dark:block" />
-                <p class="text-white dark:text-">Special Team</p>
+                <p class="text-white dark:text-white">Special Team</p>
             </div>
             <p class="text-center text-[#2E2E2E]">
                 Copyright © 2024 Specialteam.com
             </p>
             <div class="flex gap-4 items-center ">
-                <p class="dark:text-gray-500 text-[#2E2E2E]">Dark Mode</p>
+                <p id="mode-text" class="dark:text-gray-500 text-[#2E2E2E]">Dark Mode</p>
                 <div class="dark:bg-[#303030] bg-[#E2E2E2] relative rounded-full w-14 h-8 toggle-on flex items-center" id="btn-toggle">
                     <div class="absolute h-[26px] w-[26px] rounded-full bg-blue-500 cursor-pointer left-[4px]"
                     id="circle-toggle" ></div>
@@ -534,7 +534,7 @@
             </div>
         </div>
 
-        <div name="mobile-footer" class="flex flex-col justify-evenly items-center mt-8 lg:hidden ">
+        <div name="mobile-footer" class="flex flex-col justify-evenly items-center mt-4 lg:hidden ">
                 <div class="flex gap-4  items-center">
                     <img loading="lazy" src="./assets/icons/logo-dark.svg" class="w-[34px] cursor-pointer block dark:hidden" />
                     <img loading="lazy" src="./assets/icons/logo.svg" class="w-[34px] cursor-pointer hidden dark:block" />
