@@ -144,7 +144,6 @@ function setActiveLinkOnScroll() {
      else if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
       links.forEach(link => {
         if (link.getAttribute('href') === `#${sectionId}`) {
-          console.log(link.getAttribute('href'))
           link.classList.add('active-link');
           if (! window.matchMedia('(prefers-color-scheme: dark)').matches) {
             link.nextElementSibling.src = link.getAttribute('data-img-light'); 
