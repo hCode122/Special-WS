@@ -112,9 +112,7 @@ const aboutUs2 = document.querySelector("#about2")
 if (scrollY < aboutUs.offsetTop) {
   heroLink.classList.add("active-link")
 }
-if (scrollY < aboutUs2.offsetTop) {
-  heroLink2.classList.add("active-link")
-}
+
 
 function setActiveLinkOnScroll() {
   const sections = document.querySelectorAll('section'); 
@@ -125,10 +123,12 @@ function setActiveLinkOnScroll() {
     const sectionHeight = section.offsetHeight;
     const sectionId = section.getAttribute('id');
   
-    if (scrollY < aboutUs.offsetTop) {
+    if (scrollY < aboutUs.offsetTop-300) {
       heroLink.classList.add("active-link")
-    }
-    if (scrollY < aboutUs2.offsetTop) {
+
+    } 
+    
+    if (scrollY < aboutUs2.offsetTop -300) {
       links.forEach(link => {
         
           link.classList.remove('active-link');
@@ -136,7 +136,10 @@ function setActiveLinkOnScroll() {
         }
       );
       heroLink2.classList.add("active-link")
-
+      if (! window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        heroLink2.nextElementSibling.src = heroLink2.getAttribute('data-img-light'); 
+      }
+      else heroLink2.nextElementSibling.src = heroLink2.getAttribute('data-img-active'); 
     }
      else if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
       links.forEach(link => {

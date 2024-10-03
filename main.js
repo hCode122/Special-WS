@@ -58,19 +58,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const navBtn = document.getElementById('nav-btn');
     navBtn.addEventListener('click', toggleNav);
 
-    const dropdownToggle = document.getElementById('dropdown-toggle');
-    dropdownToggle.addEventListener('click', dropdown);
-
     const navMenu = document.getElementById("nav-menu");
-    const dropdownMenu = document.getElementById('dropdown-menu');
     
     
     window.onclick = function(e) {
-        if (!dropdownToggle.contains(e.target) && !dropdownMenu.contains(e.target)) {
-            if (dropdownMenu.classList.contains('dropdown-on')) {
-                dropdown();
-            }
-        } 
         if (!navBtn.contains(e.target) && !navMenu.contains(e.target)) {
             if (navMenu.classList.contains("nav-on")) {
                 toggleNav();
@@ -107,27 +98,53 @@ function switchDarkIcons() {
 }
 
 
-function dropdown() {
-    var dropdownMenu = document.querySelector('#dropdown-menu');
-
-    if (dropdownMenu.classList.contains('dropdown-off')) {
-        dropdownMenu.classList.remove('dropdown-off');
-        dropdownMenu.classList.add('dropdown-on');
-    } else {
-        dropdownMenu.classList.remove('dropdown-on');
-        dropdownMenu.classList.add('dropdown-off');
-    }
+function toggleDropdown() {
+    const dropdownMenu = document.getElementById('dropdown-menu');
+    
+    // Use toggle for better handling of class states
+    dropdownMenu.classList.toggle('dropdown-on');
+    dropdownMenu.classList.toggle('dropdown-off');
 }
 
-
-
- function setSelectedItem(item) {
-    var itemText = item.innerText;
+// Set the selected item and close the dropdown
+function setSelectedItem(item) {
     const selectedItemDiv = document.getElementById('selected-item');
-    selectedItemDiv.textContent = itemText;
-    dropdown(); 
+    selectedItemDiv.textContent = item.innerText;
+
+    // Close dropdown after selection
+    closeDropdown();
 }
 
+// Explicitly close the dropdown
+function closeDropdown() {
+    const dropdownMenu = document.getElementById('dropdown-menu');
+    dropdownMenu.classList.remove('dropdown-on');
+    dropdownMenu.classList.add('dropdown-off');
+}
 
-
+window.addEventListener('DOMContentLoaded', function() {
+    const dropdownToggle = document.getElementById('selected-item');
+    const dropdownItems = document.querySelectorAll('.dropdown-item');
+    
+    dropdownToggle.addEventListener('click', function(event) {
+        event.stopPropagation(); 
+        toggleDropdown();
+    });
+    
+    dropdownItems.forEach(function(item) {
+        item.addEventListener('click', function(event) {
+            event.stopPropagation(); 
+            setSelectedItem(item);
+        });
+    });
+    
+    document.addEventListener('click', function(event) {
+        const dropdownMenu = document.getElementById('dropdown-menu');
+        const dropdownContainer = document.getElementById('dropdown-container');
+        
+        if (!dropdownContainer.contains(event.target)) {
+            closeDropdown();
+        }
+    });
+});
 
